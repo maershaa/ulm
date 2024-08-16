@@ -4,24 +4,39 @@ import {
   StyledLink,
   IconWrapper,
 } from './Header.styled';
-import sprite from 'assets/sprite.svg';
+import { useLocation } from 'react-router-dom';
+
+import Logo from '../Logo/Logo';
 
 export const Header = () => {
-
+  const location = useLocation();
+  
+  
   return (
     <HeaderContainer>
+     
+      <Logo />
+
       <Navigation>
-        <StyledLink to="/first">
-          <IconWrapper>
-            <use href={`${sprite}#icon-logo`} />
-          </IconWrapper>
-          First
+        <StyledLink to="/services" className={location.pathname === '/services' ? 'active' : ''}>
+          ПОСЛУГИ
         </StyledLink>
-        <StyledLink to="/second">
-          <IconWrapper>
-            <use href={`${sprite}#icon-logo`} />
-          </IconWrapper>
-          Second
+
+        <StyledLink to="/aboutUs" className={location.pathname === '/aboutUs' ? 'active' : ''}>
+          ПРО НАС
+        </StyledLink>
+
+        <StyledLink to="/features" className={location.pathname === '/features' ? 'active' : ''}>
+          ПЕРЕВАГИ
+        </StyledLink>
+
+        <StyledLink to="/products"  className={location.pathname === '/products' ? 'active' : ''}>
+          ПРОДУКЦІЯ
+        </StyledLink>
+
+        <StyledLink to="/contacts"     className={location.pathname === '/contacts' ? 'active' : ''}>
+
+          КОНТАКТИ
         </StyledLink>
       </Navigation>
     </HeaderContainer>
