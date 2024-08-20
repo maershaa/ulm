@@ -1,4 +1,4 @@
-import{n as r,j as e}from"./index-f7c36f78.js";import d from"./AboutUsPage-85d85d9c.js";const s=r.div`
+import{n as r,j as e}from"./index-df9a9b7e.js";import d from"./AboutUsPage-d8f73a9a.js";const s=r.div`
   display: flex;
   justify-content: center;
   align-items: center;
