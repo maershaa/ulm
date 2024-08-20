@@ -12,6 +12,9 @@ export const Container = styled.div`
   align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
+
+  margin-right: auto;
+  margin-left: auto;
 `;
 
 export const Title = styled.h1`
