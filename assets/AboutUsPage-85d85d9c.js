@@ -1,4 +1,4 @@
-import{n as f,L as p,j as t}from"./index-999f759d.js";const x=f.div`
+import{n as f,L as p,j as t}from"./index-f7c36f78.js";const x=f.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,8 +13,8 @@ import{n as f,L as p,j as t}from"./index-999f759d.js";const x=f.div`
     padding-right: 32px;
   }
 
-  @media (min-width: 1280px) {
-    width: 1280px;
+  @media (min-width: 1024px) {
+    width: 1024px;
     padding-left: 20px;
     padding-right: 20px;
   }
