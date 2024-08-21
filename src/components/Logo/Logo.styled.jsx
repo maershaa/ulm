@@ -11,7 +11,7 @@ export const LogoLink = styled(NavLink)`
   align-items: center;
   column-gap: 8px;
   cursor: pointer;
-  z-index: 101;
+
 
   margin-right: auto;
   @media screen and (min-width: 768px) {

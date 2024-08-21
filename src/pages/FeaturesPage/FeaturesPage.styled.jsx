@@ -5,16 +5,11 @@ export const Container = styled.div`
   width: 100%;
   min-height: 100vh;
 
-  padding: 20px;
-
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
-
-  margin-right: auto;
-  margin-left: auto;
 `;
 
 export const Title = styled.h1`
@@ -69,18 +64,15 @@ export const FeatureGrid = styled.ul`
 `;
 
 export const FeatureItem = styled.li`
+  cursor: pointer;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  /* margin-bottom: 1.5rem; */
-
-  height: 500px;
 
   @media (min-width: 768px) {
     flex-direction: column;
-
-    max-height: 650px;
 
     // Для нечётных элементов (1, 3, 5...)
     &:nth-of-type(odd) {
@@ -94,22 +86,22 @@ export const FeatureItem = styled.li`
   }
 
   @media (min-width: 1024px) {
-
     max-height: 730px;
-
-}
+  }
 `;
 
 export const StyledImage = styled.img`
-  width: 250px;
-  max-width: 100%;
-
-  height: 250px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
 
   @media (min-width: 768px) {
-    max-width: 250px;
+    max-width: 300px;
     margin-bottom: 0;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 500px;
   }
 `;
 
@@ -118,12 +110,11 @@ export const TextContainer = styled.div`
   flex-direction: column;
   justify-content: center;
 
-  max-width: 250px;
   text-align: center;
   background-color: #045174;
   color: #ffffff;
-  height: 250px; //!
 
+  width: 100%;
   aspect-ratio: 1 / 1;
   padding: 16px;
   margin: 0;
@@ -132,14 +123,11 @@ export const TextContainer = styled.div`
   @media (min-width: 768px) {
     text-align: left;
     padding: 24px;
-
     max-width: 300px;
   }
 
   @media (min-width: 1024px) {
-
-    max-width: 370px;
-
+    max-width: 500px;
     padding: 32px;
   }
 `;
@@ -149,7 +137,7 @@ export const FeatureItemTitle = styled.h4`
   margin: 0;
   font-weight: 700;
 
-  font-size: 0.9rem;
+  font-size: 1.7rem;
 
   @media (min-width: 768px) {
     font-size: 1rem;
@@ -161,26 +149,26 @@ export const FeatureItemTitle = styled.h4`
 `;
 
 export const FeatureItemText = styled.p`
-  cursor: pointer;
   position: relative;
-  padding: 0 10px 0 0;
+  padding: 0 30px;
   height: 84px;
-  font-size: 0.7rem;
+  font-size: 1.4rem;
   line-height: 1.2;
-
-  display: -webkit-box;
-  -webkit-line-clamp: 5; /* Ограничивает количество строк до 5 */
-  -webkit-box-orient: vertical;
-
-  overflow: hidden;
-  text-overflow: ellipsis; /* добавляет многоточие, если текст не помещается в выделенные строки. */
-
-  max-height: calc(
-    1.2em * 5
-  ); /* Устанавливает максимальную высоту для 5 строк */
+  text-align: justify;
 
   @media (min-width: 768px) {
     font-size: 0.8rem;
+    padding: 0 10px 0 0;
+
+    //! Делаем (...) троеточиеи обрезаем текст
+    display: -webkit-box;
+    -webkit-line-clamp: 5; /* Ограничивает количество строк до 5 */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis; /* добавляет многоточие, если текст не помещается в выделенные строки. */
+    max-height: calc(
+      1.2em * 5
+    ); /* Устанавливает максимальную высоту для 5 строк */
   }
 
   @media (min-width: 1024px) {
