@@ -1,11 +1,11 @@
-import{n as r,j as e}from"./index-df9a9b7e.js";import d from"./AboutUsPage-d8f73a9a.js";const s=r.div`
+import{n as r,j as e}from"./index-89fa548e.js";import s from"./AboutUsPage-25c7dd2a.js";import d from"./FeaturesPage-55e8aacf.js";import a from"./ProductsPage-8f077c4f.js";import l from"./ContactsPage-046313ae.js";const c=r.div`
   display: flex;
   justify-content: center;
   align-items: center;
   /* padding-top: 500px; */
-`,a=r.div`
+`,x=r.div`
   text-align: center;
-`,l=r.div`
+`,p=r.div`
   background-image: linear-gradient(
       to right,
       rgba(3, 37, 65, 0.9) 0%,
@@ -22,10 +22,10 @@ import{n as r,j as e}from"./index-df9a9b7e.js";import d from"./AboutUsPage-d8f73
   display: flex;
   justify-content: center;
   align-items: center;
-`,c=r.div`
+`,m=r.div`
   text-align: center;
   width: 50%;
-`,x=r.h2`
+`,h=r.h2`
   color: #ffffff;
 
   margin-bottom: 10px;
@@ -44,7 +44,7 @@ import{n as r,j as e}from"./index-df9a9b7e.js";import d from"./AboutUsPage-d8f73
     margin-top: 20px; /* Отступ сверху */
     margin-bottom: 20px; /* Отступ снизу */
   }
-`,p=r.h3`
+`,f=r.h3`
   color: #ffffff;
 
   margin-bottom: 10px;
@@ -53,7 +53,7 @@ import{n as r,j as e}from"./index-df9a9b7e.js";import d from"./AboutUsPage-d8f73
   line-height: 1.2;
 
   text-align: left;
-`,m=r.div`
+`,g=r.div`
  max-width: 100%;
   width: 370px; 
   margin: 0 auto; 
@@ -88,7 +88,7 @@ import{n as r,j as e}from"./index-df9a9b7e.js";import d from"./AboutUsPage-d8f73
     border-color: #007bff;
     outline: none;
   }
-`,h=r.textarea`
+`,u=r.textarea`
   width: 100%;
   padding: 10px;
   border: 1px solid #ddd;
@@ -100,7 +100,7 @@ import{n as r,j as e}from"./index-df9a9b7e.js";import d from"./AboutUsPage-d8f73
     border-color: #007bff;
     outline: none;
   }
-`,f=r.button`
+`,b=r.button`
     cursor: pointer;
 
     padding: 0.75rem 1.10rem;
@@ -120,4 +120,4 @@ import{n as r,j as e}from"./index-df9a9b7e.js";import d from"./AboutUsPage-d8f73
   &:hover {
     background-color: #196f97;
   }
-`,g="/ulm/assets/hero-4c7cc523.jpeg",u=()=>e.jsxs(l,{heroImage:g,children:[e.jsxs(c,{children:[e.jsx(x,{children:" Виробник металевих рішень, що відповідають вашим стандартам "}),e.jsx(p,{children:"Здійснюємо виробництво металевої продукції з 1994 року. Наші банки, підноси та кришки – це поєднання надійності, функціональності та високих стандартів."})]}),e.jsx(m,{children:e.jsxs("form",{children:[e.jsxs(o,{children:[e.jsx(t,{htmlFor:"fullName",children:"Повне Ім'я"}),e.jsx(n,{type:"text",id:"fullName",name:"fullName",placeholder:"Ваше повне ім'я",required:!0})]}),e.jsxs(o,{children:[e.jsx(t,{htmlFor:"phone",children:"Телефон"}),e.jsx(n,{type:"tel",id:"phone",name:"phone",placeholder:"Ваш телефон",required:!0})]}),e.jsxs(o,{children:[e.jsx(t,{htmlFor:"email",children:"Електронна Адреса"}),e.jsx(n,{type:"email",id:"email",name:"email",placeholder:"Ваш email",required:!0})]}),e.jsxs(o,{children:[e.jsx(t,{htmlFor:"message",children:"Текст повідомлення"}),e.jsx(h,{id:"message",name:"message",rows:"4",placeholder:"Ваше повідомлення",required:!0})]}),e.jsx(f,{type:"submit",children:"Зв'яжіться з нами"})]})})]}),w=()=>e.jsx(s,{children:e.jsxs(a,{children:[e.jsx(u,{}),e.jsx(d,{})]})});export{w as default};
+`,j="/ulm/assets/hero-4c7cc523.jpeg",w=()=>e.jsxs(p,{heroImage:j,children:[e.jsxs(m,{children:[e.jsx(h,{children:" Виробник металевих рішень, що відповідають вашим стандартам "}),e.jsx(f,{children:"Здійснюємо виробництво металевої продукції з 1994 року. Наші банки, підноси та кришки – це поєднання надійності, функціональності та високих стандартів."})]}),e.jsx(g,{children:e.jsxs("form",{children:[e.jsxs(o,{children:[e.jsx(t,{htmlFor:"fullName",children:"Повне Ім'я"}),e.jsx(n,{type:"text",id:"fullName",name:"fullName",placeholder:"Ваше повне ім'я",required:!0})]}),e.jsxs(o,{children:[e.jsx(t,{htmlFor:"phone",children:"Телефон"}),e.jsx(n,{type:"tel",id:"phone",name:"phone",placeholder:"Ваш телефон",required:!0})]}),e.jsxs(o,{children:[e.jsx(t,{htmlFor:"email",children:"Електронна Адреса"}),e.jsx(n,{type:"email",id:"email",name:"email",placeholder:"Ваш email",required:!0})]}),e.jsxs(o,{children:[e.jsx(t,{htmlFor:"message",children:"Текст повідомлення"}),e.jsx(u,{id:"message",name:"message",rows:"4",placeholder:"Ваше повідомлення",required:!0})]}),e.jsx(b,{type:"submit",children:"Зв'яжіться з нами"})]})})]}),P=()=>e.jsx(c,{children:e.jsxs(x,{children:[e.jsx(w,{}),e.jsx(s,{}),e.jsx(d,{}),e.jsx(a,{}),e.jsx(l,{})]})});export{P as default};
