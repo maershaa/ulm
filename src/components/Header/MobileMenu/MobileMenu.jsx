@@ -30,16 +30,6 @@ const MobileMenu = ({ handleClick }) => {
 
           <NavItem>
             <StyledLink
-              to="/services"
-              className={location.pathname === '/services' ? 'active' : ''}
-              onClick={handleClick}
-            >
-              ПОСЛУГИ
-            </StyledLink>
-          </NavItem>
-
-          <NavItem>
-            <StyledLink
               to="/aboutUs"
               className={location.pathname === '/aboutUs' ? 'active' : ''}
               onClick={handleClick}

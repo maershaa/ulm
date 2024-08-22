@@ -3,7 +3,6 @@ import SharedLayout from 'components/SharedLayout/SharedLayout';
 import { lazy, Suspense } from 'react';
 
 const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
-const ServicesPage = lazy(() => import('./pages/ServicesPage/ServicesPage'));
 const AboutUsPage = lazy(() => import('./pages/AboutUsPage/AboutUsPage'));
 const FeaturesPage = lazy(() => import('./pages/FeaturesPage/FeaturesPage'));
 const ProductsPage = lazy(() => import('./pages/ProductsPage/ProductsPage'));
@@ -22,7 +21,6 @@ function App() {
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<HomePage />} />
 
-          <Route path="/services" element={<ServicesPage />} />
           <Route path="/aboutUs" element={<AboutUsPage />}>
             {/* <Route path=":half" element={<HalfPage />} /> */}
           </Route>

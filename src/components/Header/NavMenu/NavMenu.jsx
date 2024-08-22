@@ -12,13 +12,6 @@ const NavMenu = () => {
       </StyledLink>
 
       <StyledLink
-        to="/services"
-        className={location.pathname === '/services' ? 'active' : ''}
-      >
-        ПОСЛУГИ
-      </StyledLink>
-
-      <StyledLink
         to="/aboutUs"
         className={location.pathname === '/aboutUs' ? 'active' : ''}
       >
