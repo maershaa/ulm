@@ -1,4 +1,4 @@
-import{n as r,j as e,a as t}from"./index-66e463d6.js";import{T as l}from"./Title-f651ccbe.js";const c=r.div`
+import{n as r,j as e,a as t}from"./index-90748662.js";import{T as l}from"./Title-9bfc67e9.js";const c=r.div`
  max-width: 100%;
   width: 370px; 
   margin: 0 auto; 

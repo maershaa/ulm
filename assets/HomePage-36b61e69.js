@@ -1,4 +1,4 @@
-import{n as e,j as t}from"./index-66e463d6.js";import{C as r,a as n}from"./ContactsPage-461a21d1.js";import i from"./AboutUsPage-f01361e2.js";import a from"./FeaturesPage-1181eab0.js";import s from"./ProductsPage-493b75bd.js";import"./Title-f651ccbe.js";const c=e.div`
+import{n as e,j as t}from"./index-90748662.js";import{C as r,a as n}from"./ContactsPage-f9bb9eea.js";import i from"./AboutUsPage-33988ead.js";import a from"./FeaturesPage-0cb99f0a.js";import s from"./ProductsPage-24bdc9da.js";import"./Title-9bfc67e9.js";const c=e.div`
   display: flex;
   justify-content: center;
   align-items: center;

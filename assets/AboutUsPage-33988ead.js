@@ -1,4 +1,4 @@
-import{n as t,j as i}from"./index-66e463d6.js";import{T as n}from"./Title-f651ccbe.js";const d=t.div`
+import{n as t,j as i}from"./index-90748662.js";import{T as n}from"./Title-9bfc67e9.js";const d=t.div`
     max-width: 1200px;
   width: 100%;
   min-height: 100vh;
