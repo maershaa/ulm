@@ -1,4 +1,4 @@
-import{n as r,j as e}from"./index-89fa548e.js";import s from"./AboutUsPage-25c7dd2a.js";import d from"./FeaturesPage-55e8aacf.js";import a from"./ProductsPage-8f077c4f.js";import l from"./ContactsPage-046313ae.js";const c=r.div`
+import{n as r,j as e}from"./index-78004976.js";import s from"./AboutUsPage-4fdbfbf6.js";import a from"./FeaturesPage-2ed84417.js";import d from"./ProductsPage-e4cadb92.js";import l from"./ContactsPage-3384f447.js";const c=r.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,7 +11,7 @@ import{n as r,j as e}from"./index-89fa548e.js";import s from"./AboutUsPage-25c7d
       rgba(3, 37, 65, 0.9) 0%,
       rgba(3, 37, 65, 0) 100%
     ),
-    url(${i=>i.heroImage});
+    url(${n=>n.heroImage});
   background-size: cover;
   background-repeat: no-repeat;
   background-color: rgb(3, 37, 65);
@@ -26,7 +26,7 @@ import{n as r,j as e}from"./index-89fa548e.js";import s from"./AboutUsPage-25c7d
   text-align: center;
   width: 50%;
 `,h=r.h2`
-  color: #ffffff;
+  color: var(--primary-text-color-light);
 
   margin-bottom: 10px;
   font-size: 30px;
@@ -44,7 +44,7 @@ import{n as r,j as e}from"./index-89fa548e.js";import s from"./AboutUsPage-25c7d
     margin-top: 20px; /* Отступ сверху */
     margin-bottom: 20px; /* Отступ снизу */
   }
-`,f=r.h3`
+`,g=r.h3`
   color: #ffffff;
 
   margin-bottom: 10px;
@@ -53,7 +53,7 @@ import{n as r,j as e}from"./index-89fa548e.js";import s from"./AboutUsPage-25c7d
   line-height: 1.2;
 
   text-align: left;
-`,g=r.div`
+`,u=r.div`
  max-width: 100%;
   width: 370px; 
   margin: 0 auto; 
@@ -76,7 +76,7 @@ import{n as r,j as e}from"./index-89fa548e.js";import s from"./AboutUsPage-25c7d
   font-size: 1rem;
   margin-bottom: 5px;
   color: #333;
-`,n=r.input`
+`,i=r.input`
   width: 100%;
   padding: 10px;
   border: 1px solid #ddd;
@@ -88,7 +88,7 @@ import{n as r,j as e}from"./index-89fa548e.js";import s from"./AboutUsPage-25c7d
     border-color: #007bff;
     outline: none;
   }
-`,u=r.textarea`
+`,f=r.textarea`
   width: 100%;
   padding: 10px;
   border: 1px solid #ddd;
@@ -112,7 +112,7 @@ import{n as r,j as e}from"./index-89fa548e.js";import s from"./AboutUsPage-25c7d
 
 
 
-  background-color: #045174;
+  background-color: var(--accent-color);
   color: #fff; 
 
 
@@ -120,4 +120,4 @@ import{n as r,j as e}from"./index-89fa548e.js";import s from"./AboutUsPage-25c7d
   &:hover {
     background-color: #196f97;
   }
-`,j="/ulm/assets/hero-4c7cc523.jpeg",w=()=>e.jsxs(p,{heroImage:j,children:[e.jsxs(m,{children:[e.jsx(h,{children:" Виробник металевих рішень, що відповідають вашим стандартам "}),e.jsx(f,{children:"Здійснюємо виробництво металевої продукції з 1994 року. Наші банки, підноси та кришки – це поєднання надійності, функціональності та високих стандартів."})]}),e.jsx(g,{children:e.jsxs("form",{children:[e.jsxs(o,{children:[e.jsx(t,{htmlFor:"fullName",children:"Повне Ім'я"}),e.jsx(n,{type:"text",id:"fullName",name:"fullName",placeholder:"Ваше повне ім'я",required:!0})]}),e.jsxs(o,{children:[e.jsx(t,{htmlFor:"phone",children:"Телефон"}),e.jsx(n,{type:"tel",id:"phone",name:"phone",placeholder:"Ваш телефон",required:!0})]}),e.jsxs(o,{children:[e.jsx(t,{htmlFor:"email",children:"Електронна Адреса"}),e.jsx(n,{type:"email",id:"email",name:"email",placeholder:"Ваш email",required:!0})]}),e.jsxs(o,{children:[e.jsx(t,{htmlFor:"message",children:"Текст повідомлення"}),e.jsx(u,{id:"message",name:"message",rows:"4",placeholder:"Ваше повідомлення",required:!0})]}),e.jsx(b,{type:"submit",children:"Зв'яжіться з нами"})]})})]}),P=()=>e.jsx(c,{children:e.jsxs(x,{children:[e.jsx(w,{}),e.jsx(s,{}),e.jsx(d,{}),e.jsx(a,{}),e.jsx(l,{})]})});export{P as default};
+`,j="/ulm/assets/hero-4c7cc523.jpeg",w=()=>e.jsxs(p,{heroImage:j,children:[e.jsxs(m,{children:[e.jsx(h,{children:" Виробник металевих рішень, що відповідають вашим стандартам "}),e.jsx(g,{children:"Здійснюємо виробництво металевої продукції з 1994 року. Наші банки, підноси та кришки – це поєднання надійності, функціональності та високих стандартів."})]}),e.jsx(u,{children:e.jsxs("form",{children:[e.jsxs(o,{children:[e.jsx(t,{htmlFor:"fullName",children:"Повне Ім'я"}),e.jsx(i,{type:"text",id:"fullName",name:"fullName",placeholder:"Ваше повне ім'я",required:!0})]}),e.jsxs(o,{children:[e.jsx(t,{htmlFor:"phone",children:"Телефон"}),e.jsx(i,{type:"tel",id:"phone",name:"phone",placeholder:"Ваш телефон",required:!0})]}),e.jsxs(o,{children:[e.jsx(t,{htmlFor:"email",children:"Електронна Адреса"}),e.jsx(i,{type:"email",id:"email",name:"email",placeholder:"Ваш email",required:!0})]}),e.jsxs(o,{children:[e.jsx(t,{htmlFor:"message",children:"Текст повідомлення"}),e.jsx(f,{id:"message",name:"message",rows:"4",placeholder:"Ваше повідомлення",required:!0})]}),e.jsx(b,{type:"submit",children:"Зв'яжіться з нами"})]})})]}),P=()=>e.jsx(c,{children:e.jsxs(x,{children:[e.jsx(w,{}),e.jsx(s,{}),e.jsx(a,{}),e.jsx(d,{}),e.jsx(l,{})]})});export{P as default};

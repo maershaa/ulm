@@ -1,12 +1,12 @@
-import{n as t,j as e}from"./index-89fa548e.js";const f=t.div`
+import{n as t,j as e}from"./index-78004976.js";const i=t.div`
   display: flex;
   justify-content: center;
   align-items: center;
   padding-top: 500px;
-`,i=t.h1`
+`,r=t.h1`
   margin: 0;
   margin-right: 10px;
-  color: #ffffff;
+  color: var(--primary-text-color-light);
   text-shadow:
     0 0 5px #00baff,
     0 0 10px #00baff,
@@ -17,4 +17,4 @@ import{n as t,j as e}from"./index-89fa548e.js";const f=t.div`
   width: 40px;
   height: 40px;
   object-fit: cover;
-`;const a=()=>e.jsx(f,{children:e.jsx(i,{children:"ПРОДУКЦІЯ"})});export{a as default};
+`;const n=()=>e.jsx(i,{children:e.jsx(r,{children:"ПОСЛУГИ"})});export{n as default};

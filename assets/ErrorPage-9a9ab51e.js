@@ -1,14 +1,14 @@
-import{n as f,j as t}from"./index-89fa548e.js";const e=f.div`
+import{n as e,j as t}from"./index-78004976.js";const r=e.div`
   display: flex;
   justify-content: center;
   align-items: center;
   padding-top: 500px;
-`,n=f.h1`
-  color: #ffffff;
+`,a=e.h1`
+  color: var(--primary-text-color-light);
   text-shadow:
     0 0 5px #00baff,
     0 0 10px #00baff,
     0 0 20px #00baff,
     0 0 40px #00baff,
     0 0 80px #00baff;
-`,r=()=>t.jsx(e,{children:t.jsx(n,{children:"404"})});export{r as default};
+`,o=()=>t.jsx(r,{children:t.jsx(a,{children:"404"})});export{o as default};

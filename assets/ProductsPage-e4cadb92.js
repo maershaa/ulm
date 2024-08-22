@@ -1,4 +1,4 @@
-import{n as t,j as e}from"./index-89fa548e.js";const f=t.div`
+import{n as t,j as e}from"./index-78004976.js";const f=t.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,4 +17,4 @@ import{n as t,j as e}from"./index-89fa548e.js";const f=t.div`
   width: 40px;
   height: 40px;
   object-fit: cover;
-`;const a=()=>e.jsx(f,{children:e.jsx(i,{children:"ПОСЛУГИ"})});export{a as default};
+`;const a=()=>e.jsx(f,{children:e.jsx(i,{children:"ПРОДУКЦІЯ"})});export{a as default};

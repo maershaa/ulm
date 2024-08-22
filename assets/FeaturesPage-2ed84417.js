@@ -1,4 +1,4 @@
-import{n as i,s as r,j as e,r as m}from"./index-89fa548e.js";const p=i.div`
+import{n as i,s as o,j as e,r as m}from"./index-78004976.js";const p=i.div`
   max-width: 1200px;
   width: 100%;
   min-height: 100vh;
@@ -80,7 +80,7 @@ import{n as i,s as r,j as e,r as m}from"./index-89fa548e.js";const p=i.div`
   @media (min-width: 1024px) {
     max-height: 730px;
   }
-`,f=i.img`
+`,u=i.img`
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
@@ -93,14 +93,14 @@ import{n as i,s as r,j as e,r as m}from"./index-89fa548e.js";const p=i.div`
   @media (min-width: 1024px) {
     max-width: 500px;
   }
-`,u=i.div`
+`,f=i.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
 
   text-align: center;
-  background-color: #045174;
-  color: #ffffff;
+  background-color: var(--accent-color);
+  color: var(--primary-text-color-light);
 
   width: 100%;
   aspect-ratio: 1 / 1;
@@ -158,7 +158,7 @@ import{n as i,s as r,j as e,r as m}from"./index-89fa548e.js";const p=i.div`
   @media (min-width: 1024px) {
     font-size: 0.9rem;
   }
-`,y=r.div`
+`,y=o.div`
 
 visibility: hidden; //!!! временное решение чтобы не обображать модалку на телефонах
 
@@ -179,7 +179,7 @@ visibility: hidden; //!!! временное решение чтобы не об
   z-index: 1001; //! так как у header 1000  
 }
 
-`,j=r.div`
+`,j=o.div`
   background: white;
   padding: 20px;
   border-radius: 8px;
@@ -188,7 +188,7 @@ visibility: hidden; //!!! временное решение чтобы не об
   position: relative;
 
   
-`,v=r.button`
+`,v=o.button`
   position: absolute;
   top: 10px;
   right: 10px;
@@ -207,7 +207,7 @@ visibility: hidden; //!!! временное решение чтобы не об
   &:hover {
     background-color: rgba(150, 150, 150, 0.8); /* Более темный фон при наведении */
   }
-`,k=r.img`
+`,k=o.img`
   width: 100%; 
   max-width: 400px; 
   height: auto; 
@@ -221,7 +221,7 @@ visibility: hidden; //!!! временное решение чтобы не об
   @media (min-width: 1024px) {
     max-width: 600px;
   }
-`,z=r.p`
+`,z=o.p`
   font-size: 1rem;
   line-height: 1.5;
   color: #333;
@@ -235,4 +235,4 @@ visibility: hidden; //!!! временное решение чтобы не об
   @media (min-width: 1024px) {
     font-size: 1.2rem;
   }
-`,S=({show:s,onClose:o,text:d,imageSrc:l})=>{if(!s)return null;const c=n=>{n.target===n.currentTarget&&o()};return e.jsx(y,{onClick:c,children:e.jsxs(j,{onClick:n=>n.stopPropagation(),children:[e.jsx(v,{onClick:o,children:"×"}),e.jsx(k,{src:l,alt:"Expanded view"}),e.jsx(z,{children:d})]})})},C="/ulm/assets/team-edae2c4d.jpeg",F="/ulm/assets/obsessions-9c02b3a3.jpg",M="/ulm/assets/price2-8dc70092.jpeg",T="/ulm/assets/delivery5-83ddad4b.jpg",I="/ulm/assets/quality-9d5289cc.jpeg",D="/ulm/assets/paymentDeferral-d32b33c7.jpeg",a={team:C,volumes:F,delivery:T,price:M,paymentDeferral:D,quality:I},q=[{id:1,title:"Колектив",description:"Колектив нашого підприємства складається з високопрофесійних працівників із величезним досвідом роботи у жестетарному виробництві. Стаж провідних спеціалістів коливається від 15 до 40 років. Завдяки їхньому досвіду наше підприємство розробило та впровадило унікальне виробництво, здатне випускати високоякісну продукцію.",imageSrc:a.team,alt:"Колектив працівників"},{id:2,title:"Ціна",description:"За допомогою нестандартних рішень використання жерсті та допоміжних матеріалів, а також скорочуючи свої накладні витрати, ми добиваємося цині на наш виріб нижче за інших виробників зі збереженням високої якості.",imageSrc:a.price,alt:"Ціна продукції"},{id:3,title:"Обсяги",description:"Потужність нашого виробництва дозволяє забезпечити будь-який обсяг продукції найбільших виробників консервів.",imageSrc:a.volumes,alt:"Обсяги виробництва"},{id:4,title:"Доставка",description:"Для зручності споживачів ми надаємо послуги з доставки нашого товару.",imageSrc:a.delivery,alt:"Послуги з доставки"},{id:5,title:"Якість",description:"Жорсткий контроль стосується не тільки продукції, що випускається, але і вхідної жерсті, лаків, емалей, фарб. У своєму виробництві ми використовуємо складові від перевірених постачальників, які відповідають якості європейських стандартів.",imageSrc:a.quality,alt:"Контроль якості"},{id:6,title:"Відстрочка платежу",description:"Для перевірених клієнтів нашому підприємстві існує система гнучких відстрочок від 30 до 90 днів /факторинг/.",imageSrc:a.paymentDeferral,alt:"Відстрочка платежу"}],B=()=>{const[s,o]=m.useState(!1),[d,l]=m.useState({}),c=t=>{l(t),o(!0)},n=()=>{o(!1)};return e.jsxs(p,{className:"container",children:[e.jsx(x,{children:"ПЕРЕВАГИ"}),e.jsx(h,{children:q.map(t=>e.jsxs(g,{onClick:()=>c(t),children:[e.jsx(f,{src:t.imageSrc,alt:t.alt}),e.jsxs(u,{children:[e.jsx(w,{children:t.title}),e.jsx(b,{children:t.description})]})]},t.id))}),s&&e.jsx(S,{show:s,onClose:n,text:d.description,imageSrc:d.imageSrc})]})};export{B as default};
+`,S=({show:s,onClose:r,text:d,imageSrc:l})=>{if(!s)return null;const c=n=>{n.target===n.currentTarget&&r()};return e.jsx(y,{onClick:c,children:e.jsxs(j,{onClick:n=>n.stopPropagation(),children:[e.jsx(v,{onClick:r,children:"×"}),e.jsx(k,{src:l,alt:"Expanded view"}),e.jsx(z,{children:d})]})})},C="/ulm/assets/team-edae2c4d.jpeg",F="/ulm/assets/obsessions-9c02b3a3.jpg",M="/ulm/assets/price2-8dc70092.jpeg",T="/ulm/assets/delivery5-83ddad4b.jpg",I="/ulm/assets/quality-9d5289cc.jpeg",D="/ulm/assets/paymentDeferral-d32b33c7.jpeg",a={team:C,volumes:F,delivery:T,price:M,paymentDeferral:D,quality:I},q=[{id:1,title:"Колектив",description:"Колектив нашого підприємства складається з високопрофесійних працівників із величезним досвідом роботи у жестетарному виробництві. Стаж провідних спеціалістів коливається від 15 до 40 років. Завдяки їхньому досвіду наше підприємство розробило та впровадило унікальне виробництво, здатне випускати високоякісну продукцію.",imageSrc:a.team,alt:"Колектив працівників"},{id:2,title:"Ціна",description:"За допомогою нестандартних рішень використання жерсті та допоміжних матеріалів, а також скорочуючи свої накладні витрати, ми добиваємося цині на наш виріб нижче за інших виробників зі збереженням високої якості.",imageSrc:a.price,alt:"Ціна продукції"},{id:3,title:"Обсяги",description:"Потужність нашого виробництва дозволяє забезпечити будь-який обсяг продукції найбільших виробників консервів.",imageSrc:a.volumes,alt:"Обсяги виробництва"},{id:4,title:"Доставка",description:"Для зручності споживачів ми надаємо послуги з доставки нашого товару.",imageSrc:a.delivery,alt:"Послуги з доставки"},{id:5,title:"Якість",description:"Жорсткий контроль стосується не тільки продукції, що випускається, але і вхідної жерсті, лаків, емалей, фарб. У своєму виробництві ми використовуємо складові від перевірених постачальників, які відповідають якості європейських стандартів.",imageSrc:a.quality,alt:"Контроль якості"},{id:6,title:"Відстрочка платежу",description:"Для перевірених клієнтів нашому підприємстві існує система гнучких відстрочок від 30 до 90 днів /факторинг/.",imageSrc:a.paymentDeferral,alt:"Відстрочка платежу"}],B=()=>{const[s,r]=m.useState(!1),[d,l]=m.useState({}),c=t=>{l(t),r(!0)},n=()=>{r(!1)};return e.jsxs(p,{className:"container",children:[e.jsx(x,{children:"ПЕРЕВАГИ"}),e.jsx(h,{children:q.map(t=>e.jsxs(g,{onClick:()=>c(t),children:[e.jsx(u,{src:t.imageSrc,alt:t.alt}),e.jsxs(f,{children:[e.jsx(w,{children:t.title}),e.jsx(b,{children:t.description})]})]},t.id))}),s&&e.jsx(S,{show:s,onClose:n,text:d.description,imageSrc:d.imageSrc})]})};export{B as default};
