@@ -10,10 +10,11 @@ import {
 import ContactUsForm from '../../components/ContactUsForm/ContactUsForm';
 import sprite from '/src/assets/icons.svg';
 import Title from '../../components/Title/Title'
+import Map from './Map';
 
 const ContactsPage = () => {
   return (
-    <Container>
+    <Container className="container">
       <ContactContainer>
       <Title title="Контакти" />
         <Address>
@@ -56,9 +57,13 @@ const ContactsPage = () => {
             factory@ulm.com.ua
           </ContactLink>
         </ContactInfo>
+
+        <Map />
       </ContactContainer>
 
       <ContactUsForm />
+
+      
     </Container>
   );
 };

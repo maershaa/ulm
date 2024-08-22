@@ -28,7 +28,7 @@ const productsData = [
   {
     id: 4,
     title: 'Алюмінієва тара для їжі швидкого приготування',
-    description: 'Алюмінієва тара для швидкого приготування їжі.',
+    description: 'ТУТ ДОЛЖЕН БЫТЬ ТЕКСТ!!!!!!!!!!',
     imageSrc: images.can_drawn,
     // imageSrc: images.aluminum_packaging,
     alt: 'Алюмінієва тара для їжі швидкого приготування'
@@ -36,7 +36,7 @@ const productsData = [
   {
     id: 5,
     title: 'Металеві підноси різних розмірів',
-    description: 'Металеві підноси різних розмірів.',
+    description: 'ТУТ ДОЛЖЕН БЫТЬ ТЕКСТ!!!!!!!!!!',
     imageSrc: images.can_drawn,
     // imageSrc: images.metal_trays,
     alt: 'Металеві підноси різних розмірів'
