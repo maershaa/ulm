@@ -1,12 +1,14 @@
 import React from 'react'
-import { Container, Title, StyledImage } from './ProductsPage.styled';
+import { Container } from './ProductsPage.styled';
+import Title from '../../components/Title/Title'
 
 
 
 const ProductsPage = () => {
   return (
     <Container>
-    <Title>ПРОДУКЦІЯ</Title>
+            <Title title="ПРОДУКЦІЯ" />
+
   </Container>
   )
 }

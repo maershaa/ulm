@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Container, Title, FeatureGrid, FeatureItem, TextContainer, StyledImage, FeatureItemTitle,FeatureItemText  } from './FeaturesPage.styled';
+import { Container, FeatureGrid, FeatureItem, TextContainer, StyledImage, FeatureItemTitle,FeatureItemText  } from './FeaturesPage.styled';
 import FeaturesModal from '../../components/FeaturesModal/FeaturesModal'
 import featuresData from './featuresData';
-
+import Title from '../../components/Title/Title'
 const FeaturesPage = () => {
 // Состояние для отображения или скрытия модалки
 const [showFeaturesModal, setShowFeaturesModal] = useState(false);
@@ -23,7 +23,7 @@ const closeFeaturesModal = () => {
 
   return (
     <Container className="container">
-      <Title>ПЕРЕВАГИ</Title>
+      <Title title="ПЕРЕВАГИ" />
       <FeatureGrid>
         {featuresData.map((feature) => (
           <FeatureItem key={feature.id} onClick={() => openFeaturesModal(feature)}>

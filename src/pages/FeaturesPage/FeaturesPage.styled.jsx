@@ -12,39 +12,7 @@ export const Container = styled.div`
   flex-direction: column;
 `;
 
-export const Title = styled.h1`
-  display: inline;
-  margin: 0;
-  margin-right: 10px;
-  color: #000000;
 
-  font-family: 'Caladea', Arial, sans-serif;
-
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  line-height: 1.25;
-
-  font-size: 1rem;
-
-  @media (min-width: 768px) {
-    font-size: 1.5rem;
-  }
-
-  @media (min-width: 1024px) {
-    font-size: 2rem;
-  }
-
-  /* Псевдоэлемент для разделительной полоски */
-  &::after {
-    content: '';
-    display: block;
-    border-top: 6px solid #1274a2; /* Цвет полоски */
-    width: 100px; /* Ширина полоски */
-    margin-top: 20px; /* Отступ сверху */
-    margin-bottom: 20px; /* Отступ снизу */
-  }
-`;
 
 export const FeatureGrid = styled.ul`
   display: grid;

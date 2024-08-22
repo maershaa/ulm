@@ -1,7 +1,7 @@
 import React from 'react';
-import {  HeroContainer, Block, HeroPrimaryText, HeroInfo, FormContainer, FormGroup, FormLabel, FormInput, FormTextarea, FormButton } from './Hero.styled';
+import {  HeroContainer, Block, HeroPrimaryText, HeroInfo} from './Hero.styled';
 import heroImage from '../../assets/Hero/hero.jpeg'; 
-
+import ContactUsForm from '../ContactUsForm/ContactUsForm'
 const Hero = () => {
   return (
     <HeroContainer heroImage={heroImage}>
@@ -16,51 +16,8 @@ const Hero = () => {
       </HeroInfo>
    </Block>
 
-   <FormContainer>
-   <form>
-        <FormGroup>
-          <FormLabel htmlFor="fullName">Повне Ім'я</FormLabel>
-          <FormInput
-            type="text"
-            id="fullName"
-            name="fullName"
-            placeholder="Ваше повне ім'я"
-            required
-          />
-        </FormGroup>
-        <FormGroup>
-          <FormLabel htmlFor="phone">Телефон</FormLabel>
-          <FormInput
-            type="tel"
-            id="phone"
-            name="phone"
-            placeholder="Ваш телефон"
-            required
-          />
-        </FormGroup>
-        <FormGroup>
-          <FormLabel htmlFor="email">Електронна Адреса</FormLabel>
-          <FormInput
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Ваш email"
-            required
-          />
-        </FormGroup>
-        <FormGroup>
-          <FormLabel htmlFor="message">Текст повідомлення</FormLabel>
-          <FormTextarea
-            id="message"
-            name="message"
-            rows="4"
-            placeholder="Ваше повідомлення"
-            required
-          />
-        </FormGroup>
-        <FormButton type="submit">Зв'яжіться з нами</FormButton>
-      </form>
-      </FormContainer>
+<ContactUsForm />
+   
     </HeroContainer>
   );
 };

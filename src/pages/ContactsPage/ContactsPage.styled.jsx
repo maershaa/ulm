@@ -4,7 +4,12 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* padding-top: 500px; */
+  flex-wrap: wrap;
+  padding-top: 20px;
+
+  @media (min-width: 768px) {
+    flex-wrap: nowrap;
+  }
 `;
 
 export const ContactContainer = styled.div`
@@ -18,19 +23,34 @@ export const Address = styled.address`
   margin-bottom: 20px;
 `;
 
-export const ContactTitle = styled.h2`
-  margin-bottom: 10px;
-  font-size: 24px;
-`;
-
 export const ContactInfo = styled.p`
   margin-bottom: 5px;
+
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+`;
+
+export const Icon = styled.div`
+  margin-right: 8px;
+
+  svg {
+    width: 22px;
+    height: 22px;
+    fill: var(--accent-color); 
+  }
 `;
 
 export const ContactLink = styled.a`
   color: #045174;
   text-decoration: none;
+
+  display: flex;
+  align-items: center;
+  font-size: 16px;
   &:hover {
     text-decoration: underline;
   }
 `;
+
+

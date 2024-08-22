@@ -1,72 +1,83 @@
-import { Link } from 'react-router-dom';
 import styled from '@emotion/styled';
 
 export const Container = styled.div`
+    max-width: 1200px;
+  width: 100%;
+  min-height: 100vh;
+  
   display: flex;
   justify-content: center;
   align-items: center;
 
-        padding: 80px 20px;
-        width: 375px;
-        margin: 0 auto;
+  padding: 80px 20px;
+  margin: 0 auto;
 
   @media (min-width: 768px) {
-    width: 768px;
     padding-left: 32px;
     padding-right: 32px;
   }
 
   @media (min-width: 1024px) {
-    width: 1024px;
     padding-left: 20px;
     padding-right: 20px;
   }
 `;
 
 export const Block = styled.div`
-  text-align: center;
-`;
-export const Title = styled.h1`
-  color: #ffffff;
-  text-shadow:
-    0 0 5px #00baff,
-    0 0 10px #00baff,
-    0 0 20px #00baff,
-    0 0 40px #00baff,
-    0 0 80px #00baff;
+  background-image: url(${(props) => props.bgImageAboutUsPage});
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: var(--primary-text-color-light);
+  background-position: center center;
 
-      /* Псевдоэлемент для разделительной полоски */
-  &::after {
-    content: '';
-    display: block;
-    border-top: 6px solid #1274a2; /* Цвет полоски */
-    width: 100px; /* Ширина полоски */
-    margin-top: 20px; /* Отступ сверху */
-    margin-bottom: 20px; /* Отступ снизу */
+  padding: 20px;
+
+  width: 100%;
+  min-height: 400px;
+  border-radius: 10px;
+
+  @media (min-width: 768px) {
+    padding: 40px;
+
   }
+
 `;
 
-export const StyledLink = styled(Link)`
-  padding: 8px 16px;
-  color: var(--primary-text-color-light); 
-  text-shadow:
-    0 0 5px #00baff,
-    0 0 10px #00baff,
-    0 0 20px #00baff,
-    0 0 40px #00baff,
-    0 0 80px #00baff;
-  transition:
-    color 0.3s,
-    text-shadow 0.3s;
-  display: block;
-  &:hover,
-  &:focus {
-    color: #00baff; /* Blue text color on hover/focus */
-    text-shadow:
-      0 0 5px #00baff,
-      0 0 10px #00baff,
-      0 0 20px #00baff,
-      0 0 40px #00baff,
-      0 0 80px #00baff;
+export const InfoContainer = styled.div`
+  width: 80%;
+  padding: 60px 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  border-radius: 5px;
+
+  background-color: var(--primary-text-color-light);
+
+
+  @media (min-width: 900px) {
+    width: 50%;
   }
+
+
+`;
+
+export const AboutUsInfo = styled.p`
+  text-align: left;
+
+  color: var(--primary-bg-dark-color);
+  background-color: var(--primary-text-color-light);
+  
+  font-size: 1.4rem;
+  line-height: 1.2;
+
+  @media (min-width: 768px) {
+    font-size: 0.9rem;
+    padding: 0 10px 0 0;
+  }
+
+
 `;
