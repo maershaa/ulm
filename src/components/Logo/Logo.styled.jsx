@@ -27,7 +27,7 @@ export const LogoText = styled.span`
 
   font-size: 24px;
   font-weight: 500px;
-  color: #ffffff;
+  color: var(--primary-text-color-light);
   text-shadow: 
   0 0 2px #00baff, 
   0 0 4px #00baff, 

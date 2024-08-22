@@ -26,7 +26,7 @@ export const Block = styled.div`
 `;
 
 export const HeroPrimaryText = styled.h2`
-  color: #ffffff;
+  color: var(--primary-text-color-light);
 
   margin-bottom: 10px;
   font-size: 30px;
@@ -125,7 +125,7 @@ export const FormButton = styled.button`
 
 
 
-  background-color: #045174;
+  background-color: var(--accent-color);
   color: #fff; 
 
 

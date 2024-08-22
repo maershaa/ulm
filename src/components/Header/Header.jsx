@@ -1,44 +1,48 @@
-import {
-  HeaderContainer,
-  Navigation,
-  StyledLink,
-  IconWrapper,
-} from './Header.styled';
-import { useLocation } from 'react-router-dom';
-
-import Logo from '../Logo/Logo';
+import React, { useState, useEffect } from 'react';
+import { useMediaQuery } from 'react-responsive'; 
+import { HeaderContainer } from './Header.styled'; 
+import Logo from '../Logo/Logo'; 
+import NavMenu from './NavMenu/NavMenu'; 
+import BurgerMenuButton from './BurgerMenuButton/BurgerMenuButton'; 
+import MobileMenu from './MobileMenu/MobileMenu'; 
 
 export const Header = () => {
-  const location = useLocation();
-  
-  
+  // Состояние для отображения или скрытия меню
+  const [isOpenMenu, setIsOpenMenu] = useState(false);
+
+  // Используем медиазапрос для проверки ширины экрана
+  const isDesktop = useMediaQuery({ minWidth: 1280 });
+
+  // Хук для отслеживания изменения состояния меню и управления прокруткой
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      if (isOpenMenu) {
+        window.document.body.style.overflow = 'hidden'; // Отключаем прокрутку при открытом меню
+      } else {
+        window.document.body.style.overflow = 'auto'; // Включаем прокрутку при закрытом меню
+      }
+    }
+  }, [isOpenMenu]);
+
+  // Функция для закрытия меню при клике
+  const handleClick = () => setIsOpenMenu(false);
+
   return (
     <HeaderContainer>
-     
-      <Logo />
+      <Logo /> 
+         {/* Отображаем десктопное меню, если экран является десктопным */}
+         {isDesktop && <NavMenu />}
 
-      <Navigation>
-        <StyledLink to="/services" className={location.pathname === '/services' ? 'active' : ''}>
-          ПОСЛУГИ
-        </StyledLink>
+{/* Отображаем кнопку бургер-меню, если экран не является десктопным */}
+{!isDesktop && (
+  <BurgerMenuButton
+    isOpenMenu={isOpenMenu}
+    setIsOpenMenu={setIsOpenMenu}
+  />
+)}
 
-        <StyledLink to="/aboutUs" className={location.pathname === '/aboutUs' ? 'active' : ''}>
-          ПРО НАС
-        </StyledLink>
-
-        <StyledLink to="/features" className={location.pathname === '/features' ? 'active' : ''}>
-          ПЕРЕВАГИ
-        </StyledLink>
-
-        <StyledLink to="/products"  className={location.pathname === '/products' ? 'active' : ''}>
-          ПРОДУКЦІЯ
-        </StyledLink>
-
-        <StyledLink to="/contacts"     className={location.pathname === '/contacts' ? 'active' : ''}>
-
-          КОНТАКТИ
-        </StyledLink>
-      </Navigation>
+{/* Отображаем мобильное меню, если оно открыто и экран не является десктопным */}
+{isOpenMenu && !isDesktop && <MobileMenu handleClick={handleClick} />}
     </HeaderContainer>
   );
 };

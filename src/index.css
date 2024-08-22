@@ -1,4 +1,14 @@
-body {
+:root {
+  --primary-bg-dark-color: #032541;
+  --accent-color: #045174;
+  /* --primary-bg-light-color: ;
+  --nav-hover-color: ; */
+  --primary-text-color-light:#ffffff;
+  /* --primary-text-color-05: ; */
+}
+
+  
+  body {
   background-color: hsl(0, 12%, 97%);
   font-family: "Caladea", serif;
   font-weight: 400;

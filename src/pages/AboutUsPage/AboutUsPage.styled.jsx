@@ -48,7 +48,7 @@ export const Title = styled.h1`
 
 export const StyledLink = styled(Link)`
   padding: 8px 16px;
-  color: #ffffff; /* White text color */
+  color: var(--primary-text-color-light); 
   text-shadow:
     0 0 5px #00baff,
     0 0 10px #00baff,

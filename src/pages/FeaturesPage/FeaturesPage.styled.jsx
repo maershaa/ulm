@@ -111,8 +111,8 @@ export const TextContainer = styled.div`
   justify-content: center;
 
   text-align: center;
-  background-color: #045174;
-  color: #ffffff;
+  background-color: var(--accent-color);
+  color: var(--primary-text-color-light);
 
   width: 100%;
   aspect-ratio: 1 / 1;
