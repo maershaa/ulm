@@ -5,7 +5,7 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding-top: 20px;
+  padding: 40px 20px;
 
   @media (min-width: 768px) {
     flex-wrap: nowrap;
@@ -16,10 +16,15 @@ export const ContactContainer = styled.div`
   padding: 20px;
   max-width: 600px;
   margin: 0 auto;
-  font-family: Arial, sans-serif;
+
+  text-align: left;
 `;
 
 export const Address = styled.address`
+  margin-bottom: 20px;
+`;
+
+export const Phone = styled.div`
   margin-bottom: 20px;
 `;
 
@@ -28,7 +33,9 @@ export const ContactInfo = styled.p`
 
   display: flex;
   align-items: center;
-  font-size: 16px;
+  font-size: 1rem;
+
+  line-height: 1.2;
 `;
 
 export const Icon = styled.div`
@@ -37,7 +44,7 @@ export const Icon = styled.div`
   svg {
     width: 22px;
     height: 22px;
-    fill: var(--accent-color); 
+    fill: var(--accent-color);
   }
 `;
 
@@ -52,5 +59,3 @@ export const ContactLink = styled.a`
     text-decoration: underline;
   }
 `;
-
-

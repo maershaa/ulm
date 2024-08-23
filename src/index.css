@@ -1,16 +1,17 @@
 :root {
   --primary-bg-dark-color: #032541;
   --accent-color: #045174;
-  /* --primary-bg-light-color: ;
-  --nav-hover-color: ; */
-  --primary-text-color-light:#ffffff;
-  /* --primary-text-color-05: ; */
+  --primary-text-color-light: #ffffff;
 }
 
-  
-  body {
+html {
+  font-size: 16px; /* 1 rem = 16px  */
+  /* !  Пример как считать: 30px ÷ 16px = 1.875rem */
+}
+
+body {
   background-color: hsl(0, 12%, 97%);
-  font-family: "Caladea", serif;
+  font-family: 'Caladea', serif;
   font-weight: 400;
   font-style: normal;
   color: #111111;
@@ -45,6 +46,8 @@ button {
 .container {
   margin: 0 auto;
   padding: 80px 10px;
+  width: 100%;
+  min-height: 100vh; /*! vh обозначает "viewport height", что означает "процент от высоты окна просмотра". 100vh означает 100% от высоты видимого окна браузера */
 }
 
 @media screen and (max-width: 374px) {
@@ -56,11 +59,11 @@ button {
 @media screen and (min-width: 375px) {
   .container {
     padding: 80px 20px;
-    width: 375px;
+    /*! max-width: 375px;  */
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 768px) and (max-width: 900px) {
   .container {
     width: 768px;
     padding-left: 32px;
@@ -68,6 +71,25 @@ button {
   }
 }
 
+@media screen and (min-width: 900px) and (max-width: 999px) {
+  .container {
+    max-width: 900px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1199px) {
+  .container {
+    max-width: 1000px;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1279px) {
+  .container {
+    max-width: 1200px;
+  }
+}
 @media screen and (min-width: 1280px) {
   .container {
     width: 1280px;

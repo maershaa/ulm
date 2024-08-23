@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-export const Title = styled.h1`
+export const Title = styled.h2`
   display: inline;
   margin: 0;
   margin-right: 10px;

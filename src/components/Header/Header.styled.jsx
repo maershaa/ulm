@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const HeaderContainer = styled.div`
+  min-width:100%;
+  
   position: sticky; /* или position: fixed; */
   top: 0; /* Для фиксированного позиционирования */
   z-index: 1000; /* Для обеспечения отображения поверх других элементов */

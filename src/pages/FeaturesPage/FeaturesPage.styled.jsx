@@ -1,18 +1,14 @@
 import styled from '@emotion/styled';
 
 export const Container = styled.div`
-  max-width: 1200px;
-  width: 100%;
-  min-height: 100vh;
-
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
+
+  padding: 40px 20px;
 `;
-
-
 
 export const FeatureGrid = styled.ul`
   display: grid;
@@ -52,10 +48,6 @@ export const FeatureItem = styled.li`
       flex-direction: column-reverse;
     }
   }
-
-  @media (min-width: 1024px) {
-    max-height: 730px;
-  }
 `;
 
 export const StyledImage = styled.img`
@@ -84,9 +76,13 @@ export const TextContainer = styled.div`
 
   width: 100%;
   aspect-ratio: 1 / 1;
-  padding: 16px;
+
   margin: 0;
   gap: 1.5rem;
+
+  @media (min-width: 625px) {
+    padding: 16px;
+  }
 
   @media (min-width: 768px) {
     text-align: left;
@@ -105,7 +101,7 @@ export const FeatureItemTitle = styled.h4`
   margin: 0;
   font-weight: 700;
 
-  font-size: 1.7rem;
+  font-size: 1.3rem;
 
   @media (min-width: 768px) {
     font-size: 1rem;
@@ -119,13 +115,20 @@ export const FeatureItemTitle = styled.h4`
 export const FeatureItemText = styled.p`
   position: relative;
   padding: 0 30px;
-  height: 84px;
-  font-size: 1.4rem;
+  font-size: 0.9rem;
   line-height: 1.2;
   text-align: justify;
 
+  @media (min-width: 450px) {
+    font-size: 1rem;
+  }
+
+  @media (min-width: 500px) {
+    font-size: 1.2rem;
+  }
+
   @media (min-width: 768px) {
-    font-size: 0.8rem;
+    font-size: 1rem;
     padding: 0 10px 0 0;
 
     //! Делаем (...) троеточиеи обрезаем текст
@@ -137,9 +140,5 @@ export const FeatureItemText = styled.p`
     max-height: calc(
       1.2em * 5
     ); /* Устанавливает максимальную высоту для 5 строк */
-  }
-
-  @media (min-width: 1024px) {
-    font-size: 0.9rem;
   }
 `;

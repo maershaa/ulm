@@ -1,16 +1,11 @@
 import styled from '@emotion/styled';
 
 export const Container = styled.div`
-    max-width: 1200px;
-  width: 100%;
-  min-height: 100vh;
-  
   display: flex;
   justify-content: center;
   align-items: center;
 
-  padding: 80px 20px;
-  margin: 0 auto;
+  padding: 40px 20px;
 
   @media (min-width: 768px) {
     padding-left: 32px;
@@ -30,22 +25,20 @@ export const Block = styled.div`
   background-color: var(--primary-text-color-light);
   background-position: center center;
 
-  padding: 20px;
-
   width: 100%;
   min-height: 400px;
+  padding: 20px;
+
   border-radius: 10px;
 
   @media (min-width: 768px) {
     padding: 40px;
-
   }
-
 `;
 
 export const InfoContainer = styled.div`
-  width: 80%;
-  padding: 60px 40px;
+  width: 100%;
+  padding: 40px 20px;
 
   display: flex;
   justify-content: center;
@@ -57,27 +50,26 @@ export const InfoContainer = styled.div`
 
   background-color: var(--primary-text-color-light);
 
-
-  @media (min-width: 900px) {
-    width: 50%;
+  @media (min-width: 768px) {
+    width: 80%;
+    padding: 60px 40px;
   }
 
-
+  @media (min-width: 1000px) {
+    width: 50%;
+  }
 `;
-
 export const AboutUsInfo = styled.p`
   text-align: left;
 
   color: var(--primary-bg-dark-color);
   background-color: var(--primary-text-color-light);
-  
-  font-size: 1.4rem;
+
+  font-size: 0.9rem;
   line-height: 1.2;
 
   @media (min-width: 768px) {
-    font-size: 0.9rem;
+    font-size: 1rem;
     padding: 0 10px 0 0;
   }
-
-
 `;

@@ -1,9 +1,6 @@
 import styled from '@emotion/styled';
 
 export const Container = styled.div`
-  max-width: 1200px;
-  width: 100%;
-  min-height: 100vh; //! vh обозначает "viewport height", что означает "процент от высоты окна просмотра". 100vh означает 100% от высоты видимого окна браузера */
 
   display: flex;
   justify-content: center;
@@ -13,7 +10,9 @@ export const Container = styled.div`
 
   margin-right: auto;
   margin-left: auto;
-  padding-top: 20px;
+
+  padding: 40px 20px; 
+
 `;
 
 export const ProductsList = styled.ul`
@@ -22,14 +21,11 @@ export const ProductsList = styled.ul`
   align-items: center;
   flex-wrap: wrap;
 
-  padding: 20px;
-  margin-bottom: 30px;
   gap: 10px;
 
   align-items: stretch; //! Устанавливает одинаковую высоту для всех элементов
 
   @media (min-width: 768px) {
-    margin-bottom: 80px;
     gap: 20px;
   }
 
