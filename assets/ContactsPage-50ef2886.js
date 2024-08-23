@@ -1,4 +1,4 @@
-import{n as r,j as e,a as s}from"./index-3b7a79a4.js";import{T as l}from"./Title-137a5689.js";const c=r.div`
+import{n as r,j as e,a as s}from"./index-706cd0d7.js";import{T as l}from"./Title-caa435ae.js";const m=r.div`
  max-width: 100%;
   /* width: 370px;  */
   margin: 0 auto; 
@@ -45,7 +45,7 @@ import{n as r,j as e,a as s}from"./index-3b7a79a4.js";import{T as l}from"./Title
     border-color: #007bff;
     outline: none;
   }
-`,m=r.textarea`
+`,c=r.textarea`
   width: 100%;
   padding: 10px;
   border: 1px solid #ddd;
@@ -86,7 +86,7 @@ import{n as r,j as e,a as s}from"./index-3b7a79a4.js";import{T as l}from"./Title
   &:hover {
     background-color: #196f97;
   }
-`,p=()=>e.jsx(c,{children:e.jsxs("form",{children:[e.jsxs(o,{children:[e.jsx(n,{htmlFor:"fullName",children:"Повне Ім'я"}),e.jsx(d,{type:"text",id:"fullName",name:"fullName",placeholder:"Ваше повне ім'я",required:!0})]}),e.jsxs(o,{children:[e.jsx(n,{htmlFor:"phone",children:"Телефон"}),e.jsx(d,{type:"tel",id:"phone",name:"phone",placeholder:"Ваш телефон",required:!0})]}),e.jsxs(o,{children:[e.jsx(n,{htmlFor:"email",children:"Електронна Адреса"}),e.jsx(d,{type:"email",id:"email",name:"email",placeholder:"Ваш email",required:!0})]}),e.jsxs(o,{children:[e.jsx(n,{htmlFor:"message",children:"Текст повідомлення"}),e.jsx(m,{id:"message",name:"message",rows:"4",placeholder:"Ваше повідомлення",required:!0})]}),e.jsx(x,{type:"submit",children:"Зв'яжіться з нами"})]})}),h=r.div`
+`,p=()=>e.jsx(m,{children:e.jsxs("form",{children:[e.jsxs(o,{children:[e.jsx(n,{htmlFor:"fullName",children:"Повне Ім'я"}),e.jsx(d,{type:"text",id:"fullName",name:"fullName",placeholder:"Ваше повне ім'я",required:!0})]}),e.jsxs(o,{children:[e.jsx(n,{htmlFor:"phone",children:"Телефон"}),e.jsx(d,{type:"tel",id:"phone",name:"phone",placeholder:"Ваш телефон",required:!0})]}),e.jsxs(o,{children:[e.jsx(n,{htmlFor:"email",children:"Електронна Адреса"}),e.jsx(d,{type:"email",id:"email",name:"email",placeholder:"Ваш email",required:!0})]}),e.jsxs(o,{children:[e.jsx(n,{htmlFor:"message",children:"Текст повідомлення"}),e.jsx(c,{id:"message",name:"message",rows:"4",placeholder:"Ваше повідомлення",required:!0})]}),e.jsx(x,{type:"submit",children:"Зв'яжіться з нами"})]})}),h=r.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -114,6 +114,10 @@ import{n as r,j as e,a as s}from"./index-3b7a79a4.js";import{T as l}from"./Title
   font-size: 1rem;
 
   line-height: 1.2;
+
+  @media (min-width: 768px) {
+    font-size: 1.1rem;
+  }
 `,a=r.div`
   margin-right: 8px;
 
@@ -128,7 +132,11 @@ import{n as r,j as e,a as s}from"./index-3b7a79a4.js";import{T as l}from"./Title
 
   display: flex;
   align-items: center;
-  font-size: 16px;
+  font-size: 1rem;
+
+  @media (min-width: 768px) {
+    font-size: 1.1rem;
+  }
   &:hover {
     text-decoration: underline;
   }

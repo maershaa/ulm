@@ -1,4 +1,4 @@
-import{n as i,j as t}from"./index-3b7a79a4.js";import{T as n}from"./Title-137a5689.js";const r=i.div`
+import{n as e,j as t}from"./index-706cd0d7.js";import{T as s}from"./Title-caa435ae.js";const n=e.div`
 
   display: flex;
   justify-content: center;
@@ -11,7 +11,7 @@ import{n as i,j as t}from"./index-3b7a79a4.js";import{T as n}from"./Title-137a56
 
   padding: 40px 20px; 
 
-`,s=i.ul`
+`,r=e.ul`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,7 +28,7 @@ import{n as i,j as t}from"./index-3b7a79a4.js";import{T as n}from"./Title-137a56
   @media (min-width: 1280px) {
     gap: 30px;
   }
-`,c=i.li`
+`,c=e.li`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -53,16 +53,16 @@ import{n as i,j as t}from"./index-3b7a79a4.js";import{T as n}from"./Title-137a56
     // !Элемент занимает 33.3333% ширины контейнера, минус 30 пикселей. Это делит экран на три столбца.
     flex-basis: calc(33.3333% - 30px);
   }
-`,o=i.div`
+`,l=e.div`
   width: 100%;
-`,d=i.img`
+`,o=e.img`
   width: 100%;
   height: auto;
   object-fit: cover;
   aspect-ratio: 1 / 1;
 
   border-radius: 50%;
-`,l=i.h3`
+`,m=e.h3`
   margin-top: 10px;
   color: var(--accent-color);
 
@@ -76,7 +76,7 @@ import{n as i,j as t}from"./index-3b7a79a4.js";import{T as n}from"./Title-137a56
   @media (min-width: 1024px) {
     font-size: 1.2rem;
   }
-`,m=i.p`
+`,d=e.p`
   margin-top: 10px;
   color: var(--accent-color);
 
@@ -91,4 +91,4 @@ import{n as i,j as t}from"./index-3b7a79a4.js";import{T as n}from"./Title-137a56
   @media (min-width: 1024px) {
     font-size: 1.1rem;
   }
-`,p="/ulm/assets/can_drawn-f63c393c.jpg",x="/ulm/assets/metal_lids-a0b30bed.jpeg",a={can_drawn:p,metal_lids:x},g=[{id:1,title:"Цельнотянуті банки",description:"№21, 1, 2, 3, 38, 5, 6, 8.",imageSrc:a.can_drawn,alt:"Цельнотянуті банки"},{id:2,title:"Металеві кришки",description:"72,4мм, 83,4мм, 99мм.",imageSrc:a.metal_lids,alt:"Металеві кришки"},{id:3,title:"Металеві кришки для скляних консервних банок",description:"СКО 1-82, 1-63, 1-58.",imageSrc:a.can_drawn,alt:"Металеві кришки для скляних консервних банок"},{id:4,title:"Алюмінієва тара для їжі швидкого приготування",description:"ТУТ ДОЛЖЕН БЫТЬ ТЕКСТ!!!!!!!!!!",imageSrc:a.can_drawn,alt:"Алюмінієва тара для їжі швидкого приготування"},{id:5,title:"Металеві підноси різних розмірів",description:"ТУТ ДОЛЖЕН БЫТЬ ТЕКСТ!!!!!!!!!!",imageSrc:a.can_drawn,alt:"Металеві підноси різних розмірів"}],w=()=>t.jsxs(r,{className:"container",children:[t.jsx(n,{title:"ПРОДУКЦІЯ"}),t.jsx(s,{children:g.map(e=>t.jsx(c,{children:t.jsxs(o,{children:[t.jsx(d,{src:e.imageSrc,alt:e.alt}),t.jsx(l,{children:e.title}),t.jsx(m,{children:e.description})]})},e.id))})]});export{w as default};
+`,p="/ulm/assets/can_drawn-f63c393c.jpg",x="/ulm/assets/metal_lids-a0b30bed.jpeg",g="/ulm/assets/glass_can_lids-d13d283e.jpeg",f="/ulm/assets/aluminum_packaging-7f38eb59.jpg",u="/ulm/assets/metal_trays-e81faa67.jpeg",a={can_drawn:p,metal_lids:x,glass_can_lids:g,aluminum_packaging:f,metal_trays:u},h=[{id:1,title:"Цельнотянуті банки",description:"№21, 1, 2, 3, 38, 5, 6, 8.",imageSrc:a.can_drawn,alt:"Цельнотянуті банки"},{id:2,title:"Металеві кришки",description:"72,4мм, 83,4мм, 99мм.",imageSrc:a.metal_lids,alt:"Металеві кришки"},{id:3,title:"Металеві кришки для скляних консервних банок",description:"СКО 1-82, 1-63, 1-58.",imageSrc:a.glass_can_lids,alt:"Металеві кришки для скляних консервних банок"},{id:4,title:"Алюмінієва тара для їжі швидкого приготування",description:"ТУТ ДОЛЖЕН БЫТЬ ТЕКСТ!!!!!!!!!!",imageSrc:a.aluminum_packaging,alt:"Алюмінієва тара для їжі швидкого приготування"},{id:5,title:"Металеві підноси різних розмірів",description:"ТУТ ДОЛЖЕН БЫТЬ ТЕКСТ!!!!!!!!!!",imageSrc:a.metal_trays,alt:"Металеві підноси різних розмірів"}],_=()=>t.jsxs(n,{className:"container",children:[t.jsx(s,{title:"ПРОДУКЦІЯ"}),t.jsx(r,{children:h.map(i=>t.jsx(c,{children:t.jsxs(l,{children:[t.jsx(o,{src:i.imageSrc,alt:i.alt}),t.jsx(m,{children:i.title}),t.jsx(d,{children:i.description})]})},i.id))})]});export{_ as default};
