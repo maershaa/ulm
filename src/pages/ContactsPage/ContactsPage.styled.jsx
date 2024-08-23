@@ -36,6 +36,10 @@ export const ContactInfo = styled.p`
   font-size: 1rem;
 
   line-height: 1.2;
+
+  @media (min-width: 768px) {
+    font-size: 1.1rem;
+  }
 `;
 
 export const Icon = styled.div`
@@ -54,7 +58,11 @@ export const ContactLink = styled.a`
 
   display: flex;
   align-items: center;
-  font-size: 16px;
+  font-size: 1rem;
+
+  @media (min-width: 768px) {
+    font-size: 1.1rem;
+  }
   &:hover {
     text-decoration: underline;
   }

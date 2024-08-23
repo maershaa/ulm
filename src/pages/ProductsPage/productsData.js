@@ -21,24 +21,21 @@ const productsData = [
     id: 3,
     title: 'Металеві кришки для скляних консервних банок',
     description: 'СКО 1-82, 1-63, 1-58.',
-    imageSrc: images.can_drawn,
-    // imageSrc: images.glass_can_lids,
+    imageSrc: images.glass_can_lids,
     alt: 'Металеві кришки для скляних консервних банок'
   },
   {
     id: 4,
     title: 'Алюмінієва тара для їжі швидкого приготування',
     description: 'ТУТ ДОЛЖЕН БЫТЬ ТЕКСТ!!!!!!!!!!',
-    imageSrc: images.can_drawn,
-    // imageSrc: images.aluminum_packaging,
+    imageSrc: images.aluminum_packaging,
     alt: 'Алюмінієва тара для їжі швидкого приготування'
   },
   {
     id: 5,
     title: 'Металеві підноси різних розмірів',
     description: 'ТУТ ДОЛЖЕН БЫТЬ ТЕКСТ!!!!!!!!!!',
-    imageSrc: images.can_drawn,
-    // imageSrc: images.metal_trays,
+    imageSrc: images.metal_trays,
     alt: 'Металеві підноси різних розмірів'
   }
 ];
