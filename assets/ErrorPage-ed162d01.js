@@ -1,8 +1,7 @@
-import{n as e,j as t}from"./index-142e6ed9.js";const r=e.div`
+import{n as e,j as t}from"./index-3b7a79a4.js";const r=e.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 500px;
 `,a=e.h1`
   color: var(--primary-text-color-light);
   text-shadow:
@@ -11,4 +10,4 @@ import{n as e,j as t}from"./index-142e6ed9.js";const r=e.div`
     0 0 20px #00baff,
     0 0 40px #00baff,
     0 0 80px #00baff;
-`,o=()=>t.jsx(r,{children:t.jsx(a,{children:"404"})});export{o as default};
+`,o=()=>t.jsx(r,{className:"container",children:t.jsx(a,{children:"404"})});export{o as default};
