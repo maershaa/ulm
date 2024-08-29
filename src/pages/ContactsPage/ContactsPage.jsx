@@ -21,7 +21,7 @@ const ContactsPage = () => {
         <Address>
           <ContactInfo>ТОВ "Южлитографметалл"</ContactInfo>
           <ContactInfo>Застава II, вул. Привозна, 1</ContactInfo>
-          <ContactInfo>Одеса 65098, Україна</ContactInfo>
+          <ContactInfo>Одеса, 65098, Україна</ContactInfo>
         </Address>
 
         <Phone>
