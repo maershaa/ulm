@@ -13,6 +13,13 @@ export const HeroContainer = styled.div`
   flex-wrap: wrap;
   flex-direction: column;
 
+  background-image: linear-gradient(
+      to right,
+      rgba(3, 37, 65, 0.9) 0%,
+      rgba(3, 37, 65, 0) 100%
+    ),
+    url(${(props) => props.heroImageTablet});
+    
   @media (min-width: 450px) {
     background-image: linear-gradient(
       to right,

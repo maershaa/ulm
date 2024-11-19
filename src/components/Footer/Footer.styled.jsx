@@ -104,6 +104,7 @@ export const CopyrightText = styled.p`
   color: var(--primary-text-color-light);
 
 margin: 0;
+margin-bottom: 10px;
 `;
 
 export const StyledLink = styled.a`

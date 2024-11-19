@@ -1,12 +1,13 @@
 import React from 'react';
 import { HeroContainer, Block, HeroPrimaryText, HeroInfo } from './Hero.styled';
 import heroImage from '../../assets/Hero/hero.jpeg';
-import heroImageMobile from '../../assets/Hero/lots_of_tins.jpeg';
+import heroImageTablet from '../../assets/Hero/lots_of_tins.jpeg';
+import heroImageMobile from '../../assets/Hero/lots_of_tins_mb.jpeg';
 
 import ContactUsForm from '../ContactUsForm/ContactUsForm';
 const Hero = () => {
   return (
-    <HeroContainer heroImage={heroImage} heroImageMobile={heroImageMobile}>
+    <HeroContainer heroImage={heroImage} heroImageTablet={heroImageTablet} heroImageMobile={heroImageMobile}>
       <Block>
         <HeroPrimaryText>
           {' '}
