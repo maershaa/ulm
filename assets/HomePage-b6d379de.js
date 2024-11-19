@@ -1,10 +1,10 @@
-import{n as e,j as t}from"./index-ab935b23.js";import{C as r,a as o}from"./ContactsPage-aa48206c.js";import n from"./AboutUsPage-33d2e5fa.js";import a from"./FeaturesPage-90e1d9b8.js";import m from"./ProductsPage-c692eb20.js";import"./Title-ee4a5f66.js";const s=e.div`
+import{n as t,j as e}from"./index-b6216361.js";import{C as i,a as o}from"./ContactsPage-6c2cdf1e.js";import n from"./AboutUsPage-b44b8d1e.js";import a from"./FeaturesPage-45723a7f.js";import m from"./ProductsPage-f0291e99.js";import"./Title-0321666e.js";const s=t.div`
   display: flex;
   justify-content: center;
   align-items: center;  
-`,d=e.div`
+`,g=t.div`
   text-align: center;
-`,c=e.div`
+`,d=t.div`
 
   background-color: rgb(3, 37, 65);
 
@@ -17,13 +17,20 @@ import{n as e,j as t}from"./index-ab935b23.js";import{C as r,a as o}from"./Conta
   flex-wrap: wrap;
   flex-direction: column;
 
+  background-image: linear-gradient(
+      to right,
+      rgba(3, 37, 65, 0.9) 0%,
+      rgba(3, 37, 65, 0) 100%
+    ),
+    url(${r=>r.heroImageTablet});
+    
   @media (min-width: 450px) {
     background-image: linear-gradient(
       to right,
       rgba(3, 37, 65, 0.9) 0%,
       rgba(3, 37, 65, 0) 100%
     ),
-    url(${i=>i.heroImageMobile});
+    url(${r=>r.heroImageMobile});
   background-size: cover;
   background-repeat: no-repeat;
   background-color: rgb(3, 37, 65);
@@ -43,9 +50,9 @@ import{n as e,j as t}from"./index-ab935b23.js";import{C as r,a as o}from"./Conta
         rgba(3, 37, 65, 0.9) 0%,
         rgba(3, 37, 65, 0) 100%
       ),
-      url(${i=>i.heroImage});
+      url(${r=>r.heroImage});
   }
-`,g=e.div`
+`,l=t.div`
   text-align: center;
   width: 90%;
   text-align: center;
@@ -56,7 +63,7 @@ import{n as e,j as t}from"./index-ab935b23.js";import{C as r,a as o}from"./Conta
     width: 50%;
     margin-bottom: 0;
   }
-`,l=e.h2`
+`,c=t.h2`
   color: var(--primary-text-color-light);
 
   margin-bottom: 10px;
@@ -84,7 +91,7 @@ import{n as e,j as t}from"./index-ab935b23.js";import{C as r,a as o}from"./Conta
     margin-top: 20px; 
     margin-bottom: 20px; 
   }
-`,x=e.h3`
+`,x=t.h3`
   color: #ffffff;
 
   margin-bottom: 10px;
@@ -101,4 +108,4 @@ import{n as e,j as t}from"./index-ab935b23.js";import{C as r,a as o}from"./Conta
   @media (min-width: 768px) {
     text-align: left;
   }
-`,p="/ulm/assets/hero-4c7cc523.jpeg",h="/ulm/assets/lots_of_tins-b51adc3e.jpeg",f=()=>t.jsxs(c,{heroImage:p,heroImageMobile:h,children:[t.jsxs(g,{children:[t.jsxs(l,{children:[" ","Виробник металевих рішень, що відповідають вашим стандартам"," "]}),t.jsx(x,{children:"Здійснюємо виробництво металевої продукції з 1994 року. Наші банки, підноси та кришки – це поєднання надійності, функціональності та високих стандартів."})]}),t.jsx(r,{})]}),P=()=>t.jsx(s,{children:t.jsxs(d,{children:[t.jsx(f,{}),t.jsx(n,{}),t.jsx(a,{}),t.jsx(m,{}),t.jsx(o,{})]})});export{P as default};
+`,p="/ulm/assets/hero-4c7cc523.jpeg",h="/ulm/assets/lots_of_tins-b51adc3e.jpeg",f="/ulm/assets/lots_of_tins_mb-7041297b.jpeg",b=()=>e.jsxs(d,{heroImage:p,heroImageTablet:h,heroImageMobile:f,children:[e.jsxs(l,{children:[e.jsxs(c,{children:[" ","Виробник металевих рішень, що відповідають вашим стандартам"," "]}),e.jsx(x,{children:"Здійснюємо виробництво металевої продукції з 1994 року. Наші банки, підноси та кришки – це поєднання надійності, функціональності та високих стандартів."})]}),e.jsx(i,{})]}),P=()=>e.jsx(s,{children:e.jsxs(g,{children:[e.jsx(b,{}),e.jsx(n,{}),e.jsx(a,{}),e.jsx(m,{}),e.jsx(o,{})]})});export{P as default};

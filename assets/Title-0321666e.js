@@ -1,4 +1,4 @@
-import{n as r,j as i}from"./index-ab935b23.js";const e=r.h2`
+import{n as r,j as i}from"./index-b6216361.js";const e=r.h2`
   display: inline;
   margin: 0;
   margin-right: 10px;
