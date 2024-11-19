@@ -9,7 +9,7 @@ import {
   ContactLink,
   Icon,
   CopyrightText,
-  StyledLink
+  StyledLink,
 } from './Footer.styled';
 import sprite from '/src/assets/icons.svg';
 
@@ -19,8 +19,11 @@ export const Footer = () => {
       <Container>
         <Logo />
         <CopyrightText>
-        Copyright © 2024 <StyledLink href="https://www.linkedin.com/in/valeriiayefremova/">Валерія Єфремова</StyledLink>
-      </CopyrightText>
+          Copyright © 2024{' '}
+          <StyledLink href="https://www.linkedin.com/in/valeriiayefremova/">
+            Валерія Єфремова
+          </StyledLink>
+        </CopyrightText>
       </Container>
 
       <Address>

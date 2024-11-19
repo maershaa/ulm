@@ -4,14 +4,18 @@ export const FooterContainer = styled.div`
   min-width:100%;
   
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  text-align: center;
 
   background-color: var(--primary-bg-dark-color);
 
-  padding: 0 15px;
+  padding: 15px;
+
   margin-left: auto;
   margin-right: auto;
+
   border-bottom: 1px solid #196f97;
   box-shadow:
     rgba(46, 47, 66, 0.08) 0px 2px 1px,
@@ -20,14 +24,25 @@ export const FooterContainer = styled.div`
 
   @media (min-width: 768px) {
     padding: 0 25px;
+    flex-direction: row;
+    justify-content: space-between;
   }
 `;
 
 export const Container = styled.div`
-  
+    order: 3; /* По умолчанию для мобильных внизу */
+    
+    max-width: 200px;
+
+  @media (min-width: 768px) {
+    order: 0; /* Для планшетов и десктопов отображается первым */
+
+    max-width: 300px;
+  }
 `;
 
 export const Address = styled.address`
+  order: 1;
 
   max-width: 200px;
 
@@ -37,6 +52,7 @@ export const Address = styled.address`
 `;
 
 export const Phone = styled.div`
+  order: 2;
 
 max-width: 200px;
 
