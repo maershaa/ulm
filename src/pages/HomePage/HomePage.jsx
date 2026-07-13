@@ -1,27 +1,18 @@
-import React from 'react'
-import { Container, Block} from './HomePage.styled';
-import Hero from '../../components/Hero/Hero'
-import AboutUsPage from '../AboutUsPage/AboutUsPage'
-
-import FeaturesPage from '../FeaturesPage/FeaturesPage'
-import ProductsPage from '../ProductsPage/ProductsPage'
-import ContactsPage from '../ContactsPage/ContactsPage'
-
-
-
-
+import { Hero, AboutUsSection, FeaturesSection } from '@/features';
 const HomePage = () => {
   return (
-    <Container>
-      <Block>
-<Hero />
-<AboutUsPage />
-<FeaturesPage />
-<ProductsPage />
-<ContactsPage />
-      </Block>
-    </Container>
-  )
-}
+    <div>
+      <div>
+        <Hero />
+        <div id="aboutUs">
+          <AboutUsSection />
+        </div>
+        <div id="features">
+          <FeaturesSection />
+        </div>
+      </div>
+    </div>
+  );
+};
 
-export default HomePage
+export default HomePage;

@@ -1,11 +1,9 @@
-import React from 'react';
 import {
   ModalContainer,
   ModalContent,
   CloseButton,
   ModalImage,
-  ModalText
-
+  ModalText,
 } from './FeaturesModal.styled';
 
 // Основной компонент модалки
@@ -24,7 +22,7 @@ const FeaturesModal = ({ show, onClose, text, imageSrc }) => {
     <ModalContainer onClick={handleBackdropClick}>
       <ModalContent onClick={(e) => e.stopPropagation()}>
         <CloseButton onClick={onClose}>×</CloseButton>
-        <ModalImage src={imageSrc} alt="Expanded view" />
+        <ModalImage src={imageSrc} alt="Expanded view" loading="lazy" />
         <ModalText>{text}</ModalText>
       </ModalContent>
     </ModalContainer>

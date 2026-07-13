@@ -1,0 +1,68 @@
+import { useState } from 'react';
+import {
+  Wrapper,
+  FeatureGrid,
+  FeatureItem,
+  TextContainer,
+  StyledImage,
+  FeatureItemTitle,
+  FeatureItemText,
+} from './FeaturesSection.styled';
+import FeaturesModal from '@/components/FeaturesModal/FeaturesModal';
+import { featuresData } from '@/constants';
+import { Title } from '@/components';
+
+const FeaturesSection = () => {
+  // Состояние для отображения или скрытия модалки
+  const [showFeaturesModal, setShowFeaturesModal] = useState(false);
+
+  // Состояние для хранения данных текущей особенности, которые будут отображаться в модалке
+  const [modalContent, setModalContent] = useState({});
+
+  // Функция для открытия модалки и установки данных выбранной особенности
+  const openFeaturesModal = (feature) => {
+    setModalContent(feature); // Устанавливаем данные текущей особенности
+    setShowFeaturesModal(true); // Отображаем модалку
+  };
+
+  // Функция для закрытия модалки
+  const closeFeaturesModal = () => {
+    setShowFeaturesModal(false); // Скрываем модалку
+  };
+
+  return (
+    <Wrapper>
+      <Title title="ПЕРЕВАГИ" />
+      <FeatureGrid>
+        {featuresData.map((feature) => (
+          <FeatureItem
+            key={feature.id}
+            onClick={() => openFeaturesModal(feature)}
+          >
+            <StyledImage
+              src={feature.imageSrc}
+              alt={feature.alt}
+              loading="lazy"
+            />
+            <TextContainer>
+              <FeatureItemTitle>{feature.title}</FeatureItemTitle>
+              <FeatureItemText>{feature.description}</FeatureItemText>
+            </TextContainer>
+          </FeatureItem>
+        ))}
+      </FeatureGrid>
+
+      {/* Компонент модалки */}
+      {showFeaturesModal && (
+        <FeaturesModal
+          show={showFeaturesModal}
+          onClose={closeFeaturesModal}
+          text={modalContent.description}
+          imageSrc={modalContent.imageSrc}
+        />
+      )}
+    </Wrapper>
+  );
+};
+
+export { FeaturesSection };
