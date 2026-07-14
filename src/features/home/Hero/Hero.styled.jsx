@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const HeroContainer = styled.div`
   background-color: rgb(3, 37, 65);
@@ -17,15 +18,14 @@ export const HeroContainer = styled.div`
       rgba(3, 37, 65, 0.9) 0%,
       rgba(3, 37, 65, 0) 100%
     ),
-    url(${(props) => props.heroImageTablet});
-
+    url(${(props) => props.$heroImageTablet});
   @media (min-width: 450px) {
     background-image: linear-gradient(
         to right,
         rgba(3, 37, 65, 0.9) 0%,
         rgba(3, 37, 65, 0) 100%
       ),
-      url(${(props) => props.heroImageMobile});
+      url(${(props) => props.$heroImageMobile});
     background-size: cover;
     background-repeat: no-repeat;
     background-color: rgb(3, 37, 65);
@@ -38,24 +38,14 @@ export const HeroContainer = styled.div`
   @media (min-width: 768px) {
     flex-wrap: nowrap;
     flex-direction: row;
-    height: 600px;
+    /* height: 600px; */
 
     background-image: linear-gradient(
         to right,
         rgba(3, 37, 65, 0.9) 0%,
         rgba(3, 37, 65, 0) 100%
       ),
-      url(${(props) => props.heroImage});
-  }
-
-  div {
-    display: inline-flex;
-    flex-direction: column;
-    gap: 20px;
-
-    a {
-      background-color: pink;
-    }
+      url(${(props) => props.$heroImage});
   }
 `;
 
@@ -95,7 +85,7 @@ export const HeroPrimaryText = styled.h2`
   &::after {
     content: '';
     display: block;
-    border-top: 6px solid #1274a2;
+    border-top: 6px solid var(--light-accent);
     width: 100px;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -117,5 +107,48 @@ export const HeroInfo = styled.h3`
 
   @media (min-width: 768px) {
     text-align: left;
+  }
+`;
+
+export const ButtonsGroup = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+
+  @media (min-width: 450px) {
+    flex-direction: row;
+    width: auto;
+  }
+`;
+
+export const StyledLink = styled(Link)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 14px 28px;
+  border-radius: 10px;
+
+  transition: all 0.2s ease;
+
+  width: 100%;
+  margin-top: 20px;
+  @media (min-width: 450px) {
+    width: auto;
+  }
+
+  background-color: var(--light-accent);
+  opacity: 0.8;
+  color: var(--primary-text-color-light);
+
+  &:hover {
+    transform: translateY(-2px);
+    opacity: 1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
 `;

@@ -19,7 +19,7 @@ export const Wrapper = styled.div`
 `;
 
 export const Block = styled.div`
-  background-image: url(${(props) => props.bgImageAboutUsPage});
+  background-image: url(${(props) => props.$bgImageAboutUsPage});
   background-size: cover;
   background-repeat: no-repeat;
   background-color: var(--primary-text-color-light);
@@ -44,6 +44,8 @@ export const InfoContainer = styled.div`
   flex-direction: column;
   flex-wrap: wrap;
 
+  gap: 20px;
+
   justify-content: center;
   align-items: center;
 
@@ -53,6 +55,10 @@ export const InfoContainer = styled.div`
   @media (min-width: 768px) {
     max-width: 500px;
     padding: 60px 40px;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 600px;
   }
 `;
 export const AboutUsInfo = styled.p`

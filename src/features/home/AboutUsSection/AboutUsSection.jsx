@@ -10,7 +10,7 @@ import bgImageAboutUsPage from '@/assets/images/aboutUs/bg-tin.jpeg';
 const AboutUsSection = () => {
   return (
     <Wrapper>
-      <Block bgImageAboutUsPage={bgImageAboutUsPage}>
+      <Block $bgImageAboutUsPage={bgImageAboutUsPage}>
         <InfoContainer>
           <Title title="Про нас" />
           <AboutUsInfo>

@@ -1,11 +1,10 @@
 import { useState, useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { HeaderContainer } from './Header.styled';
-import { Logo } from '@/components';
+import { Logo, ThemeSwitcher } from '@/components';
 import NavMenu from './NavMenu/NavMenu';
 import BurgerMenuButton from './BurgerMenuButton/BurgerMenuButton';
 import MobileMenu from './MobileMenu/MobileMenu';
-
 const Header = () => {
   // Состояние для отображения или скрытия меню
   const [isOpenMenu, setIsOpenMenu] = useState(false);
@@ -40,7 +39,7 @@ const Header = () => {
           setIsOpenMenu={setIsOpenMenu}
         />
       )}
-
+      <ThemeSwitcher setIsOpenMenu={setIsOpenMenu} />
       {/* Отображаем мобильное меню, если оно открыто и экран не является десктопным */}
       {isOpenMenu && !isDesktop && <MobileMenu handleClick={handleClick} />}
     </HeaderContainer>

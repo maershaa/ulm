@@ -6,13 +6,27 @@
   padding: 0;
 }
 
+:root {
+  /* ==========================================
+     БАЗОВЫЕ НАСТРОЙКИ
+     ========================================== */
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-round: 50%;
+
+  /* Transitions */
+  --transition-base: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 :root,
 [data-theme='light'] {
   /* бренд / акценты */
   --primary-bg-dark-color: #032541; /* фон Header/Footer/Hero */
   --accent-color: #045174;
-  --accent-teal: #12a594; /* акцентный блик в SharedLayout */
-  --accent-copper: #d98a4c; /* акцентный блик в SharedLayout */
+  --light-accent: #1274a2;
 
   /* текст */
   --primary-text-color-light: #ffffff;
@@ -22,6 +36,30 @@
   /* фон страницы */
   --page-bg-color: hsl(0, 12%, 97%);
   --surface-bg-color: #f6f4f1;
+
+  /* границы / свечение */
+  --border-color: rgba(3, 37, 65, 0.12);
+  --border-color-strong: rgba(3, 37, 65, 0.24);
+  --glow-color: rgba(18, 116, 162, 0.25);
+  --shadow-color: rgba(46, 47, 66, 0.12);
+}
+
+[data-theme='dark'] {
+  --primary-bg-dark-color: #032541;
+  --accent-color: #0d3a56;
+  --light-accent: #4ea8d8;
+
+  --primary-text-color-light: #ffffff;
+  --text-color: #f5f3ef;
+  --text-color-muted: rgba(245, 243, 239, 0.6);
+
+  --page-bg-color: #0b1620;
+  --surface-bg-color: #142130;
+
+  --border-color: rgba(245, 243, 239, 0.12);
+  --border-color-strong: rgba(245, 243, 239, 0.24);
+  --glow-color: rgba(78, 168, 216, 0.35);
+  --shadow-color: rgba(0, 0, 0, 0.4);
 }
 
 html {

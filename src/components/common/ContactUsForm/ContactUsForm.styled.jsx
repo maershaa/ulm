@@ -41,7 +41,7 @@ export const FormInput = styled.input`
   width: 100%;
   padding: 10px;
   border: 1px solid #ddd;
-  border-radius: 4px;
+  border-radius: var(--radius-sm);
   font-size: 0.9rem;
   box-sizing: border-box;
 
@@ -59,7 +59,7 @@ export const FormTextarea = styled.textarea`
   width: 100%;
   padding: 10px;
   border: 1px solid #ddd;
-  border-radius: 4px;
+  border-radius: var(--radius-sm);
   font-size: 0.9rem;
   box-sizing: border-box;
 
@@ -78,7 +78,7 @@ export const FormButton = styled.button`
 
   padding: 0.75rem 1.1rem;
   text-transform: uppercase;
-  border-radius: 4px;
+  border-radius: var(--radius-sm);
   border: none;
 
   font-size: 0.9rem;

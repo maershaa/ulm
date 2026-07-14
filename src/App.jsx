@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import { SharedLayout } from '@/components';
-import { lazy } from 'react';
+import { lazy, useContext } from 'react';
+import { ThemeContext } from '@/context/theme/ThemeContext';
 
 const HomePage = lazy(() => import('@/pages/HomePage/HomePage.jsx'));
 const ProductsPage = lazy(() => import('./pages/ProductsPage/ProductsPage'));
@@ -10,8 +11,10 @@ const ErrorPage = lazy(() => import('./pages/ErrorPage/ErrorPage'));
 import { AppWrapper } from './App.styled';
 
 function App() {
+  const { theme } = useContext(ThemeContext);
+
   return (
-    <AppWrapper>
+    <AppWrapper data-theme={theme}>
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<HomePage />} />
