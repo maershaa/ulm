@@ -1,4 +1,4 @@
-import{j as e,T as n,s as i}from"./index-067a1dbe.js";const o=({title:t})=>e.jsx(n,{children:t}),r=i.div`
+import{j as e,T as n,s as i,L as a}from"./index-13223bc0.js";const r=({title:t})=>e.jsx(n,{children:t}),d=i.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,8 +14,8 @@ import{j as e,T as n,s as i}from"./index-067a1dbe.js";const o=({title:t})=>e.jsx
     /* padding-left: 20px;
     padding-right: 20px; */
   }
-`,d=i.div`
-  background-image: url(${t=>t.bgImageAboutUsPage});
+`,p=i.div`
+  background-image: url(${t=>t.$bgImageAboutUsPage});
   background-size: cover;
   background-repeat: no-repeat;
   background-color: var(--primary-text-color-light);
@@ -38,6 +38,8 @@ import{j as e,T as n,s as i}from"./index-067a1dbe.js";const o=({title:t})=>e.jsx
   flex-direction: column;
   flex-wrap: wrap;
 
+  gap: 20px;
+
   justify-content: center;
   align-items: center;
 
@@ -48,7 +50,11 @@ import{j as e,T as n,s as i}from"./index-067a1dbe.js";const o=({title:t})=>e.jsx
     max-width: 500px;
     padding: 60px 40px;
   }
-`,p=i.p`
+
+  @media (min-width: 1024px) {
+    max-width: 600px;
+  }
+`,x=i.p`
   text-align: left;
 
   color: var(--primary-bg-dark-color);
@@ -78,15 +84,14 @@ import{j as e,T as n,s as i}from"./index-067a1dbe.js";const o=({title:t})=>e.jsx
       rgba(3, 37, 65, 0.9) 0%,
       rgba(3, 37, 65, 0) 100%
     ),
-    url(${t=>t.heroImageTablet});
-
+    url(${t=>t.$heroImageTablet});
   @media (min-width: 450px) {
     background-image: linear-gradient(
         to right,
         rgba(3, 37, 65, 0.9) 0%,
         rgba(3, 37, 65, 0) 100%
       ),
-      url(${t=>t.heroImageMobile});
+      url(${t=>t.$heroImageMobile});
     background-size: cover;
     background-repeat: no-repeat;
     background-color: rgb(3, 37, 65);
@@ -99,26 +104,16 @@ import{j as e,T as n,s as i}from"./index-067a1dbe.js";const o=({title:t})=>e.jsx
   @media (min-width: 768px) {
     flex-wrap: nowrap;
     flex-direction: row;
-    height: 600px;
+    /* height: 600px; */
 
     background-image: linear-gradient(
         to right,
         rgba(3, 37, 65, 0.9) 0%,
         rgba(3, 37, 65, 0) 100%
       ),
-      url(${t=>t.heroImage});
+      url(${t=>t.$heroImage});
   }
-
-  div {
-    display: inline-flex;
-    flex-direction: column;
-    gap: 20px;
-
-    a {
-      background-color: pink;
-    }
-  }
-`,x=i.div`
+`,c=i.div`
   text-align: center;
   width: 90%;
   text-align: center;
@@ -129,7 +124,7 @@ import{j as e,T as n,s as i}from"./index-067a1dbe.js";const o=({title:t})=>e.jsx
     width: 50%;
     margin-bottom: 0;
   }
-`,c=i.h2`
+`,s=i.h2`
   color: var(--primary-text-color-light);
 
   margin-bottom: 10px;
@@ -152,12 +147,12 @@ import{j as e,T as n,s as i}from"./index-067a1dbe.js";const o=({title:t})=>e.jsx
   &::after {
     content: '';
     display: block;
-    border-top: 6px solid #1274a2;
+    border-top: 6px solid var(--light-accent);
     width: 100px;
     margin-top: 20px;
     margin-bottom: 20px;
   }
-`,s=i.h3`
+`,g=i.h3`
   color: #ffffff;
 
   margin-bottom: 10px;
@@ -174,7 +169,46 @@ import{j as e,T as n,s as i}from"./index-067a1dbe.js";const o=({title:t})=>e.jsx
   @media (min-width: 768px) {
     text-align: left;
   }
-`,g=i.div`
+`,h=i.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+
+  @media (min-width: 450px) {
+    flex-direction: row;
+    width: auto;
+  }
+`,f=i(a)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 14px 28px;
+  border-radius: 10px;
+
+  transition: all 0.2s ease;
+
+  width: 100%;
+  margin-top: 20px;
+  @media (min-width: 450px) {
+    width: auto;
+  }
+
+  background-color: var(--light-accent);
+  opacity: 0.8;
+  color: var(--primary-text-color-light);
+
+  &:hover {
+    transform: translateY(-2px);
+    opacity: 1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+`,w=i.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -182,7 +216,7 @@ import{j as e,T as n,s as i}from"./index-067a1dbe.js";const o=({title:t})=>e.jsx
   flex-direction: column;
 
   padding: 40px 20px;
-`,h=i.ul`
+`,b=i.ul`
   display: grid;
   grid-template-columns: 1fr;
 
@@ -197,7 +231,7 @@ import{j as e,T as n,s as i}from"./index-067a1dbe.js";const o=({title:t})=>e.jsx
   @media (min-width: 1024px) {
     grid-template-columns: 1fr 1fr 1fr;
   }
-`,f=i.li`
+`,u=i.li`
   cursor: pointer;
 
   display: flex;
@@ -218,7 +252,7 @@ import{j as e,T as n,s as i}from"./index-067a1dbe.js";const o=({title:t})=>e.jsx
       flex-direction: column-reverse;
     }
   }
-`,w=i.img`
+`,v=i.img`
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
@@ -231,7 +265,7 @@ import{j as e,T as n,s as i}from"./index-067a1dbe.js";const o=({title:t})=>e.jsx
   @media (min-width: 1024px) {
     max-width: 500px;
   }
-`,b=i.div`
+`,y=i.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -260,7 +294,7 @@ import{j as e,T as n,s as i}from"./index-067a1dbe.js";const o=({title:t})=>e.jsx
     max-width: 500px;
     padding: 32px;
   }
-`,u=i.h4`
+`,k=i.h4`
   text-transform: uppercase;
   margin: 0;
   font-weight: 700;
@@ -274,7 +308,7 @@ import{j as e,T as n,s as i}from"./index-067a1dbe.js";const o=({title:t})=>e.jsx
   @media (min-width: 1024px) {
     font-size: 1.2rem;
   }
-`,v=i.p`
+`,z=i.p`
   position: relative;
   padding: 0 30px;
   font-size: 0.9rem;
@@ -303,7 +337,7 @@ import{j as e,T as n,s as i}from"./index-067a1dbe.js";const o=({title:t})=>e.jsx
       1.2em * 5
     ); /* Устанавливает максимальную высоту для 5 строк */
   }
-`,y=i.div`
+`,j=i.div`
 
 visibility: hidden; //!!! временное решение чтобы не обображать модалку на телефонах
 
@@ -324,7 +358,7 @@ visibility: hidden; //!!! временное решение чтобы не об
   z-index: 1001; //! так как у header 1000  
 }
 
-`,k=i.div`
+`,I=i.div`
   background: white;
   padding: 20px;
   border-radius: 8px;
@@ -333,7 +367,7 @@ visibility: hidden; //!!! временное решение чтобы не об
   position: relative;
 
   
-`,z=i.button`
+`,C=i.button`
   position: absolute;
   top: 10px;
   right: 10px;
@@ -352,7 +386,7 @@ visibility: hidden; //!!! временное решение чтобы не об
   &:hover {
     background-color: rgba(150, 150, 150, 0.8); /* Более темный фон при наведении */
   }
-`,I=i.img`
+`,$=i.img`
   width: 100%; 
   max-width: 400px; 
   height: auto; 
@@ -366,7 +400,7 @@ visibility: hidden; //!!! временное решение чтобы не об
   @media (min-width: 1024px) {
     max-width: 600px;
   }
-`,j=i.p`
+`,T=i.p`
   font-size: 1rem;
   line-height: 1.5;
   color: #333;
@@ -380,7 +414,7 @@ visibility: hidden; //!!! временное решение чтобы не об
   @media (min-width: 1024px) {
     font-size: 1.2rem;
   }
-`,C=i.div`
+`,M=i.div`
   padding: 20px;
   max-width: 600px;
   margin: 0 auto;
@@ -390,9 +424,9 @@ visibility: hidden; //!!! временное решение чтобы не об
   address {
     margin-bottom: 20px;
   }
-`,T=i.div`
+`,P=i.div`
   margin-bottom: 20px;
-`,$=i.p`
+`,B=i.p`
   margin-bottom: 5px;
 
   display: flex;
@@ -404,7 +438,7 @@ visibility: hidden; //!!! временное решение чтобы не об
   @media (min-width: 768px) {
     font-size: 1.1rem;
   }
-`,M=i.div`
+`,F=i.div`
   margin-right: 8px;
 
   svg {
@@ -412,7 +446,7 @@ visibility: hidden; //!!! временное решение чтобы не об
     height: 22px;
     fill: var(--accent-color);
   }
-`,P=i.a`
+`,L=i.a`
   color: #045174;
   text-decoration: none;
 
@@ -426,7 +460,7 @@ visibility: hidden; //!!! временное решение чтобы не об
   &:hover {
     text-decoration: underline;
   }
-`,F=i.ul`
+`,H=i.ul`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -443,7 +477,7 @@ visibility: hidden; //!!! временное решение чтобы не об
   @media (min-width: 1280px) {
     gap: 30px;
   }
-`,B=i.li`
+`,A=i.li`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -513,4 +547,4 @@ visibility: hidden; //!!! временное решение чтобы не об
       font-size: 1.1rem;
     }
   }
-`;export{p as A,d as B,z as C,h as F,l as H,m as I,y as M,F as P,w as S,o as T,r as W,x as a,c as b,s as c,k as d,I as e,j as f,g,f as h,b as i,u as j,v as k,B as l,C as m,$ as n,T as o,M as p,P as q};
+`;export{x as A,p as B,C,b as F,l as H,m as I,j as M,H as P,f as S,r as T,d as W,c as a,s as b,g as c,h as d,I as e,$ as f,T as g,w as h,u as i,v as j,y as k,k as l,z as m,A as n,M as o,B as p,P as q,F as r,L as s};
