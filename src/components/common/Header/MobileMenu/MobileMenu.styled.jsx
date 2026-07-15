@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { breakpoints } from '@/assets/styles/breakpoints';
+
 import { NavLink } from 'react-router-dom';
 import bg224 from '@/assets/images/mob-menu-bg/bg224.png'; // перевірте правильність шляху та імпорту
 import bg223 from '@/assets/images/mob-menu-bg/bg223.png';
@@ -46,7 +48,7 @@ export const NavItem = styled.li`
 export const StyledLink = styled(NavLink)`
   padding: 8px 16px;
   border: 1px solid var(--primary-text-color-light);
-  border-radius: 40px;
+  border-radius: var(--radius-lg);
   color: var(--primary-text-color-light);
   text-align: center;
   font-size: 14px;
@@ -63,7 +65,7 @@ export const StyledLink = styled(NavLink)`
     color: white;
   }
 
-  @media screen and (min-width: 768px) {
+  @media (min-width: ${breakpoints.tabletLg}) {
     line-height: 1.6;
   }
 `;
@@ -77,7 +79,7 @@ export const StyledAnchor = styled.a`
   font-weight: 500;
   letter-spacing: 0.04em;
 
-  color: rgba(245, 243, 239, 0.72);
+  color: var(--text-color-muted);
   text-decoration: none;
 
   transition: color 0.2s ease;

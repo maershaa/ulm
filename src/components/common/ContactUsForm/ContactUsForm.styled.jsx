@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { breakpoints } from '@/assets/styles/breakpoints';
 
 export const FormContainer = styled.div`
   max-width: 100%;
@@ -6,18 +7,19 @@ export const FormContainer = styled.div`
   margin: 0 auto;
   padding: 50px 30px;
   background-color: #f9f9f9;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
+
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
-  @media (min-width: 625px) {
+  @media (min-width: ${breakpoints.tablet}) {
     width: 370px;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: ${breakpoints.tabletLg}) {
     width: 400px;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: ${breakpoints.desktop}) {
     width: 420px;
   }
 `;
@@ -32,7 +34,7 @@ export const FormLabel = styled.label`
   margin-bottom: 5px;
   color: #333;
 
-  @media (min-width: 625px) {
+  @media (min-width: ${breakpoints.tablet}) {
     font-size: 1rem;
   }
 `;
@@ -45,7 +47,7 @@ export const FormInput = styled.input`
   font-size: 0.9rem;
   box-sizing: border-box;
 
-  @media (min-width: 625px) {
+  @media (min-width: ${breakpoints.tablet}) {
     font-size: 1rem;
   }
 
@@ -63,7 +65,7 @@ export const FormTextarea = styled.textarea`
   font-size: 0.9rem;
   box-sizing: border-box;
 
-  @media (min-width: 625px) {
+  @media (min-width: ${breakpoints.tablet}) {
     font-size: 1rem;
   }
 
@@ -88,7 +90,7 @@ export const FormButton = styled.button`
 
   transition: background-color 0.3s ease;
 
-  @media (min-width: 625px) {
+  @media (min-width: ${breakpoints.tablet}) {
     font-size: 1rem;
   }
 

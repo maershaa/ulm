@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { breakpoints } from '@/assets/styles/breakpoints';
 
 export const ContactContainer = styled.div`
   padding: 20px;
@@ -25,7 +26,9 @@ export const ContactInfo = styled.p`
 
   line-height: 1.2;
 
-  @media (min-width: 768px) {
+  color: var(--text-color);
+
+  @media (min-width: ${breakpoints.tabletLg}) {
     font-size: 1.1rem;
   }
 `;
@@ -36,19 +39,19 @@ export const Icon = styled.div`
   svg {
     width: 22px;
     height: 22px;
-    fill: var(--accent-color);
+    fill: var(--light-accent);
   }
 `;
 
 export const ContactLink = styled.a`
-  color: #045174;
+  color: var(--light-accent);
   text-decoration: none;
 
   display: flex;
   align-items: center;
   font-size: 1rem;
 
-  @media (min-width: 768px) {
+  @media (min-width: ${breakpoints.tabletLg}) {
     font-size: 1.1rem;
   }
   &:hover {

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { breakpoints } from '@/assets/styles/breakpoints';
 
 export const Wrapper = styled.div`
   display: flex;
@@ -7,12 +8,12 @@ export const Wrapper = styled.div`
 
   padding: 40px 0;
 
-  @media (min-width: 768px) {
+  @media (min-width: ${breakpoints.tabletLg}) {
     /* padding-left: 32px;
     padding-right: 32px; */
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: ${breakpoints.desktop}) {
     /* padding-left: 20px;
     padding-right: 20px; */
   }
@@ -29,9 +30,9 @@ export const Block = styled.div`
   min-height: 400px;
   padding: 20px;
 
-  border-radius: 10px;
+  border-radius: var(--radius-lg);
 
-  @media (min-width: 768px) {
+  @media (min-width: ${breakpoints.tabletLg}) {
     padding: 40px;
   }
 `;
@@ -49,15 +50,15 @@ export const InfoContainer = styled.div`
   justify-content: center;
   align-items: center;
 
-  border-radius: 5px;
+  border-radius: var(--radius-md);
   background-color: var(--primary-text-color-light);
 
-  @media (min-width: 768px) {
+  @media (min-width: ${breakpoints.tabletLg}) {
     max-width: 500px;
     padding: 60px 40px;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: ${breakpoints.desktop}) {
     max-width: 600px;
   }
 `;
@@ -70,7 +71,7 @@ export const AboutUsInfo = styled.p`
   font-size: 0.9rem;
   line-height: 1.2;
 
-  @media (min-width: 768px) {
+  @media (min-width: ${breakpoints.tabletLg}) {
     font-size: 1rem;
     padding: 0 10px 0 0;
   }

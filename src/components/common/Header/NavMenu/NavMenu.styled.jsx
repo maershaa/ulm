@@ -17,7 +17,7 @@ export const StyledLink = styled(Link)`
   font-weight: 500;
   letter-spacing: 0.04em;
 
-  color: rgba(245, 243, 239, 0.72);
+  color: var(--text-color-muted);
   text-decoration: none;
 
   transition: color 0.2s ease;
@@ -29,9 +29,9 @@ export const StyledLink = styled(Link)`
     bottom: -4px;
 
     width: 100%;
-    height: 1px;
+    height: 2px;
 
-    background-color: var(--accent-color);
+    background-color: var(--light-accent);
 
     transform: scaleX(0);
     transform-origin: left;

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { breakpoints } from '@/assets/styles/breakpoints';
 
 export const BtnBurger = styled.button`
   background-color: inherit;
@@ -9,7 +10,7 @@ export const BtnBurger = styled.button`
   justify-content: center;
   z-index: 101;
 
-  @media screen and (min-width: 1280px) {
+  @media (min-width: ${breakpoints.desktopLg}) {
     display: none;
   }
 `;

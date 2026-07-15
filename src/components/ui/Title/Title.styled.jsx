@@ -1,10 +1,11 @@
 import styled from 'styled-components';
+import { breakpoints } from '@/assets/styles/breakpoints';
 
 export const Title = styled.h2`
   display: inline;
   margin: 0;
   margin-right: 10px;
-  color: var(--primary-bg-dark-color);
+  color: var(--light-accent);
 
   font-family: 'Caladea', Arial, sans-serif;
 
@@ -15,7 +16,7 @@ export const Title = styled.h2`
 
   font-size: 1.5rem;
 
-  @media (min-width: 1024px) {
+  @media (min-width: ${breakpoints.desktop}) {
     font-size: 2rem;
   }
 
@@ -23,7 +24,7 @@ export const Title = styled.h2`
   &::after {
     content: '';
     display: block;
-    border-top: 6px solid #1274a2;
+    border-top: 6px solid var(1274a2);
     width: 100px;
     margin-top: 15px;
     margin-bottom: 20px;

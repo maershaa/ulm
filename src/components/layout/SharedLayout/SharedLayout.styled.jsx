@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { breakpoints } from '@/assets/styles/breakpoints';
 
 export const LayoutWrapper = styled.div`
   position: relative;
@@ -8,7 +9,7 @@ export const LayoutWrapper = styled.div`
   /* Прячем всё, что выходит за границы экрана (особенно размытые края бликов) */
   overflow-x: hidden;
 
-  background-color: var(--surface-bg-color);
+  background-color: var(--page-bg-color);
 
   main {
     flex-grow: 1;
@@ -16,7 +17,7 @@ export const LayoutWrapper = styled.div`
     width: 100%;
     position: relative;
 
-    @media (min-width: 1280px) {
+    @media (min-width: ${breakpoints.desktopLg}) {
       align-items: center;
     }
 
@@ -26,7 +27,7 @@ export const LayoutWrapper = styled.div`
       position: absolute;
       width: 450px;
       height: 450px;
-      border-radius: 50%;
+      border-radius: var(--radius-round);
       pointer-events: none;
       z-index: 0;
       filter: blur(220px);
@@ -51,7 +52,7 @@ export const LayoutWrapper = styled.div`
     position: absolute;
     width: 450px;
     height: 450px;
-    border-radius: 50%;
+    border-radius: var(--radius-round);
     pointer-events: none; /* Чтобы сквозь них можно было кликать */
     z-index: 0;
     filter: blur(220px); /* Мощное размытие для мягкого свечения */

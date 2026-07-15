@@ -68,15 +68,30 @@ src/
 
 /_ Transitions _/ --transition-base: all 250ms cubic-bezier(0.4, 0, 0.2, 1); }
 
-Будет темная и светлая тема. пока для светлой такие цвета заданы:
-[data-theme='light'] { /_ бренд / акценты _/ --primary-bg-dark-color: #032541;
-/_ фон Header/Footer/Hero _/ --accent-color: #045174; --light-accent: #1274a2;
+:root, [data-theme='light'] { /_ бренд / акценты _/ --primary-bg-dark-color:
+#032541; /_ фон Header/Footer/Hero _/ --accent-color: #045174; --light-accent:
+#1274a2;
 
 /_ текст _/ --primary-text-color-light: #ffffff; --text-color: #111111;
 --text-color-muted: rgba(245, 243, 239, 0.72);
 
-/_ фон страницы _/ --page-bg-color: hsl(0, 12%, 97%); --surface-bg-color:
-#f6f4f1; }
+/_ фон страницы _/ --page-bg-color: #f8f6f6; --surface-bg-color: #f6f4f1;
+
+/_ границы / свечение _/ --border-color: rgba(3, 37, 65, 0.12);
+--border-color-strong: rgba(3, 37, 65, 0.24); --glow-color: rgba(18, 116, 162,
+0.25); --shadow-color: rgba(46, 47, 66, 0.12); }
+
+[data-theme='dark'] { --primary-bg-dark-color: #032541; --accent-color: #0d3a56;
+--light-accent: #4ea8d8;
+
+--primary-text-color-light: #ffffff; --text-color: #f5f3ef; --text-color-muted:
+rgba(245, 243, 239, 0.6);
+
+--page-bg-color: #0b1620; --surface-bg-color: #426791;
+
+--border-color: rgba(245, 243, 239, 0.12); --border-color-strong: rgba(245, 243,
+239, 0.24); --glow-color: rgba(78, 168, 216, 0.35); --shadow-color: rgba(0, 0,
+0, 0.4); }
 
 ## Известный техдолг / roadmap
 

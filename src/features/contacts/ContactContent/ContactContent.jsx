@@ -15,7 +15,7 @@ const ContactContent = () => {
       <ContactContainer>
         <Title title="Контакти" />
         <address>
-          <ContactInfo>ТОВ "Южлитографметалл"</ContactInfo>
+          <ContactInfo>ТОВ &#39;Южлитографметалл&#39; </ContactInfo>
           <ContactInfo>Застава II, вул. Привозна, 1</ContactInfo>
           <ContactInfo>Одеса, 65098, Україна</ContactInfo>
         </address>

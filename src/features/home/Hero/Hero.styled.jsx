@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { breakpoints } from '@/assets/styles/breakpoints';
 
 export const HeroContainer = styled.div`
   background-color: rgb(3, 37, 65);
@@ -19,7 +20,8 @@ export const HeroContainer = styled.div`
       rgba(3, 37, 65, 0) 100%
     ),
     url(${(props) => props.$heroImageTablet});
-  @media (min-width: 450px) {
+
+  @media (min-width: ${breakpoints.mobileLg}) {
     background-image: linear-gradient(
         to right,
         rgba(3, 37, 65, 0.9) 0%,
@@ -31,11 +33,11 @@ export const HeroContainer = styled.div`
     background-color: rgb(3, 37, 65);
   }
 
-  @media (min-width: 625px) {
+  @media (min-width: ${breakpoints.tablet}) {
     padding: 40px;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: ${breakpoints.tabletLg}) {
     flex-wrap: nowrap;
     flex-direction: row;
     /* height: 600px; */
@@ -56,7 +58,7 @@ export const Block = styled.div`
 
   margin-bottom: 20px;
 
-  @media (min-width: 768px) {
+  @media (min-width: ${breakpoints.tabletLg}) {
     width: 50%;
     margin-bottom: 0;
   }
@@ -72,11 +74,11 @@ export const HeroPrimaryText = styled.h2`
 
   text-align: left;
 
-  @media (min-width: 625px) {
+  @media (min-width: ${breakpoints.tablet}) {
     font-size: 1.8rem;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: ${breakpoints.tabletLg}) {
     width: 50%;
     margin-bottom: 0;
   }
@@ -92,7 +94,7 @@ export const HeroPrimaryText = styled.h2`
   }
 `;
 export const HeroInfo = styled.h3`
-  color: #ffffff;
+  color: var(--primary-text-color-light);
 
   margin-bottom: 10px;
   font-size: 0.9rem;
@@ -101,11 +103,11 @@ export const HeroInfo = styled.h3`
 
   text-align: center;
 
-  @media (min-width: 625px) {
+  @media (min-width: ${breakpoints.tablet}) {
     font-size: 1.1rem;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: ${breakpoints.tabletLg}) {
     text-align: left;
   }
 `;
@@ -117,7 +119,7 @@ export const ButtonsGroup = styled.div`
   gap: 16px;
   width: 100%;
 
-  @media (min-width: 450px) {
+  @media (min-width: ${breakpoints.mobileLg}) {
     flex-direction: row;
     width: auto;
   }
@@ -132,13 +134,14 @@ export const StyledLink = styled(Link)`
   font-weight: 600;
   font-size: 1rem;
   padding: 14px 28px;
-  border-radius: 10px;
+  border-radius: var(--radius-lg);
 
   transition: all 0.2s ease;
 
   width: 100%;
   margin-top: 20px;
-  @media (min-width: 450px) {
+
+  @media (min-width: ${breakpoints.mobileLg}) {
     width: auto;
   }
 

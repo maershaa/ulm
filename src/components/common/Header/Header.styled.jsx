@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { breakpoints } from '@/assets/styles/breakpoints';
 
 export const HeaderContainer = styled.div`
   min-width: 100%;
@@ -16,13 +17,18 @@ export const HeaderContainer = styled.div`
   padding: 0 15px;
   margin-left: auto;
   margin-right: auto;
-  border-bottom: 1px solid #196f97;
+
+  /* border-radius: var(--radius-lg); */
+  border-top-left-radius: var(--radius-lg);
+  border-top-right-radius: var(--radius-lg);
+
+  border-bottom: 1px solid var(--light-accent);
   box-shadow:
     rgba(46, 47, 66, 0.08) 0px 2px 1px,
     rgba(46, 47, 66, 0.16) 0px 1px 1px,
     rgba(46, 47, 66, 0.08) 0px 1px 6px;
 
-  @media (min-width: 768px) {
+  @media (min-width: ${breakpoints.tabletLg}) {
     padding: 0 25px;
   }
 `;
