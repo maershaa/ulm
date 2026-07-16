@@ -1,4 +1,4 @@
-# ЮЖЛИТОГРАФМЕТАЛЛ — сайт-визитка производителя жестяной упаковки
+# ЮЖЛИТОГРАФМЕТАЛЛ (ULM) — сайт-визитка производителя жестяной упаковки
 
 ## О проекте
 
@@ -6,45 +6,68 @@
 упаковки для консервации. Аудитория — B2B, украиноязычная. Цель — рассказать о
 компании и продукции, дать связаться (заявка/телефон/почта).
 
+Живой сайт: https://maershaa.github.io/ulm/ (GitHub Pages, автодеплой из
+`main`).
+
 ## Технологии
 
-- **React 18** + **Vite** (SWC-плагин), SPA
-- **React Router v6** (`react-router-dom`) — 4 роута: `/`, `/products`,
-  `/contacts`, `*` (404)
-- Стилизация: **styled-components** (основной подход).
+- **React 19.2** + **Vite 7.3** (`@vitejs/plugin-react-swc`)
+- **React Router v6.30**(`react-router-dom`) — 4 роута: `/`, `/products`,
+  `/contacts`, `*` (404). Апгрейд до react-router v7/v8 сознательно отложен (там
+  смена API, `RouterProvider`) — делать вместе с переходом на TS.
+- Стилизация: **styled-components v6** — единственный CSS-in-JS движок в
+  проекте.
 - Формы: `formik` + `yup`
 - Уведомления: `react-toastify`
-- Адаптивность JS-логики (переключение десктоп/мобайл меню): `react-responsive`
-- Иконки: один SVG-спрайт (`src/assets/icons.svg`), инлайнится в DOM компонентом
-  `IconSprite` (монтируется в `main.jsx`), везде используется как
-  `<use xlinkHref="#icon-id" />` — **не** через URL-ссылку на файл (иначе не
-  наследуется CSS fill/stroke от родителя).
-  - иконки через react-icons
+- Адаптивность JS-логики (десктоп/мобайл меню): `react-responsive`
+- Шрифты: `Manrope` (запасной вариант для лого, если вместо картинки — текст) +
+  `Lora` (основной текстовый шрифт, подключены оба через Google Fonts в
+  `index.html`).
+- Иконки: смешанный подход —
+  - `react-icons` (например, `Hero` использует `FiCompass`/`FiPlusCircle`);
+  - собственный SVG-спрайт `src/assets/icons.svg`, инлайнится в DOM компонентом
+    `IconSprite` (монтируется в `main.jsx`), используется как
+    `<use xlinkHref="#icon-id" />` — **не** через URL на файл (иначе не
+    наследуется CSS `fill`/`stroke` от родителя — так было, чинили).
+  - технически можно унифицировать до одного подхода, не срочно.
 - Бэкенд для формы обратной связи: отдельный `server.js` (Express + Nodemailer),
-  минимальный, живёт в том же репозитории.
-- Деплой: GitHub Pages, `base: '/ulm'` в vite.config.js, `basename="ulm"` в
-  Router.
-- TypeScript пока не используется, планируется поэтапный переход (`allowJs`,
-  файлы переименовываются по одному, начиная с `ui/*`).
+  живёт в том же репозитории, пароль — `PASSWORD` в `.env` (в `.gitignore`, не
+  утекал в git). ⚠️ **Сейчас сервер нигде не задеплоен отдельно от фронтенда**,
+  а `ContactUsForm` стучится на `http://localhost:5001/api/sendMail` хардкодом —
+  на проде (GitHub Pages, чистая статика) этот адрес недостижим, форма обратной
+  связи сейчас не работает. См. "Известные проблемы" ниже.
+- Деплой: GitHub Pages, автоматически через GitHub Actions
+  (`.github/workflows/deploy.yml`) при каждом пуше в `main`: `checkout` →
+  `setup-node` → `npm ci` → `npm run build` → копия `index.html` в `404.html`
+  (нужно для прямых ссылок/refresh на роутах SPA на статическом хостинге) →
+  публикация `dist/` в ветку `gh-pages` через
+  `JamesIves/github-pages-deploy-action`. `base: '/ulm'` в `vite.config.js`,
+  `basename="ulm"` в `<BrowserRouter>`.
+- TypeScript пока не используется, план — поэтапный переход (`allowJs`, файлы
+  переименовываются по одному, начиная с `ui/*`).
 
-## Структура (актуальная, после ревизии)
+## Структура
 
 ```
 src/
   assets/            # картинки, иконки (icons.svg), styles/index.css (глобальные стили + CSS-переменные темы)
+  constants/
+    breakpoints.js    # единая точка правды по брейкпоинтам (см. ниже)
+    productsData / featuresData
+  context/
+    theme/            # ThemeContext + ThemeProvider (светлая/тёмная тема, localStorage + prefers-color-scheme)
   components/
-    ui/              # переиспользуемые "кирпичики": Container, Logo, Title
+    ui/              # Container, Logo, Title
     common/          # Header (+ NavMenu, MobileMenu, BurgerMenuButton), Footer, ContactUsForm
     layout/          # SharedLayout — общий каркас страницы (Header + Outlet + Footer)
-    FeaturesModal/   # модалка карточки преимущества
-    IconSprite/       # инлайнер SVG-спрайта (см. выше)
-  features/          # блоки-секции по доменам страниц
-    home/             # Hero, AboutUsSection, FeaturesSection (для HomePage)
-    products/         # ProductsContent (для ProductsPage)
-    contacts/         # ContactContent (для ContactsPage)
-  pages/              # ТОЛЬКО композиция роутов из features + Container, без своих стилей
+    FeaturesModal/
+    IconSprite/       # инлайнер SVG-спрайта
+  features/
+    home/             # Hero, AboutUsSection, FeaturesSection
+    products/         # ProductsContent
+    contacts/         # ContactContent
+  pages/              # композиция роутов из features + Container, без своих стилей
     HomePage/ ProductsPage/ ContactsPage/ ErrorPage/
-  constants/          # статичные данные (productsData, featuresData)
   App.jsx / main.jsx
 ```
 
@@ -52,54 +75,138 @@ src/
 
 - **HomePage** (`/`) — Hero, AboutUsSection (#aboutUs), FeaturesSection
   (#features, с модалкой карточек)
-- **ProductsPage** (`/products`) — каталог продукции (ProductsContent +
-  productsData)
-- **ContactsPage** (`/contacts`) — контакты, форма обратной связи (ContactUsForm
-  → server.js → email), карта
+- **ProductsPage** (`/products`) — каталог продукции
+- **ContactsPage** (`/contacts`) — контакты, форма обратной связи, карта
 - **ErrorPage** (`*`) — 404
 
-## Стили и дизайн-система
+## Layout: Header / Hero / Container
 
-:root { /_ ========================================== БАЗОВЫЕ НАСТРОЙКИ
-========================================== _/
+Единая горизонтальная сетка на всю страницу — один компонент `ui/Container`
+(`max-width: 1800px`, `padding: 0 24px`), используется:
 
-/_ Border Radius _/ --radius-sm: 4px; --radius-md: 8px; --radius-lg: 12px;
---radius-round: 50%;
+- в `main` (оборачивает весь `<Outlet/>` в `SharedLayout`);
+- внутри `Header` — сам `HeaderContainer` full-bleed (фон на 100% ширины
+  экрана), а лого/меню внутри обёрнуты в `Container`, чтобы совпадать по
+  отступам с остальным контентом;
+- внутри `Hero` — аналогично: `HeroContainer` full-bleed (приём
+  `width:100vw; margin-left: calc(50% - 50vw)`), текст/форма внутри — в
+  `HeroInner` с теми же `max-width/padding`, что и `Container`.
 
-/_ Transitions _/ --transition-base: all 250ms cubic-bezier(0.4, 0, 0.2, 1); }
+## Тема (светлая / тёмная)
 
-:root, [data-theme='light'] { /_ бренд / акценты _/ --primary-bg-dark-color:
-#032541; /_ фон Header/Footer/Hero _/ --accent-color: #045174; --light-accent:
-#1274a2;
+Реализовано через `ThemeContext`/`ThemeProvider` (`src/context/theme/`),
+`data-theme` ставится на `document.documentElement`, сохраняется в
+`localStorage`, по умолчанию читает `prefers-color-scheme`.
 
-/_ текст _/ --primary-text-color-light: #ffffff; --text-color: #111111;
---text-color-muted: rgba(245, 243, 239, 0.72);
+Токены в `index.css` — обе темы заполнены одинаковым набором имён переменных:
+`--primary-bg-dark-color`, `--accent-color`, `--light-accent`,
+`--primary-text-color-light`, `--text-color`, `--text-color-muted`,
+`--page-bg-color`, `--surface-bg-color`, `--border-color`,
+`--border-color-strong`, `--glow-color`, `--shadow-color`, плюс тема-независимые
+`--radius-*` и `--transition-base`.
 
-/_ фон страницы _/ --page-bg-color: #f8f6f6; --surface-bg-color: #f6f4f1;
+Более удачные имена для будущего переименования (не переименовано намеренно,
+чтобы не ломать текущий код разом): `--primary-bg-dark-color` → `--brand-navy`,
+`--accent-color` → `--brand-accent`, `--text-color` → `--text-primary`,
+`--page-bg-color` → `--bg-page`, `--surface-bg-color` → `--bg-surface`.
 
-/_ границы / свечение _/ --border-color: rgba(3, 37, 65, 0.12);
---border-color-strong: rgba(3, 37, 65, 0.24); --glow-color: rgba(18, 116, 162,
-0.25); --shadow-color: rgba(46, 47, 66, 0.12); }
+## Брейкпоинты
 
-[data-theme='dark'] { --primary-bg-dark-color: #032541; --accent-color: #0d3a56;
---light-accent: #4ea8d8;
+`src/constants/breakpoints.js` — единая точка правды вместо разрозненных
+медиазапросов по всему проекту:
 
---primary-text-color-light: #ffffff; --text-color: #f5f3ef; --text-color-muted:
-rgba(245, 243, 239, 0.6);
+```js
+export const breakpoints = {
+  mobile: '375px',
+  mobileLg: '450px',
+  tablet: '625px',
+  tabletLg: '768px',
+  desktop: '1000px',
+  desktopLg: '1280px',
+  wide: '1800px',
+};
+export const media = {
+  /* готовые шаблонные функции под каждый брейкпоинт */
+};
+```
 
---page-bg-color: #0b1620; --surface-bg-color: #426791;
+CSS-переменные для брейкпоинтов принципиально не используются — `var()` нельзя
+подставлять в условие `@media`, поэтому это обычный JS-модуль, импортируется в
+`*.styled.jsx` файлы.
 
---border-color: rgba(245, 243, 239, 0.12); --border-color-strong: rgba(245, 243,
-239, 0.24); --glow-color: rgba(78, 168, 216, 0.35); --shadow-color: rgba(0, 0,
-0, 0.4); }
+## Используемые библиотеки
 
-## Известный техдолг / roadmap
+### Frontend
 
-1. Разобраться с проблемой отображения навигации для мобильного приложения.
-2. Упорядочить имеющиеся цвета стилей, подобрать подходящие им названия и
-   добавить `[data-theme='dark']`.
-3. Обновить зависимости (React Router, Vite и т.д.) по одной, без резких скачков
-   мажорных версий.
+- React 19
+- React DOM
+- React Router DOM
+- Styled Components
+- Formik
+- Yup
+- Axios
+- React Responsive
+- React Toastify
+- React Icons
+- Normalize.css
+- modern-normalize
+
+### Backend
+
+- Express
+- Nodemailer
+- Body Parser
+- Cors
+- Dotenv
+
+### Development
+
+- Vite
+- @vitejs/plugin-react-swc
+- SWC
+- ESLint
+- Prettier
+- Husky
+- lint-staged
+- vite-plugin-svgr
+
+## Известные проблемы (актуально, по приоритету)
+
+1. 🔴 **Форма обратной связи не работает на проде.** `ContactUsForm` шлёт `POST`
+   на хардкод `http://localhost:5001/api/sendMail` — на GitHub Pages такого
+   адреса не существует. Нужно: (а) задеплоить `server.js` отдельно
+   (Render/Railway/Fly.io), (б) завести `VITE_API_URL` в `.env.development` /
+   `.env.production`, (в) заменить хардкод на
+   `` `${import.meta.env.VITE_API_URL}/api/sendMail` ``, (г) поправить CORS на
+   сервере под прод-домен. Пока не сделано.
+2. 🔴 **Фон мобильного меню отображается некорректно** — правка в
+   `MobileMenu.jsx` пока не финальная, проблема ещё не закрыта до конца (похоже
+   на конфликт `position: absolute` с контейнером/z-index, разбираемся).
+3. 🟡 **Сервер (`server.js`) без рейт-лимита и защиты от спама** на роуте
+   отправки формы — актуально сделать в связке с пунктом 1 (когда сервер
+   переедет на отдельный хостинг).
+4. 🟡 **Изображения не оптимизированы** — часть JPEG в районе 400–700 КБ
+   (`obsessions`, `delivery5`, `can_drawn`), стоит перевести в WebP + добавить
+   `loading="lazy"` для картинок вне первого экрана.
+5. 🟢 `.gitignore` в порядке, `.env`/`PASSWORD` в историю git не попадали —
+   проверено, риска утечки нет.
+6. 🟢 SEO/OG-теги, `theme-color`, `description` — добавлены в `index.html`.
+   `robots.txt`/`sitemap.xml` пока не заведены — низкий приоритет для B2B-сайта
+   такого размера, но не забыть перед реальным продвижением.
+
+## Roadmap / техдолг
+
+1. Починить прод-адрес формы обратной связи (см. проблему №1) — приоритет №1.
+2. Исправить отображение фона мобильного меню.
+3. Обновить зависимости дальше по плану:
+
+- react-router-dom → v7 (после перехода на RouterProvider и TypeScript);
+- ESLint → v9 (Flat Config);
+- SWC и сопутствующие dev-зависимости по мере выхода стабильных версий.
+
 4. Постепенный переход на TypeScript (`.jsx → .tsx`, начиная с `ui/*`).
-5. Перенести стили из `pages/*` в соответствующие `features/*` — в `pages/*`
-   должны остаться только JSX-роуты.
+5. Унифицировать иконки — выбрать один подход (`react-icons` или SVG-спрайт), не
+   смешивать оба.
+6. Переименовать CSS-токены на более понятные имена (см. таблицу выше), когда
+   дойдут руки пройтись по всем компонентам разом.
+7. Оптимизация изображений (WebP, lazy-loading).
