@@ -69,7 +69,8 @@ html {
 
 body {
   background-color: var(--page-bg-color);
-  font-family: 'Caladea', serif;
+
+  font-family: 'Lora', serif;
 
   font-weight: 400;
   font-style: normal;
