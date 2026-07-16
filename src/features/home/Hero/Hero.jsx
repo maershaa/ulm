@@ -4,7 +4,6 @@ import {
   HeroPrimaryText,
   HeroInfo,
   ButtonsGroup,
-  StyledLink,
 } from './Hero.styled';
 import heroImage from '@/assets/images/Hero/hero.jpeg';
 import heroImageTablet from '@/assets/images/Hero/lots_of_tins.jpeg';
@@ -33,14 +32,14 @@ const Hero = () => {
         </HeroInfo>
 
         <ButtonsGroup>
-          <StyledLink to={'#aboutUs'}>
+          <a href={'#aboutUs'}>
             <FiCompass size={32} />
             ПРО НАС{' '}
-          </StyledLink>
-          <StyledLink to={'#features'}>
+          </a>
+          <a href={'#features'}>
             <FiPlusCircle size={32} />
             ПЕРЕВАГИ{' '}
-          </StyledLink>
+          </a>
         </ButtonsGroup>
       </Block>
 

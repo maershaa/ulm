@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 import { breakpoints } from '@/assets/styles/breakpoints';
 
 export const HeroContainer = styled.div`
@@ -123,35 +122,35 @@ export const ButtonsGroup = styled.div`
     flex-direction: row;
     width: auto;
   }
-`;
 
-export const StyledLink = styled(Link)`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 
-  font-weight: 600;
-  font-size: 1rem;
-  padding: 14px 28px;
-  border-radius: var(--radius-lg);
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 14px 28px;
+    border-radius: var(--radius-lg);
 
-  transition: all 0.2s ease;
+    transition: all 0.2s ease;
 
-  width: 100%;
-  margin-top: 20px;
+    width: 100%;
+    margin-top: 20px;
 
-  @media (min-width: ${breakpoints.mobileLg}) {
-    width: auto;
-  }
+    @media (min-width: ${breakpoints.mobileLg}) {
+      width: auto;
+    }
 
-  background-color: var(--light-accent);
-  opacity: 0.8;
-  color: var(--primary-text-color-light);
+    background-color: var(--light-accent);
+    opacity: 0.8;
+    color: var(--primary-text-color-light);
 
-  &:hover {
-    transform: translateY(-2px);
-    opacity: 1;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    &:hover {
+      transform: translateY(-2px);
+      opacity: 1;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
   }
 `;
