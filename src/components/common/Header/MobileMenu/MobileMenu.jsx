@@ -8,12 +8,8 @@ import {
   BackgroundsColores,
 } from './MobileMenu.styled';
 import { Logo } from '@/components/ui/Logo/Logo';
-import { useLocation } from 'react-router-dom';
 
 const MobileMenu = ({ handleClick }) => {
-  const location = useLocation();
-  const isHome = location.pathname === '/';
-
   return (
     <MobMenuContainer>
       <BackgroundsColores>
@@ -21,18 +17,12 @@ const MobileMenu = ({ handleClick }) => {
         <LineMobile />
         <NavigationList>
           <NavItem>
-            <StyledAnchor
-              href={isHome ? '#aboutUs' : '/#aboutUs'}
-              onClick={handleClick}
-            >
+            <StyledAnchor href={'#aboutUs'} onClick={handleClick}>
               ПРО НАС
             </StyledAnchor>
           </NavItem>
           <NavItem>
-            <StyledAnchor
-              href={isHome ? '#features' : '/#features'}
-              onClick={handleClick}
-            >
+            <StyledAnchor href={'#features'} onClick={handleClick}>
               ПЕРЕВАГИ
             </StyledAnchor>
           </NavItem>
