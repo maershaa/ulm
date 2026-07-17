@@ -1,0 +1,35 @@
+{
+  "title": "PRODUCTS",
+
+  "items": {
+    "drawn-cans": {
+      "title": "Drawn Cans",
+      "description": "No. 21, 1, 2, 3, 38, 5, 6, 8.",
+      "alt": "Drawn Cans"
+    },
+
+    "metal-lids": {
+      "title": "Metal Lids",
+      "description": "72.4 mm, 83.4 mm, 99 mm.",
+      "alt": "Metal Lids"
+    },
+
+    "glass-can-lids": {
+      "title": "Metal Lids for Glass Jars",
+      "description": "SKO 1-82, 1-63, 1-58.",
+      "alt": "Metal Lids for Glass Jars"
+    },
+
+    "aluminum-packaging": {
+      "title": "Aluminium Food Containers",
+      "description": "Product description.",
+      "alt": "Aluminium Food Containers"
+    },
+
+    "metal-trays": {
+      "title": "Metal Trays of Various Sizes",
+      "description": "Product description.",
+      "alt": "Metal Trays of Various Sizes"
+    }
+  }
+}
