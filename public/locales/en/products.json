@@ -23,13 +23,31 @@
     "aluminum-packaging": {
       "title": "Aluminium Food Containers",
       "description": "Product description.",
-      "alt": "Aluminium Food Containers"
+      "alt": "Aluminium FoodContainers"
     },
 
     "metal-trays": {
       "title": "Metal Trays of Various Sizes",
       "description": "Product description.",
       "alt": "Metal Trays of Various Sizes"
+    },
+
+    "brush-ferrules": {
+      "title": "Paint Brush Ferrules",
+      "description": "Metal crimp ferrules / joints for securing brush bristles to wooden or plastic handles.",
+      "alt": "Metal Paint Brush Ferrules"
+    },
+
+    "trench-candle-cans": {
+      "title": "Trench Candle Cans",
+      "description": "Durable metal containers specially manufactured for long-burning military trench candles.",
+      "alt": "Metal Cans for Trench Candles"
+    },
+
+    "monpensier-tins": {
+      "title": "Monpensier Tin Boxes",
+      "description": "Small metal-plated containers with lids for hard drop candies dusted with powdered sugar.",
+      "alt": "Vintage Style Tin Boxes for Monpensier Candies"
     }
   }
 }
