@@ -1,26 +1,42 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { breakpoints } from '@/assets/styles/breakpoints';
 
 export const Navigation = styled.nav`
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
   justify-content: center;
-  gap: 32px;
+
+  @media (min-width: ${breakpoints.desktopLg}) {
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+  }
 `;
 
 export const StyledLink = styled(Link)`
+  padding: 8px 16px;
+
+  color: var(--primary-text-color-light);
+
+  border: 1px solid var(--primary-text-color-light);
+  border-radius: var(--radius-lg);
+
+  font-size: 0.8rem;
+  font-weight: 500;
+
+  transition: var(--transition-base);
+
   position: relative;
+
   padding: 4px 0;
 
-  font-family: var(--font-heading);
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-
   color: var(--text-color-muted);
-  text-decoration: none;
+  border: none;
 
-  transition: color 0.2s ease;
+  font-size: 0.9rem;
 
   &::after {
     content: '';
@@ -36,6 +52,10 @@ export const StyledLink = styled(Link)`
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.25s ease;
+  }
+
+  @media (min-width: ${breakpoints.desktop}) {
+    font-size: 1rem;
   }
 
   &:hover,

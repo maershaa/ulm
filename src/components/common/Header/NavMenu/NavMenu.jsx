@@ -1,7 +1,8 @@
 import { Navigation, StyledLink } from './NavMenu.styled';
 import { useLocation } from 'react-router-dom';
+import { ThemeSwitcher } from '@/components';
 
-const NavMenu = () => {
+const NavMenu = ({ handleClick }) => {
   const location = useLocation();
   const links = [
     { to: '/', label: 'Головна' },
@@ -10,17 +11,21 @@ const NavMenu = () => {
   ];
 
   return (
-    <Navigation>
-      {links.map((link) => (
-        <StyledLink
-          key={link.to}
-          to={link.to}
-          className={location.pathname === link.to ? 'active' : ''}
-        >
-          {link.label.toUpperCase()}
-        </StyledLink>
-      ))}
-    </Navigation>
+    <>
+      <Navigation>
+        {links.map((link) => (
+          <StyledLink
+            key={link.to}
+            to={link.to}
+            className={location.pathname === link.to ? 'active' : ''}
+            onClick={handleClick}
+          >
+            {link.label.toUpperCase()}
+          </StyledLink>
+        ))}
+      </Navigation>
+      <ThemeSwitcher />
+    </>
   );
 };
 

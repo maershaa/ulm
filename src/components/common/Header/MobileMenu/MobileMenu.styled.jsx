@@ -1,7 +1,6 @@
 import styled from 'styled-components';
-import { breakpoints } from '@/assets/styles/breakpoints';
+// import { breakpoints } from '@/assets/styles/breakpoints';
 
-import { NavLink } from 'react-router-dom';
 import bg224 from '@/assets/images/mob-menu-bg/bg224.png'; // перевірте правильність шляху та імпорту
 import bg223 from '@/assets/images/mob-menu-bg/bg223.png';
 import bg222 from '@/assets/images/mob-menu-bg/bg222.png';
@@ -12,8 +11,12 @@ export const MobMenuContainer = styled.div`
   left: 0;
   width: 100%;
   height: 100dvh;
-  z-index: 100;
+  z-index: 2000;
   background-color: var(--primary-bg-dark-color);
+
+  nav {
+    margin-top: 30px;
+  }
 `;
 
 export const BackgroundsColores = styled.div`
@@ -22,93 +25,11 @@ export const BackgroundsColores = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: 100;
+  z-index: 2001;
   background:
     url(${bg224}) no-repeat center center / cover,
     url(${bg223}) no-repeat center center / cover,
     url(${bg222}) no-repeat center center / cover;
-`;
-
-export const NavigationList = styled.ul`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  grid-gap: 16px;
-  margin-top: 20%;
-  list-style: none;
-  padding: 0;
-`;
-
-export const NavItem = styled.li`
-  width: auto;
-  margin-bottom: 16px;
-`;
-
-export const StyledLink = styled(NavLink)`
-  padding: 8px 16px;
-  border: 1px solid var(--primary-text-color-light);
-  border-radius: var(--radius-lg);
-  color: var(--primary-text-color-light);
-  text-align: center;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.43;
-  transition: all 400ms ease;
-  text-decoration: none;
-
-  &.active,
-  &:hover,
-  &:focus {
-    background-color: var(--primary-bg-dark-color);
-    border: 1px solid var(--primary-bg-dark-color);
-    color: white;
-  }
-
-  @media (min-width: ${breakpoints.tabletLg}) {
-    line-height: 1.6;
-  }
-`;
-
-export const StyledAnchor = styled.a`
-  position: relative;
-  padding: 4px 0;
-
-  font-family: var(--font-heading);
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-
-  color: var(--text-color-muted);
-  text-decoration: none;
-
-  transition: color 0.2s ease;
-
-  &::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-
-    width: 100%;
-    height: 1px;
-
-    background-color: var(--accent-color);
-
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.25s ease;
-  }
-
-  &:hover,
-  &:focus-visible {
-    color: var(--primary-text-color-light);
-  }
-
-  &:hover::after,
-  &:focus-visible::after {
-    transform: scaleX(1);
-  }
 `;
 
 export const LineMobile = styled.div`
