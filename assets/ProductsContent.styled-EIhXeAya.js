@@ -1,4 +1,4 @@
-import{j as a,T as o,b as t,s as i}from"./index-Qr6Bsxw_.js";const n=({title:e})=>a.jsx(o,{children:e}),d=i.div`
+import{j as a,T as o,b as t,s as i}from"./index-D_QlfYXn.js";const n=({title:e})=>a.jsx(o,{children:e}),d=i.div`
   display: flex;
   justify-content: center;
   align-items: center;
