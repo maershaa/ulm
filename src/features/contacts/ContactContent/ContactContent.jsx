@@ -5,7 +5,6 @@ import {
   ContactLink,
   Icon,
 } from './ContactContent.styled';
-import sprite from '/src/assets/icons.svg';
 import { Title, ContactUsForm } from '@/components';
 import Map from '@/pages/ContactsPage/Map';
 
@@ -24,7 +23,7 @@ const ContactContent = () => {
           <ContactInfo>
             <Icon>
               <svg>
-                <use xlinkHref={`${sprite}#icon-phone`}></use>
+                <use xlinkHref="#icon-phone"></use>
               </svg>
             </Icon>
             <ContactLink href="tel:+380487151660">
@@ -44,7 +43,7 @@ const ContactContent = () => {
           <ContactLink href="mailto:info@ulm.com.ua">
             <Icon>
               <svg>
-                <use xlinkHref={`${sprite}#icon-mail`}></use>
+                <use xlinkHref="#icon-mail"></use>
               </svg>
             </Icon>
             info@ulm.com.ua
@@ -55,7 +54,7 @@ const ContactContent = () => {
           <ContactLink href="mailto:factory@ulm.com.ua">
             <Icon>
               <svg>
-                <use xlinkHref={`${sprite}#icon-mail`}></use>
+                <use xlinkHref="#icon-mail"></use>
               </svg>
             </Icon>
             factory@ulm.com.ua

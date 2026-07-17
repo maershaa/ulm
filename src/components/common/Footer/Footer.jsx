@@ -10,7 +10,6 @@ import {
   CopyrightText,
   StyledLink,
 } from './Footer.styled';
-import sprite from '/src/assets/icons.svg';
 
 const Footer = () => {
   return (
@@ -36,7 +35,7 @@ const Footer = () => {
         <ContactInfo>
           <Icon>
             <svg>
-              <use xlinkHref={`${sprite}#icon-phone`}></use>
+              <use xlinkHref="#icon-phone"></use>
             </svg>
           </Icon>
           <ContactLink href="tel:+380487151660">

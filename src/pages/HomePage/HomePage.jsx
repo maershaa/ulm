@@ -1,4 +1,5 @@
 import { Hero, AboutUsSection, FeaturesSection } from '@/features';
+
 const HomePage = () => {
   return (
     <div>
