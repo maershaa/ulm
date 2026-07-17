@@ -17,7 +17,7 @@ export const Phone = styled.div`
   margin-bottom: 20px;
 `;
 
-export const ContactInfo = styled.p`
+export const ContactInfo = styled.div`
   margin-bottom: 5px;
 
   display: flex;
