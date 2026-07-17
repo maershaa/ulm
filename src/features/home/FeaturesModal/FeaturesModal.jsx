@@ -5,9 +5,12 @@ import {
   ModalImage,
   ModalText,
 } from './FeaturesModal.styled';
+import { useTranslation } from 'react-i18next';
 
 // Основной компонент модалки
-const FeaturesModal = ({ show, onClose, text, imageSrc }) => {
+const FeaturesModal = ({ show, onClose, featureContent }) => {
+  const { t } = useTranslation('home');
+
   // Если show=false, модалка не отображается
   if (!show) return null;
 
@@ -22,8 +25,14 @@ const FeaturesModal = ({ show, onClose, text, imageSrc }) => {
     <ModalContainer onClick={handleBackdropClick}>
       <ModalContent onClick={(e) => e.stopPropagation()}>
         <CloseButton onClick={onClose}>×</CloseButton>
-        <ModalImage src={imageSrc} alt="Expanded view" loading="lazy" />
-        <ModalText>{text}</ModalText>
+        <ModalImage
+          src={featureContent.imageSrc}
+          alt="Expanded view"
+          loading="lazy"
+        />
+        <ModalText>
+          {t(`features.items.${featureContent.id}.description`)}
+        </ModalText>
       </ModalContent>
     </ModalContainer>
   );

@@ -18,7 +18,7 @@ export const Navigation = styled.nav`
   display: flex;
   flex-direction: column;
   gap: 24px;
-  align-items: flex-start;
+  text-align: center;
   justify-content: center;
 
   @media (min-width: ${breakpoints.desktopLg}) {

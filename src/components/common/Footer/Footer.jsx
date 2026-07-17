@@ -10,8 +10,11 @@ import {
   CopyrightText,
   StyledLink,
 } from './Footer.styled';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+  const { t } = useTranslation('contacts');
+
   return (
     <FooterWrapper>
       <Wrapper>
@@ -19,15 +22,15 @@ const Footer = () => {
         <CopyrightText>
           Copyright © 2024{' '}
           <StyledLink href="https://www.linkedin.com/in/valeriiayefremova/">
-            Валерія Єфремова
+            Valeriia Yefremova{' '}
           </StyledLink>
         </CopyrightText>
       </Wrapper>
 
       <Address>
         <ContactInfo>
-          ТОВ &#39;Южлитографметалл&#39; Застава II, вул. Привозна, 1, Одеса,
-          65098, Україна
+          {t('contacts.factoryName')} {t('contacts.addressStreet')}{' '}
+          {t('contacts.addressCity')}
         </ContactInfo>
       </Address>
 
@@ -44,7 +47,7 @@ const Footer = () => {
         </ContactInfo>
 
         <ContactInfo>
-          факс.
+          {t('contacts.fax')}
           <ContactLink href="tel:+380487145509">
             +38 (048) 714-55-09
           </ContactLink>

@@ -13,7 +13,11 @@ import { ContactUsForm } from '@/components';
 
 import { FiCompass, FiPlusCircle } from 'react-icons/fi';
 
+import { useTranslation } from 'react-i18next';
+
 const Hero = () => {
+  const { t } = useTranslation('home');
+
   return (
     <HeroContainer
       $heroImage={heroImage}
@@ -21,24 +25,18 @@ const Hero = () => {
       $heroImageMobile={heroImageMobile}
     >
       <Block>
-        <HeroPrimaryText>
-          Виробник металевих рішень, що відповідають вашим стандартам{' '}
-        </HeroPrimaryText>
+        <HeroPrimaryText>{t('hero.title')}</HeroPrimaryText>
 
-        <HeroInfo>
-          Здійснюємо виробництво металевої продукції з 1994 року. Наші банки,
-          підноси та кришки – це поєднання надійності, функціональності та
-          високих стандартів.
-        </HeroInfo>
+        <HeroInfo>{t('hero.subtitle')}</HeroInfo>
 
         <ButtonsGroup>
           <a href={'#aboutUs'}>
             <FiCompass size={32} />
-            ПРО НАС{' '}
+            {t('hero.linkAbout')}
           </a>
           <a href={'#features'}>
             <FiPlusCircle size={32} />
-            ПЕРЕВАГИ{' '}
+            {t('hero.linkFeatures')}
           </a>
         </ButtonsGroup>
       </Block>

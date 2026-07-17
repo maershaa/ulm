@@ -8,31 +8,33 @@ import {
   FeatureItemTitle,
   FeatureItemText,
 } from './FeaturesSection.styled';
-import FeaturesModal from '@/components/FeaturesModal/FeaturesModal';
+import FeaturesModal from '@/features/home/FeaturesModal/FeaturesModal';
 import { featuresData } from '@/constants';
 import { Title } from '@/components';
+import { useTranslation } from 'react-i18next';
 
 const FeaturesSection = () => {
-  // Состояние для отображения или скрытия модалки
   const [showFeaturesModal, setShowFeaturesModal] = useState(false);
 
   // Состояние для хранения данных текущей особенности, которые будут отображаться в модалке
   const [modalContent, setModalContent] = useState({});
 
-  // Функция для открытия модалки и установки данных выбранной особенности
   const openFeaturesModal = (feature) => {
-    setModalContent(feature); // Устанавливаем данные текущей особенности
-    setShowFeaturesModal(true); // Отображаем модалку
+    setModalContent(feature);
+    setShowFeaturesModal(true);
   };
 
-  // Функция для закрытия модалки
   const closeFeaturesModal = () => {
-    setShowFeaturesModal(false); // Скрываем модалку
+    console.log('🚀 ~ FeaturesSection ~ modalContent:', modalContent);
+
+    setShowFeaturesModal(false);
   };
+
+  const { t } = useTranslation('home');
 
   return (
     <Wrapper>
-      <Title title="ПЕРЕВАГИ" />
+      <Title title={t('features.title')} />
       <FeatureGrid>
         {featuresData.map((feature) => (
           <FeatureItem
@@ -41,12 +43,16 @@ const FeaturesSection = () => {
           >
             <StyledImage
               src={feature.imageSrc}
-              alt={feature.alt}
+              alt={t(`features.items.${feature.id}.alt`)}
               loading="lazy"
             />
             <TextContainer>
-              <FeatureItemTitle>{feature.title}</FeatureItemTitle>
-              <FeatureItemText>{feature.description}</FeatureItemText>
+              <FeatureItemTitle>
+                <h2>{t(`features.items.${feature.id}.title`)}</h2>
+              </FeatureItemTitle>
+              <FeatureItemText>
+                {t(`features.items.${feature.id}.description`)}
+              </FeatureItemText>
             </TextContainer>
           </FeatureItem>
         ))}
@@ -57,8 +63,7 @@ const FeaturesSection = () => {
         <FeaturesModal
           show={showFeaturesModal}
           onClose={closeFeaturesModal}
-          text={modalContent.description}
-          imageSrc={modalContent.imageSrc}
+          featureContent={modalContent}
         />
       )}
     </Wrapper>

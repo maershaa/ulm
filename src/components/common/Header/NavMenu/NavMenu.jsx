@@ -1,13 +1,16 @@
 import { NavWrapper, Navigation, StyledLink } from './NavMenu.styled';
 import { useLocation } from 'react-router-dom';
-import { ThemeSwitcher } from '@/components';
+import { ThemeSwitcher, LanguageSwitcher } from '@/components';
+import { useTranslation } from 'react-i18next';
 
 const NavMenu = ({ handleClick }) => {
   const location = useLocation();
+  const { t } = useTranslation('main');
+
   const links = [
-    { to: '/', label: 'Головна' },
-    { to: '/products', label: 'Продукція' },
-    { to: '/contacts', label: 'Контакти' },
+    { to: '/', translationKey: 'main' },
+    { to: '/products', translationKey: 'products' },
+    { to: '/contacts', translationKey: 'contacts' },
   ];
 
   return (
@@ -20,11 +23,12 @@ const NavMenu = ({ handleClick }) => {
             className={location.pathname === link.to ? 'active' : ''}
             onClick={handleClick}
           >
-            {link.label.toUpperCase()}
+            {t(`navLinks.${link.translationKey}`)}
           </StyledLink>
         ))}
       </Navigation>
       <ThemeSwitcher />
+      <LanguageSwitcher />
     </NavWrapper>
   );
 };

@@ -7,16 +7,19 @@ import {
 } from './ContactContent.styled';
 import { Title, ContactUsForm } from '@/components';
 import Map from '@/pages/ContactsPage/Map';
+import { useTranslation } from 'react-i18next';
 
 const ContactContent = () => {
+  const { t } = useTranslation('contacts');
+
   return (
     <>
       <ContactContainer>
-        <Title title="Контакти" />
+        <Title title={t('contacts.title')} />
         <address>
-          <ContactInfo>ТОВ &#39;Южлитографметалл&#39; </ContactInfo>
-          <ContactInfo>Застава II, вул. Привозна, 1</ContactInfo>
-          <ContactInfo>Одеса, 65098, Україна</ContactInfo>
+          <ContactInfo>{t('contacts.factoryName')}</ContactInfo>
+          <ContactInfo>{t('contacts.addressStreet')}</ContactInfo>
+          <ContactInfo>{t('contacts.addressCity')}</ContactInfo>
         </address>
 
         <Phone>
@@ -32,14 +35,14 @@ const ContactContent = () => {
           </ContactInfo>
 
           <ContactInfo>
-            факс.
+            {t('contacts.fax')}
             <ContactLink href="tel:+380487145509">
               +38 (048) 714-55-09
             </ContactLink>
           </ContactInfo>
         </Phone>
         <ContactInfo>
-          З питань комерції:{' '}
+          {t('contacts.option1')}
           <ContactLink href="mailto:info@ulm.com.ua">
             <Icon>
               <svg>
@@ -50,7 +53,7 @@ const ContactContent = () => {
           </ContactLink>
         </ContactInfo>
         <ContactInfo>
-          З питань виробництва:{' '}
+          {t('contacts.option2')}
           <ContactLink href="mailto:factory@ulm.com.ua">
             <Icon>
               <svg>

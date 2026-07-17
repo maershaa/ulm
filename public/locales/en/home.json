@@ -1,0 +1,59 @@
+{
+  "hero": {
+    "title": "A Manufacturer of Metal Solutions That Meet Your Standards",
+    "subtitle": "We have been manufacturing metal products since 1994. Our cans, trays, and lids combine reliability, functionality, and the highest quality standards.",
+    "linkAbout": "ABOUT US",
+    "linkFeatures": "ADVANTAGES"
+  },
+
+  "aboutUs": {
+    "title": "About Us",
+    "paragraph1": "The company began its operations by manufacturing round and oval metal trays in various sizes with lithographic printing. To this day, we remain the market leader in this product category in Ukraine. Later, the company expanded its production to include SKO lids in sizes I-82, I-58, and I-63.",
+    "paragraph2": "The core of Yuzhlitografmetall LLC's team consists of specialists from Chornomorpoligrafmetal JSC, formerly the largest metal packaging manufacturer in southern Soviet Union. Thanks to our in-house engineering department and mechanical workshop, we established large-scale production of deep-drawn metal cans No. 21, No. 1, No. 2, No. 3, No. 38, No. 5, No. 6, and No. 8, along with matching lids in diameters of 72.3 mm, 83.4 mm, and 99 mm.",
+    "paragraph3": "We designed, manufactured, and commissioned our own equipment for stamping products from sheet metal and coils. From the very beginning, our company has been committed to delivering the highest quality. That is why we use premium lacquers, paints, and enamels supplied by leading European manufacturers. The certified laboratory of Chornomorpoligrafmetal JSC performs rigorous quality control of incoming raw materials as well as finished products."
+  },
+
+  "features": {
+    "title": "OUR ADVANTAGES",
+
+    "items": {
+      "team": {
+        "title": "Experienced Team",
+        "description": "Our company employs highly qualified specialists with 15 to 40 years of experience in metal packaging manufacturing. Their expertise enables us to produce high-quality products using unique manufacturing solutions.",
+        "alt": "Our team"
+      },
+
+      "price": {
+        "title": "Competitive Prices",
+        "description": "Through efficient use of tinplate, optimized production processes, and reduced overhead costs, we offer competitive prices while maintaining consistently high product quality.",
+        "alt": "Competitive pricing"
+      },
+
+      "volumes": {
+        "title": "Production Capacity",
+        "description": "Our manufacturing capacity allows us to supply products in any quantity required by large food processing companies.",
+        "alt": "Production capacity"
+      },
+
+      "delivery": {
+        "title": "Delivery",
+        "description": "We provide reliable product delivery services for the convenience of our customers.",
+        "alt": "Delivery service"
+      },
+
+      "quality": {
+        "title": "Quality",
+        "description": "Strict quality control applies to both finished products and incoming raw materials. We use only materials from trusted suppliers that meet European quality standards.",
+        "alt": "Quality control"
+      },
+
+      "payment-deferral": {
+        "title": "Deferred Payment",
+        "description": "For long-term and trusted customers, we offer flexible payment terms ranging from 30 to 90 days through factoring.",
+        "alt": "Deferred payment"
+      }
+    }
+  },
+
+  "modalText": "{{text}}"
+}

@@ -5,6 +5,7 @@ import App from './App.jsx';
 import '@/assets/styles/index.css';
 import IconSprite from '@/assets/IconSprite.jsx';
 import { ThemeProvider } from '@/context/theme/ThemeProvider.jsx';
+import '@/i18n.js';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
