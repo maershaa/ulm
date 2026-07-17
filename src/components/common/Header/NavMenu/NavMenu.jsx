@@ -1,4 +1,4 @@
-import { Navigation, StyledLink } from './NavMenu.styled';
+import { NavWrapper, Navigation, StyledLink } from './NavMenu.styled';
 import { useLocation } from 'react-router-dom';
 import { ThemeSwitcher } from '@/components';
 
@@ -11,7 +11,7 @@ const NavMenu = ({ handleClick }) => {
   ];
 
   return (
-    <>
+    <NavWrapper>
       <Navigation>
         {links.map((link) => (
           <StyledLink
@@ -25,7 +25,7 @@ const NavMenu = ({ handleClick }) => {
         ))}
       </Navigation>
       <ThemeSwitcher />
-    </>
+    </NavWrapper>
   );
 };
 

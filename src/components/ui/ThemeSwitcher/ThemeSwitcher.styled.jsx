@@ -2,14 +2,11 @@ import styled from 'styled-components';
 import { breakpoints } from '@/assets/styles/breakpoints';
 
 export const ThemeSwitcherWrapper = styled.div`
-  margin-top: 20px;
   display: flex;
-  align-items: start;
+  align-items: center;
 
-  @media (min-width: ${breakpoints.desktop}) {
-    margin-top: 0;
+  @media (min-width: ${breakpoints.desktopLg}) {
     margin-left: 20px;
-    align-items: center;
   }
 
   input {

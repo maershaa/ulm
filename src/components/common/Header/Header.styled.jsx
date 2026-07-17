@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 import { breakpoints } from '@/assets/styles/breakpoints';
+import { zIndex } from '@/assets/styles/zIndex';
 
 export const HeaderContainer = styled.div`
   min-width: 100%;
 
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: ${zIndex.header};
 
   display: flex;
   align-items: center;
@@ -18,7 +19,6 @@ export const HeaderContainer = styled.div`
   margin-left: auto;
   margin-right: auto;
 
-  /* border-radius: var(--radius-lg); */
   border-top-left-radius: var(--radius-lg);
   border-top-right-radius: var(--radius-lg);
 

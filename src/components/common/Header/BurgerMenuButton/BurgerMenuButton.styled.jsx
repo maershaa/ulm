@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { breakpoints } from '@/assets/styles/breakpoints';
+import { zIndex } from '@/assets/styles/zIndex';
 
 export const BtnBurger = styled.button`
   background-color: transparent;
@@ -8,7 +9,9 @@ export const BtnBurger = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 2001; //потому что нужно перекрыть MobMenuContainer с z-index: 2000
+
+  // Должна быть выше мобильного меню, иначе иконку "закрыть" будет не видно
+  z-index: ${zIndex.burgerButton};
 
   @media (min-width: ${breakpoints.desktopLg}) {
     display: none;
@@ -18,5 +21,5 @@ export const BtnBurger = styled.button`
 export const SvgIconBurger = styled.svg`
   width: 32px;
   height: 32px;
-  stroke: white;
+  stroke: var(--primary-text-color-light);
 `;

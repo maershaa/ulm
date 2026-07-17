@@ -2,6 +2,18 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { breakpoints } from '@/assets/styles/breakpoints';
 
+export const NavWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+
+  @media (min-width: ${breakpoints.desktopLg}) {
+    flex-direction: row;
+    gap: 32px;
+  }
+`;
+
 export const Navigation = styled.nav`
   display: flex;
   flex-direction: column;
@@ -17,56 +29,54 @@ export const Navigation = styled.nav`
 `;
 
 export const StyledLink = styled(Link)`
-  padding: 8px 16px;
+  position: relative;
+  padding: 6px 14px;
 
-  color: var(--primary-text-color-light);
-
-  border: 1px solid var(--primary-text-color-light);
+  color: var(--text-color-muted);
+  border: none;
   border-radius: var(--radius-lg);
 
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 500;
 
   transition: var(--transition-base);
 
-  position: relative;
-
-  padding: 4px 0;
-
-  color: var(--text-color-muted);
-  border: none;
-
-  font-size: 0.9rem;
-
-  &::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-
-    width: 100%;
-    height: 2px;
-
-    background-color: var(--light-accent);
-
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.25s ease;
-  }
-
-  @media (min-width: ${breakpoints.desktop}) {
-    font-size: 1rem;
-  }
-
   &:hover,
-  &:focus-visible,
-  &.active {
+  &:focus-visible {
     color: var(--primary-text-color-light);
   }
 
-  &:hover::after,
-  &:focus-visible::after,
-  &.active::after {
-    transform: scaleX(1);
+  &.active {
+    color: var(--primary-text-color-light);
+    background-color: var(--light-accent);
+    font-weight: 600;
+  }
+
+  @media (min-width: ${breakpoints.desktopLg}) {
+    font-size: 1rem;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+
+      width: 100%;
+      height: 2px;
+
+      background-color: var(--light-accent);
+
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.25s ease;
+    }
+
+    &.active {
+      background-color: transparent;
+    }
+
+    &.active::after {
+      transform: scaleX(1);
+    }
   }
 `;
