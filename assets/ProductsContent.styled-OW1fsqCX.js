@@ -1,4 +1,4 @@
-import{j as i,T as o,s as e}from"./index-qH-CQWc3.js";const n=({title:t})=>i.jsx(o,{children:t}),r=e.section`
+import{j as i,T as o,s as e}from"./index-EkST_Q1r.js";const n=({title:t})=>i.jsx(o,{children:t}),r=e.section`
   display: flex;
   justify-content: center;
   align-items: center;

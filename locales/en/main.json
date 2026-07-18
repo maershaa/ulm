@@ -3,5 +3,25 @@
     "main": "HOME",
     "products": "PRODUCTS",
     "contacts": "CONTACTS"
+  },
+
+  "contactUsForm": {
+    "nameInput": "Your name*",
+    "namePlaceholder": "For example: Alexander",
+    "nameError": "Please enter your name",
+    "telInput": "Phone number*",
+    "telPlaceholder": "+380 XX XXX XX XX",
+    "telError": "Please enter your phone number",
+    "telFormatError": "Enter phone number in format +380 XX XXX XX XX",
+    "emailInput": "Your Email",
+    "emailPlaceholder": "name@example.com",
+    "emailError": "Please check your email format",
+    "messageInput": "What are you interested in?*",
+    "messagePlaceholder": "Tell us about your idea or question — we'd be happy to help!",
+    "messageError": "We'd love to know more — please write a few words",
+    "messageTooShort": "Please write a bit more (at least 10 characters)",
+    "btnText": "Send",
+    "successToast": "Thank you for reaching out! We've received your message and will be in touch soon. 😊",
+    "errorToast": "Oops, something went wrong. Please try again"
   }
 }
