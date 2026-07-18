@@ -1,36 +1,37 @@
-import{j as a,T as o,b as t,s as i}from"./index-Bg6O2cn0.js";const n=({title:e})=>a.jsx(o,{children:e}),d=i.section`
+import{j as o,T as a,b as e,s as i}from"./index-1Cl8fMUY.js";const r=({title:t})=>o.jsx(a,{children:t}),d=i.section`
   display: flex;
   justify-content: center;
   align-items: center;
 
   padding: 40px 0;
 
-  @media (min-width: ${t.tabletLg}) {
+  @media (min-width: ${e.tabletLg}) {
     /* padding-left: 32px;
     padding-right: 32px; */
   }
 
-  @media (min-width: ${t.desktop}) {
+  @media (min-width: ${e.desktop}) {
     /* padding-left: 20px;
     padding-right: 20px; */
   }
-`,l=i.div`
-  background-image: url(${e=>e.$bgImageAboutUsPage});
+`,s=i.div`
+  background-image: url(${t=>t.$bgImageAboutUsPage});
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: var(--primary-text-color-light);
+  background-color: ${({theme:t})=>t.colors.textInverse};
+
   background-position: center center;
 
   width: 100%;
   min-height: 400px;
   padding: 20px;
 
-  border-radius: var(--radius-lg);
+  border-radius: ${({theme:t})=>t.radius.lg};
 
-  @media (min-width: ${t.tabletLg}) {
+  @media (min-width: ${e.tabletLg}) {
     padding: 40px;
   }
-`,m=i.div`
+`,l=i.div`
   width: 100%;
   padding: 40px 20px;
 
@@ -43,31 +44,32 @@ import{j as a,T as o,b as t,s as i}from"./index-Bg6O2cn0.js";const n=({title:e})
   justify-content: center;
   align-items: center;
 
-  border-radius: var(--radius-md);
-  background-color: var(--primary-text-color-light);
+  border-radius: ${({theme:t})=>t.radius.md};
 
-  @media (min-width: ${t.tabletLg}) {
+  background-color: ${({theme:t})=>t.colors.textInverse};
+
+  @media (min-width: ${e.tabletLg}) {
     max-width: 500px;
     padding: 60px 40px;
   }
 
-  @media (min-width: ${t.desktop}) {
+  @media (min-width: ${e.desktop}) {
     max-width: 600px;
   }
-`,s=i.p`
+`,m=i.p`
   text-align: left;
 
-  color: var(--primary-bg-dark-color);
-  background-color: var(--primary-text-color-light);
+  color: ${({theme:t})=>t.colors.brand};
+  background-color: ${({theme:t})=>t.colors.textInverse};
 
   font-size: 0.9rem;
   line-height: 1.2;
 
-  @media (min-width: ${t.tabletLg}) {
+  @media (min-width: ${e.tabletLg}) {
     font-size: 1rem;
     padding: 0 10px 0 0;
   }
-`,p=i.div`
+`,c=i.div`
   display: grid;
   grid-template-columns: 1fr;
   gap: 40px;
@@ -81,36 +83,36 @@ import{j as a,T as o,b as t,s as i}from"./index-Bg6O2cn0.js";const n=({title:e})
       rgba(3, 37, 65, 0.9) 0%,
       rgba(3, 37, 65, 0) 100%
     ),
-    url(${e=>e.$heroImageTablet});
+    url(${t=>t.$heroImageTablet});
 
-  @media (min-width: ${t.mobileLg}) {
+  @media (min-width: ${e.mobileLg}) {
     background-image: linear-gradient(
         to right,
         rgba(3, 37, 65, 0.9) 0%,
         rgba(3, 37, 65, 0) 100%
       ),
-      url(${e=>e.$heroImageMobile});
+      url(${t=>t.$heroImageMobile});
     background-size: cover;
     background-repeat: no-repeat;
     background-color: rgb(3, 37, 65);
   }
 
-  @media (min-width: ${t.tabletLg}) {
+  @media (min-width: ${e.tabletLg}) {
     background-image: linear-gradient(
         to right,
         rgba(3, 37, 65, 0.9) 0%,
         rgba(3, 37, 65, 0) 100%
       ),
-      url(${e=>e.$heroImage});
+      url(${t=>t.$heroImage});
   }
 
-  @media (min-width: ${t.desktop}) {
+  @media (min-width: ${e.desktop}) {
     grid-template-columns: 1fr 1fr;
 
     justify-items: stretch;
     gap: 60px;
   }
-`,c=i.div`
+`,p=i.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -121,12 +123,12 @@ import{j as a,T as o,b as t,s as i}from"./index-Bg6O2cn0.js";const n=({title:e})
   margin-bottom: 20px;
   padding: 20px;
 
-  @media (min-width: ${t.tabletLg}) {
+  @media (min-width: ${e.tabletLg}) {
     align-items: flex-start;
     text-align: left;
   }
 `,g=i.h1`
-  color: var(--primary-text-color-light);
+  color: ${({theme:t})=>t.colors.textInverse};
 
   font-size: 1.7rem;
   font-weight: 600;
@@ -136,11 +138,11 @@ import{j as a,T as o,b as t,s as i}from"./index-Bg6O2cn0.js";const n=({title:e})
 
   margin-bottom: 16px;
 
-  @media (min-width: ${t.tablet}) {
+  @media (min-width: ${e.tablet}) {
     font-size: 2.2rem;
   }
 
-  @media (min-width: ${t.desktop}) {
+  @media (min-width: ${e.desktop}) {
     font-size: 3rem;
   }
 
@@ -148,13 +150,14 @@ import{j as a,T as o,b as t,s as i}from"./index-Bg6O2cn0.js";const n=({title:e})
   &::after {
     content: '';
     display: block;
-    border-top: 6px solid var(--light-accent);
+    border-top: 6px solid ${({theme:t})=>t.colors.accentLight};
+
     width: 100px;
     margin-top: 20px;
     margin-bottom: 20px;
   }
 `,x=i.h2`
-  color: var(--primary-text-color-light);
+  color: ${({theme:t})=>t.colors.textInverse};
 
   font-size: 1.5rem;
   font-weight: 400;
@@ -165,11 +168,11 @@ import{j as a,T as o,b as t,s as i}from"./index-Bg6O2cn0.js";const n=({title:e})
   margin-bottom: 35px;
   max-width: 600px;
 
-  @media (min-width: ${t.tablet}) {
+  @media (min-width: ${e.tablet}) {
     font-size: 1.8rem;
   }
 
-  @media (min-width: ${t.desktop}) {
+  @media (min-width: ${e.desktop}) {
     font-size: 2.2rem;
   }
 `,h=i.div`
@@ -179,7 +182,7 @@ import{j as a,T as o,b as t,s as i}from"./index-Bg6O2cn0.js";const n=({title:e})
   gap: 16px;
   width: 100%;
 
-  @media (min-width: ${t.tablet}) {
+  @media (min-width: ${e.tablet}) {
     flex-direction: row;
     width: auto;
   }
@@ -197,19 +200,20 @@ import{j as a,T as o,b as t,s as i}from"./index-Bg6O2cn0.js";const n=({title:e})
     font-weight: 600;
     font-size: 1rem;
     padding: 14px 28px;
-    border-radius: var(--radius-lg);
+    border-radius: ${({theme:t})=>t.radius.lg};
 
-    background-color: var(--light-accent);
+    background-color: ${({theme:t})=>t.colors.accentLight};
+
     opacity: 0.8;
-    color: var(--primary-text-color-light);
+    color: ${({theme:t})=>t.colors.textInverse};
 
-    transition: var(--transition-base);
+    transition: ${({theme:t})=>t.transitions.base};
 
-    @media (min-width: ${t.tablet}) {
+    @media (min-width: ${e.tablet}) {
       width: auto;
     }
 
-    @media (min-width: ${t.desktop}) {
+    @media (min-width: ${e.desktop}) {
       font-size: 1.1rem;
     }
 
@@ -233,13 +237,13 @@ import{j as a,T as o,b as t,s as i}from"./index-Bg6O2cn0.js";const n=({title:e})
 
   grid-gap: 5px;
 
-  @media (min-width: ${t.tabletLg}) {
+  @media (min-width: ${e.tabletLg}) {
     grid-template-columns: 1fr 1fr;
 
     grid-gap: 15px;
   }
 
-  @media (min-width: ${t.desktop}) {
+  @media (min-width: ${e.desktop}) {
     grid-template-columns: 1fr 1fr 1fr;
   }
 `,w=i.li`
@@ -250,7 +254,7 @@ import{j as a,T as o,b as t,s as i}from"./index-Bg6O2cn0.js";const n=({title:e})
   align-items: center;
   text-align: center;
 
-  @media (min-width: ${t.tabletLg}) {
+  @media (min-width: ${e.tabletLg}) {
     flex-direction: column;
 
     // Для нечётных элементов (1, 3, 5...)
@@ -268,22 +272,23 @@ import{j as a,T as o,b as t,s as i}from"./index-Bg6O2cn0.js";const n=({title:e})
   aspect-ratio: 1 / 1;
   object-fit: cover;
 
-  @media (min-width: ${t.tabletLg}) {
+  @media (min-width: ${e.tabletLg}) {
     max-width: 300px;
     margin-bottom: 0;
   }
 
-  @media (min-width: ${t.desktop}) {
+  @media (min-width: ${e.desktop}) {
     max-width: 500px;
   }
-`,v=i.div`
+`,$=i.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
 
   text-align: center;
-  background-color: var(--accent-color);
-  color: var(--primary-text-color-light);
+  background-color: ${({theme:t})=>t.colors.accent};
+
+  color: ${({theme:t})=>t.colors.textInverse};
 
   width: 100%;
   aspect-ratio: 1 / 1;
@@ -291,46 +296,46 @@ import{j as a,T as o,b as t,s as i}from"./index-Bg6O2cn0.js";const n=({title:e})
   margin: 0;
   gap: 1.5rem;
 
-  @media (min-width: ${t.tablet}) {
+  @media (min-width: ${e.tablet}) {
     padding: 16px;
   }
 
-  @media (min-width: ${t.tabletLg}) {
+  @media (min-width: ${e.tabletLg}) {
     text-align: left;
     padding: 24px;
     max-width: 300px;
   }
 
-  @media (min-width: ${t.desktop}) {
+  @media (min-width: ${e.desktop}) {
     max-width: 500px;
     padding: 32px;
   }
-`,$=i.h4`
+`,k=i.h4`
   text-transform: uppercase;
   margin: 0;
   font-weight: 700;
 
   font-size: 1.3rem;
 
-  @media (min-width: ${t.tabletLg}) {
+  @media (min-width: ${e.tabletLg}) {
     font-size: 1rem;
   }
 
-  @media (min-width: ${t.desktop}) {
+  @media (min-width: ${e.desktop}) {
     font-size: 1.2rem;
   }
-`,k=i.p`
+`,v=i.p`
   position: relative;
   padding: 0 30px;
   font-size: 0.9rem;
   line-height: 1.2;
   text-align: justify;
 
-  @media (min-width: ${t.mobileLg}) {
+  @media (min-width: ${e.mobileLg}) {
     font-size: 1rem;
   }
 
-  @media (min-width: ${t.tabletLg}) {
+  @media (min-width: ${e.tabletLg}) {
     font-size: 1rem;
     padding: 0 10px 0 0;
 
@@ -347,7 +352,7 @@ import{j as a,T as o,b as t,s as i}from"./index-Bg6O2cn0.js";const n=({title:e})
 `,y=i.div`
   visibility: hidden; //!!! временное решение чтобы не обображать модалку на телефонах
 
-  @media (min-width: ${t.tabletLg}) {
+  @media (min-width: ${e.tabletLg}) {
     visibility: visible; //!!! временное решение чтобы не обображать модалку на телефонах
 
     position: fixed;
@@ -365,7 +370,7 @@ import{j as a,T as o,b as t,s as i}from"./index-Bg6O2cn0.js";const n=({title:e})
 `,z=i.div`
   background: white;
   padding: 20px;
-  border-radius: var(--radius-md);
+  border-radius: ${({theme:t})=>t.radius.md};
   max-width: 500px;
   width: 100%;
   position: relative;
@@ -375,7 +380,7 @@ import{j as a,T as o,b as t,s as i}from"./index-Bg6O2cn0.js";const n=({title:e})
   right: 10px;
   background-color: rgba(200, 200, 200, 0.8);
   border: none;
-  border-radius: var(--radius-round);
+  border-radius: ${({theme:t})=>t.radius.round};
   width: 30px;
   height: 30px;
   font-size: 1.5rem;
@@ -393,32 +398,32 @@ import{j as a,T as o,b as t,s as i}from"./index-Bg6O2cn0.js";const n=({title:e})
       0.8
     ); /* Более темный фон при наведении */
   }
-`,j=i.img`
+`,I=i.img`
   width: 100%;
   max-width: 400px;
   height: auto;
 
   margin-bottom: 20px;
 
-  @media (min-width: ${t.tabletLg}) {
+  @media (min-width: ${e.tabletLg}) {
     max-width: 500px;
   }
 
-  @media (min-width: ${t.desktop}) {
+  @media (min-width: ${e.desktop}) {
     max-width: 600px;
   }
-`,I=i.p`
+`,j=i.p`
   font-size: 1rem;
   line-height: 1.5;
   color: #333;
 
   margin: 0;
 
-  @media (min-width: ${t.tabletLg}) {
+  @media (min-width: ${e.tabletLg}) {
     font-size: 1.1rem;
   }
 
-  @media (min-width: ${t.desktop}) {
+  @media (min-width: ${e.desktop}) {
     font-size: 1.2rem;
   }
 `,C=i.div`
@@ -433,7 +438,7 @@ import{j as a,T as o,b as t,s as i}from"./index-Bg6O2cn0.js";const n=({title:e})
   }
 `,T=i.div`
   margin-bottom: 20px;
-`,M=i.div`
+`,P=i.div`
   margin-bottom: 5px;
 
   display: flex;
@@ -442,28 +447,29 @@ import{j as a,T as o,b as t,s as i}from"./index-Bg6O2cn0.js";const n=({title:e})
 
   line-height: 1.2;
 
-  color: var(--text-color);
+  color: ${({theme:t})=>t.colors.textPrimary};
 
-  @media (min-width: ${t.tabletLg}) {
+  @media (min-width: ${e.tabletLg}) {
     font-size: 1.1rem;
   }
-`,P=i.div`
+`,M=i.div`
   margin-right: 8px;
 
   svg {
     width: 22px;
     height: 22px;
-    fill: var(--light-accent);
+    fill: ${({theme:t})=>t.colors.accentLight};
   }
 `,B=i.a`
-  color: var(--light-accent);
+  color: ${({theme:t})=>t.colors.accentLight};
+
   text-decoration: none;
 
   display: flex;
   align-items: center;
   font-size: 1rem;
 
-  @media (min-width: ${t.tabletLg}) {
+  @media (min-width: ${e.tabletLg}) {
     font-size: 1.1rem;
   }
   &:hover {
@@ -479,24 +485,26 @@ import{j as a,T as o,b as t,s as i}from"./index-Bg6O2cn0.js";const n=({title:e})
 
   align-items: stretch; //! Устанавливает одинаковую высоту для всех элементов
 
-  @media (min-width: ${t.tabletLg}) {
+  @media (min-width: ${e.tabletLg}) {
     gap: 20px;
   }
 
-  @media (min-width: ${t.desktopLg}) {
+  @media (min-width: ${e.desktopLg}) {
     gap: 30px;
   }
-`,H=i.li`
+`,S=i.li`
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-lg);
+  border: 1px solid ${({theme:t})=>t.colors.borderSubtle};
 
-  border-bottom-color: var(--accent-color);
-  background-color: var(--accent-color);
+  border-radius: ${({theme:t})=>t.radius.lg};
+
+  border-bottom-color: ${({theme:t})=>t.colors.accent};
+
+  background-color: ${({theme:t})=>t.colors.card};
 
   // !Устанавливает базовый размер элемента равный 100% ширины контейнера, за вычетом 20 пикселей.
   // Это позволяет элементу занимать всю ширину контейнера, но оставляет небольшой отступ.
@@ -504,12 +512,12 @@ import{j as a,T as o,b as t,s as i}from"./index-Bg6O2cn0.js";const n=({title:e})
   margin-bottom: 15px;
   padding: 22px;
 
-  @media (min-width: ${t.tabletLg}) {
+  @media (min-width: ${e.tabletLg}) {
     // !Элемент занимает 50% ширины контейнера, минус 20 пикселей. Это делит экран на два столбца.
     flex-basis: calc(50% - 20px);
   }
 
-  @media (min-width: ${t.desktop}) {
+  @media (min-width: ${e.desktop}) {
     // !Элемент занимает 33.3333% ширины контейнера, минус 30 пикселей. Это делит экран на три столбца.
     flex-basis: calc(33.3333% - 30px);
   }
@@ -524,38 +532,38 @@ import{j as a,T as o,b as t,s as i}from"./index-Bg6O2cn0.js";const n=({title:e})
     object-fit: cover;
     aspect-ratio: 1 / 1;
 
-    border-radius: var(--radius-round);
+    border-radius: ${({theme:t})=>t.radius.round};
   }
 
   h3 {
     margin-top: 10px;
-    color: var(--text-color);
+    color: ${({theme:t})=>t.colors.textPrimary};
 
     font-weight: 700;
     font-size: 1.7rem;
 
-    @media (min-width: ${t.tabletLg}) {
+    @media (min-width: ${e.tabletLg}) {
       font-size: 1rem;
     }
 
-    @media (min-width: ${t.desktop}) {
+    @media (min-width: ${e.desktop}) {
       font-size: 1.2rem;
     }
   }
 
   p {
     margin-top: 10px;
-    color: var(--text-color);
+    color: ${({theme:t})=>t.colors.textPrimary};
 
     font-weight: 500;
     font-size: 1.2rem;
 
-    @media (min-width: ${t.tabletLg}) {
+    @media (min-width: ${e.tabletLg}) {
       font-size: 1rem;
     }
 
-    @media (min-width: ${t.desktop}) {
+    @media (min-width: ${e.desktop}) {
       font-size: 1.1rem;
     }
   }
-`;export{s as A,l as B,L as C,b as F,p as H,m as I,y as M,F as P,d as S,n as T,c as a,g as b,x as c,h as d,z as e,j as f,I as g,f as h,w as i,u as j,v as k,$ as l,k as m,H as n,C as o,M as p,T as q,P as r,B as s};
+`;export{m as A,s as B,L as C,b as F,c as H,l as I,y as M,F as P,d as S,r as T,p as a,g as b,x as c,h as d,z as e,I as f,j as g,f as h,w as i,u as j,$ as k,k as l,v as m,S as n,C as o,P as p,T as q,M as r,B as s};
