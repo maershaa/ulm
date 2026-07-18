@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { breakpoints } from '@/assets/styles/breakpoints';
 
 export const FooterWrapper = styled.div`
   min-width: 100%;
@@ -21,7 +20,7 @@ export const FooterWrapper = styled.div`
 
   border-top: 1px solid ${({ theme }) => theme.colors.accentLight};
 
-  @media (min-width: ${breakpoints.tabletLg}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
     padding: 0 25px;
     flex-direction: row;
     justify-content: space-between;
@@ -33,7 +32,7 @@ export const Wrapper = styled.div`
 
   max-width: 200px;
 
-  @media (min-width: ${breakpoints.tabletLg}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
     order: 0; /* Для планшетов и десктопов отображается первым */
 
     max-width: 300px;
@@ -45,7 +44,7 @@ export const Address = styled.address`
 
   max-width: 200px;
 
-  @media (min-width: ${breakpoints.tabletLg}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
     max-width: 250px;
   }
 `;
@@ -55,7 +54,7 @@ export const Phone = styled.div`
 
   max-width: 200px;
 
-  @media (min-width: ${breakpoints.tabletLg}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
     max-width: 250px;
   }
 `;
@@ -67,7 +66,7 @@ export const ContactInfo = styled.div`
   line-height: 1.2;
   color: ${({ theme }) => theme.colors.textInverse};
 
-  @media (min-width: ${breakpoints.tabletLg}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
     font-size: 1.1rem;
   }
 `;
@@ -91,7 +90,7 @@ export const ContactLink = styled.a`
   align-items: start;
   font-size: 1rem;
 
-  @media (min-width: ${breakpoints.tabletLg}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
     font-size: 1.1rem;
   }
   &:hover {
@@ -112,7 +111,7 @@ export const StyledLink = styled.a`
 
   font-size: 1rem;
 
-  @media (min-width: ${breakpoints.tabletLg}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
     font-size: 1.1rem;
   }
   &:hover {

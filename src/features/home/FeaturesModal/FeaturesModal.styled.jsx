@@ -1,11 +1,10 @@
 import styled from 'styled-components';
-import { breakpoints } from '@/assets/styles/breakpoints';
 
 // Контейнер для всей модалки, включая затемнённый фон
 export const ModalContainer = styled.div`
   visibility: hidden; //!!! временное решение чтобы не обображать модалку на телефонах
 
-  @media (min-width: ${breakpoints.tabletLg}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
     visibility: visible; //!!! временное решение чтобы не обображать модалку на телефонах
 
     position: fixed;
@@ -66,11 +65,11 @@ export const ModalImage = styled.img`
 
   margin-bottom: 20px;
 
-  @media (min-width: ${breakpoints.tabletLg}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
     max-width: 500px;
   }
 
-  @media (min-width: ${breakpoints.desktop}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
     max-width: 600px;
   }
 `;
@@ -82,11 +81,11 @@ export const ModalText = styled.p`
 
   margin: 0;
 
-  @media (min-width: ${breakpoints.tabletLg}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
     font-size: 1.1rem;
   }
 
-  @media (min-width: ${breakpoints.desktop}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
     font-size: 1.2rem;
   }
 `;

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { breakpoints } from '@/assets/styles/breakpoints';
 
 export const LayoutWrapper = styled.div`
   position: relative;
@@ -20,7 +19,7 @@ export const LayoutWrapper = styled.div`
     width: 100%;
     position: relative;
 
-    @media (min-width: ${breakpoints.desktopLg}) {
+    @media (min-width: ${({ theme }) => theme.breakpoints.desktopLg}) {
       align-items: center;
     }
   }

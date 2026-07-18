@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { breakpoints } from '@/assets/styles/breakpoints';
 
 export const SectionWrapper = styled.section`
   display: flex;
@@ -8,12 +7,12 @@ export const SectionWrapper = styled.section`
 
   padding: 40px 0;
 
-  @media (min-width: ${breakpoints.tabletLg}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
     /* padding-left: 32px;
     padding-right: 32px; */
   }
 
-  @media (min-width: ${breakpoints.desktop}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
     /* padding-left: 20px;
     padding-right: 20px; */
   }
@@ -33,7 +32,7 @@ export const Block = styled.div`
 
   border-radius: ${({ theme }) => theme.radius.lg};
 
-  @media (min-width: ${breakpoints.tabletLg}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
     padding: 40px;
   }
 `;
@@ -55,12 +54,12 @@ export const InfoContainer = styled.div`
 
   background-color: ${({ theme }) => theme.colors.textInverse};
 
-  @media (min-width: ${breakpoints.tabletLg}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
     max-width: 500px;
     padding: 60px 40px;
   }
 
-  @media (min-width: ${breakpoints.desktop}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
     max-width: 600px;
   }
 `;
@@ -73,7 +72,7 @@ export const AboutUsInfo = styled.p`
   font-size: 0.9rem;
   line-height: 1.2;
 
-  @media (min-width: ${breakpoints.tabletLg}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
     font-size: 1rem;
     padding: 0 10px 0 0;
   }

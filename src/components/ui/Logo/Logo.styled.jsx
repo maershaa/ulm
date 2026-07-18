@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
-import { breakpoints } from '@/assets/styles/breakpoints';
 
 export const LogoLink = styled(NavLink)`
   font-family: 'Manrope', sans-serif;
@@ -14,7 +13,7 @@ export const LogoLink = styled(NavLink)`
   cursor: pointer;
 
   margin-right: auto;
-  @media (min-width: ${breakpoints.tabletLg}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
     column-gap: 15px;
   }
 `;
@@ -34,7 +33,7 @@ export const LogoLink = styled(NavLink)`
 //     0 0 8px #00baff,
 //     0 0 16px #00baff;
 
-//   @media (min-width: ${breakpoints.tabletLg}) {
+//   @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
 //     font-size: 28px;
 //   }
 // `;

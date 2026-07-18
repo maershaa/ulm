@@ -1,11 +1,10 @@
 import styled from 'styled-components';
-import { breakpoints } from '@/assets/styles/breakpoints';
 
 export const ThemeSwitcherWrapper = styled.div`
   display: flex;
   align-items: center;
 
-  @media (min-width: ${breakpoints.desktopLg}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktopLg}) {
     margin-left: 20px;
   }
 

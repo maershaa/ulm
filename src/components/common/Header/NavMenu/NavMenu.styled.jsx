@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { breakpoints } from '@/assets/styles/breakpoints';
 
 export const NavWrapper = styled.div`
   display: flex;
@@ -8,7 +7,7 @@ export const NavWrapper = styled.div`
   align-items: center;
   gap: 24px;
 
-  @media (min-width: ${breakpoints.desktopLg}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktopLg}) {
     flex-direction: row;
     gap: 32px;
   }
@@ -21,7 +20,7 @@ export const Navigation = styled.nav`
   text-align: center;
   justify-content: center;
 
-  @media (min-width: ${breakpoints.desktopLg}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktopLg}) {
     flex-direction: row;
     align-items: center;
     gap: 32px;
@@ -54,7 +53,7 @@ export const StyledLink = styled(Link)`
     font-weight: 600;
   }
 
-  @media (min-width: ${breakpoints.desktopLg}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktopLg}) {
     font-size: 1rem;
 
     &::after {

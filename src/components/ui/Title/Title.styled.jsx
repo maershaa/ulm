@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { breakpoints } from '@/assets/styles/breakpoints';
 
 export const Title = styled.h2`
   display: inline;
@@ -15,7 +14,7 @@ export const Title = styled.h2`
 
   font-size: 1.5rem;
 
-  @media (min-width: ${breakpoints.desktop}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
     font-size: 2rem;
   }
 

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { breakpoints } from '@/assets/styles/breakpoints';
 import { zIndex } from '@/assets/styles/zIndex';
 
 export const BtnBurger = styled.button`
@@ -13,7 +12,7 @@ export const BtnBurger = styled.button`
   // Должна быть выше мобильного меню, иначе иконку "закрыть" будет не видно
   z-index: ${zIndex.burgerButton};
 
-  @media (min-width: ${breakpoints.desktopLg}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktopLg}) {
     display: none;
   }
 `;

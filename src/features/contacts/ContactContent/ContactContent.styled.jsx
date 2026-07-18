@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { breakpoints } from '@/assets/styles/breakpoints';
 
 export const ContactContainer = styled.div`
   padding: 20px;
@@ -28,7 +27,7 @@ export const ContactInfo = styled.div`
 
   color: ${({ theme }) => theme.colors.textPrimary};
 
-  @media (min-width: ${breakpoints.tabletLg}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
     font-size: 1.1rem;
   }
 `;
@@ -52,7 +51,7 @@ export const ContactLink = styled.a`
   align-items: center;
   font-size: 1rem;
 
-  @media (min-width: ${breakpoints.tabletLg}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
     font-size: 1.1rem;
   }
   &:hover {

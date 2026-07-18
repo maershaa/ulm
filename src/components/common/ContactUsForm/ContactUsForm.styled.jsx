@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { breakpoints } from '@/assets/styles/breakpoints';
 
 export const FormContainer = styled.div`
   width: 100%;
@@ -14,13 +13,13 @@ export const FormContainer = styled.div`
 
   box-shadow: ${({ theme }) => theme.shadows.md};
 
-  @media (min-width: ${breakpoints.tablet}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 
-  @media (min-width: ${breakpoints.tabletLg}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
   }
 
-  @media (min-width: ${breakpoints.desktop}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
   }
 `;
 
@@ -37,7 +36,7 @@ export const FormLabel = styled.label`
   margin-left: 2px;
   color: var(--text-color);
 
-  @media (min-width: ${breakpoints.desktop}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
     font-size: 1.1rem;
   }
 `;
@@ -50,7 +49,7 @@ export const FormInput = styled.input`
   border-radius: ${({ theme }) => theme.radius.sm};
   font-size: 1rem;
 
-  @media (min-width: ${breakpoints.desktop}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
     font-size: 1.1rem;
   }
 
@@ -69,7 +68,7 @@ export const FormTextarea = styled.textarea`
   font-size: 0.9rem;
   box-sizing: border-box;
 
-  @media (min-width: ${breakpoints.tablet}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
     font-size: 1rem;
   }
 
@@ -95,7 +94,7 @@ export const FormButton = styled.button`
 
   transition: ${({ theme }) => theme.transitions.base};
 
-  @media (min-width: ${breakpoints.tablet}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
     font-size: 1rem;
   }
 

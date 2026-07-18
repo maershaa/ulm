@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { breakpoints } from '@/assets/styles/breakpoints';
 
 export const HeroContainer = styled.div`
   display: grid;
@@ -17,7 +16,7 @@ export const HeroContainer = styled.div`
     ),
     url(${(props) => props.$heroImageTablet});
 
-  @media (min-width: ${breakpoints.mobileLg}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.mobileLg}) {
     background-image: linear-gradient(
         to right,
         rgba(3, 37, 65, 0.9) 0%,
@@ -29,7 +28,7 @@ export const HeroContainer = styled.div`
     background-color: rgb(3, 37, 65);
   }
 
-  @media (min-width: ${breakpoints.tabletLg}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
     background-image: linear-gradient(
         to right,
         rgba(3, 37, 65, 0.9) 0%,
@@ -38,7 +37,7 @@ export const HeroContainer = styled.div`
       url(${(props) => props.$heroImage});
   }
 
-  @media (min-width: ${breakpoints.desktop}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
     grid-template-columns: 1fr 1fr;
 
     justify-items: stretch;
@@ -57,7 +56,7 @@ export const Block = styled.div`
   margin-bottom: 20px;
   padding: 20px;
 
-  @media (min-width: ${breakpoints.tabletLg}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
     align-items: flex-start;
     text-align: left;
   }
@@ -74,11 +73,11 @@ export const HeroPrimaryText = styled.h1`
 
   margin-bottom: 16px;
 
-  @media (min-width: ${breakpoints.tablet}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
     font-size: 2.2rem;
   }
 
-  @media (min-width: ${breakpoints.desktop}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
     font-size: 3rem;
   }
 
@@ -105,11 +104,11 @@ export const HeroInfo = styled.h2`
   margin-bottom: 35px;
   max-width: 600px;
 
-  @media (min-width: ${breakpoints.tablet}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
     font-size: 1.8rem;
   }
 
-  @media (min-width: ${breakpoints.desktop}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
     font-size: 2.2rem;
   }
 `;
@@ -121,7 +120,7 @@ export const ButtonsGroup = styled.div`
   gap: 16px;
   width: 100%;
 
-  @media (min-width: ${breakpoints.tablet}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
     flex-direction: row;
     width: auto;
   }
@@ -148,11 +147,11 @@ export const ButtonsGroup = styled.div`
 
     transition: ${({ theme }) => theme.transitions.base};
 
-    @media (min-width: ${breakpoints.tablet}) {
+    @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
       width: auto;
     }
 
-    @media (min-width: ${breakpoints.desktop}) {
+    @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
       font-size: 1.1rem;
     }
 

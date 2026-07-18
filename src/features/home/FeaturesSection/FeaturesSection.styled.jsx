@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { breakpoints } from '@/assets/styles/breakpoints';
 
 export const SectionWrapper = styled.section`
   display: flex;
@@ -17,13 +16,13 @@ export const FeatureList = styled.ul`
 
   grid-gap: 5px;
 
-  @media (min-width: ${breakpoints.tabletLg}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
     grid-template-columns: 1fr 1fr;
 
     grid-gap: 15px;
   }
 
-  @media (min-width: ${breakpoints.desktop}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
     grid-template-columns: 1fr 1fr 1fr;
   }
 `;
@@ -36,7 +35,7 @@ export const FeatureItem = styled.li`
   align-items: center;
   text-align: center;
 
-  @media (min-width: ${breakpoints.tabletLg}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
     flex-direction: column;
 
     // Для нечётных элементов (1, 3, 5...)
@@ -56,12 +55,12 @@ export const StyledImage = styled.img`
   aspect-ratio: 1 / 1;
   object-fit: cover;
 
-  @media (min-width: ${breakpoints.tabletLg}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
     max-width: 300px;
     margin-bottom: 0;
   }
 
-  @media (min-width: ${breakpoints.desktop}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
     max-width: 500px;
   }
 `;
@@ -82,17 +81,17 @@ export const TextContainer = styled.div`
   margin: 0;
   gap: 1.5rem;
 
-  @media (min-width: ${breakpoints.tablet}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
     padding: 16px;
   }
 
-  @media (min-width: ${breakpoints.tabletLg}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
     text-align: left;
     padding: 24px;
     max-width: 300px;
   }
 
-  @media (min-width: ${breakpoints.desktop}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
     max-width: 500px;
     padding: 32px;
   }
@@ -105,11 +104,11 @@ export const FeatureItemTitle = styled.h4`
 
   font-size: 1.3rem;
 
-  @media (min-width: ${breakpoints.tabletLg}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
     font-size: 1rem;
   }
 
-  @media (min-width: ${breakpoints.desktop}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
     font-size: 1.2rem;
   }
 `;
@@ -121,12 +120,11 @@ export const FeatureItemText = styled.p`
   line-height: 1.2;
   text-align: justify;
 
-  @media (min-width: ${breakpoints.mobileLg}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.mobileLg}) {
     font-size: 1rem;
   }
 
-  @media (min-width: ${breakpoints.tabletLg}) {
-    font-size: 1rem;
+  @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
     padding: 0 10px 0 0;
 
     //! Делаем (...) троеточиеи обрезаем текст

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { breakpoints } from '@/assets/styles/breakpoints';
 import { zIndex } from '@/assets/styles/zIndex';
 
 export const HeaderContainer = styled.div`
@@ -23,7 +22,7 @@ export const HeaderContainer = styled.div`
 
   border-bottom: 1px solid ${({ theme }) => theme.colors.accentLight};
 
-  @media (min-width: ${breakpoints.tabletLg}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
     padding: 0 25px;
   }
 `;
