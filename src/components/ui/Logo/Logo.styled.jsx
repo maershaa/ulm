@@ -19,21 +19,22 @@ export const LogoLink = styled(NavLink)`
   }
 `;
 
-export const LogoText = styled.span`
-  text-transform: uppercase;
-  font-style: italic;
-  font-family: 'Oswald', sans-serif;
+// export const LogoText = styled.span`
+//   text-transform: uppercase;
+//   font-style: italic;
+//   font-family: 'Oswald', sans-serif;
 
-  font-size: 24px;
-  font-weight: 500px;
-  color: var(--primary-text-color-light);
-  text-shadow:
-    0 0 2px #00baff,
-    0 0 4px #00baff,
-    0 0 8px #00baff,
-    0 0 16px #00baff;
+//   font-size: 24px;
+//   font-weight: 500px;
+//   color: ${({ theme }) => theme.colors.textInverse};
 
-  @media (min-width: ${breakpoints.tabletLg}) {
-    font-size: 28px;
-  }
-`;
+//   text-shadow:
+//     0 0 2px #00baff,
+//     0 0 4px #00baff,
+//     0 0 8px #00baff,
+//     0 0 16px #00baff;
+
+//   @media (min-width: ${breakpoints.tabletLg}) {
+//     font-size: 28px;
+//   }
+// `;

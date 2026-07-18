@@ -4,16 +4,16 @@ import { ThemeContext } from '@/context/theme/ThemeContext';
 import { useContext } from 'react';
 
 const ThemeSwitcher = () => {
-  const { theme, toggleTheme } = useContext(ThemeContext);
+  const { mode, toggleTheme } = useContext(ThemeContext);
 
   return (
     <ThemeSwitcherWrapper>
       <input
         type="checkbox"
         id="check"
-        value={theme}
+        value={mode}
         onChange={toggleTheme}
-        checked={theme === 'dark' ? true : false}
+        checked={mode === 'dark' ? true : false}
       />
       <label htmlFor="check">
         <MdSunny className="sun" />

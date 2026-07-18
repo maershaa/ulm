@@ -9,18 +9,18 @@ export const ErrorMessage = styled.p`
   padding: 5px 10px;
   font-size: 0.8rem;
 
-  border-radius: var(--radius-md);
+  color: ${({ theme }) => theme.colors.warning};
+  background: ${({ theme }) => theme.colors.warningBg};
+  border: 1px solid ${({ theme }) => theme.colors.warning};
+  border-radius: ${({ theme }) => theme.radius.sm};
 
-  border: 1px solid var(--border-color);
-  background: rgba(248, 184, 98, 0.1);
-  box-shadow: 0 0 15px rgba(248, 184, 98, 0.4);
-  opacity: 0.8;
+  box-shadow: ${({ theme }) => theme.shadows.xs};
 
   svg {
-    color: #ad6a13;
+    color: ${({ theme }) => theme.colors.warning};
   }
 
   span {
-    color: #ad6a13;
+    color: ${({ theme }) => theme.colors.warning};
   }
 `;

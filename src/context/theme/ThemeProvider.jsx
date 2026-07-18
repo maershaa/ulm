@@ -1,23 +1,25 @@
 import { useEffect, useState } from 'react';
+import { ThemeProvider as StyledThemeProvider } from 'styled-components';
 
 import { ThemeContext } from '@/context/theme/ThemeContext';
+import { theme } from '@/assets/styles/theme';
 
 const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark');
+  const [mode, setMode] = useState(localStorage.getItem('theme') || 'dark');
 
   const toggleTheme = () => {
-    setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
+    setMode((prev) => (prev === 'light' ? 'dark' : 'light'));
   };
 
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme);
+    document.documentElement.setAttribute('data-theme', mode);
 
-    localStorage.setItem('theme', theme);
-  }, [theme]);
+    localStorage.setItem('theme', mode);
+  }, [mode]);
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      {children}
+    <ThemeContext.Provider value={{ mode, toggleTheme }}>
+      <StyledThemeProvider theme={theme}>{children}</StyledThemeProvider>{' '}
     </ThemeContext.Provider>
   );
 };

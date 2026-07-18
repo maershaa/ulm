@@ -17,89 +17,91 @@ export const ThemeSwitcherWrapper = styled.div`
   }
 
   label {
+    cursor: pointer;
+
     position: relative;
     display: block;
 
-    width: 70px;
-    height: 26px;
+    overflow: hidden;
 
-    border-radius: var(--radius-lg);
+    width: 92px;
+    height: 34px;
 
-    background: var(--accent-color);
-    border: 1px solid var(--border-color-strong);
-    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
-    cursor: pointer;
-    transition: var(--transition-base);
+    border: 1px solid ${({ theme }) => theme.colors.borderStrong};
+    border-radius: ${({ theme }) => theme.radius.lg};
+    background: ${({ theme }) => theme.colors.accent};
+
+    transition: ${({ theme }) => theme.transitions.base};
   }
 
   /* Ползунок (солнце) */
   label::after {
     content: '';
-    width: 22px;
-    height: 22px;
+    width: 30px;
+    height: 30px;
     position: absolute;
     top: 1px;
     left: 2px;
 
     background: linear-gradient(135deg, #ffdf9e, #f39c12);
-    border-radius: var(--radius-round);
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-
+    border-radius: 50%;
+    box-shadow: ${({ theme }) => theme.shadows.switchThumb};
     transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   /* Темная тема */
   input:checked + label {
-    background: var(--primary-bg-dark-color);
-    border-color: var(--light-accent);
-    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.4);
+    background: ${({ theme }) => theme.colors.brand};
+    border-color: ${({ theme }) => theme.colors.accentLight};
+    box-shadow: ${({ theme }) => theme.shadows.switchTrackDark};
   }
 
   /* Ползунок в темной теме (луна) */
   input:checked + label:after {
-    left: 68px;
-    transform: translateX(-100%);
+    left: 58px;
     background: linear-gradient(135deg, #4ea8d8, #032541);
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: ${({ theme }) => theme.shadows.switchThumbDark};
   }
 
   /* Эффект вытягивания в форме элипса при клике на свг */
   label:active:after {
-    width: 28px;
+    width: 34px;
   }
 
   /* Иконки */
   label svg {
     position: absolute;
-    width: 14px;
-    height: 14px;
-    top: 5px;
+    width: 18px;
+    height: 18px;
+    top: 8px;
     z-index: 10;
-    transition: var(--transition-base);
+    transition: ${({ theme }) => theme.transitions.base};
   }
 
   /* Солнце слева */
   label svg.sun {
-    left: 6px;
-    fill: var(--text-color);
+    left: 8px;
+    fill: ${({ theme }) => theme.colors.textPrimary};
+
     opacity: 0.8;
   }
 
   /* Луна справа */
   label svg.moon {
-    left: 50px;
-    fill: var(--text-color-muted);
+    left: 66px;
+    fill: ${({ theme }) => theme.colors.textSecondary};
+
     opacity: 0.4;
   }
 
   /* Состояние иконок в темной теме */
   input:checked + label svg.sun {
-    fill: var(--text-color-muted);
+    fill: ${({ theme }) => theme.colors.textSecondary};
     opacity: 0.4;
   }
 
   input:checked + label svg.moon {
-    fill: #ffffff;
+    fill: ${({ theme }) => theme.colors.textInverse};
     opacity: 1;
   }
 `;

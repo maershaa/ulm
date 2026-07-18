@@ -7,12 +7,12 @@ export const Switcher = styled.div`
 
   padding: 2px;
 
-  border: 1px solid var(--border-color-strong);
-  border-radius: var(--radius-lg);
+  border: 1px solid ${({ theme }) => theme.colors.borderStrong};
 
-  background-color: var(--primary-bg-dark-color);
+  border-radius: ${({ theme }) => theme.radius.lg};
 
-  transition: var(--transition-base);
+  background-color: ${({ theme }) => theme.colors.brand};
+  transition: ${({ theme }) => theme.transitions.base};
 `;
 
 export const LanguageButton = styled.button`
@@ -25,35 +25,31 @@ export const LanguageButton = styled.button`
 
   padding: 0 10px;
 
-  border-radius: calc(var(--radius-lg) - 2px);
+  border-radius: ${({ theme }) => theme.radius.lg};
 
   font-family: 'Manrope', sans-serif;
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.03em;
 
-  color: ${({ $active }) =>
-    $active
-      ? 'var(--primary-bg-dark-color)'
-      : 'var(--primary-text-color-light)'};
+  color: ${({ theme, $active }) =>
+    $active ? theme.colors.textInverse : theme.colors.textSecondary};
 
-  background-color: ${({ $active }) =>
-    $active ? 'var(--primary-text-color-light)' : 'transparent'};
+  background: ${({ theme, $active }) =>
+    $active ? theme.colors.accent : 'transparent'};
 
   opacity: ${({ $active }) => ($active ? 1 : 0.75)};
 
-  transition: var(--transition-base);
+  transition: ${({ theme }) => theme.transitions.base};
 
   &:hover {
     opacity: 1;
-    background-color: ${({ $active }) =>
-      $active
-        ? 'var(--primary-text-color-light)'
-        : 'rgba(255, 255, 255, 0.08)'};
+    background: ${({ theme, $active }) =>
+      $active ? theme.colors.accentLight : theme.colors.borderSubtle};
   }
 
   &:focus-visible {
-    outline: 2px solid var(--primary-text-color-light);
+    outline: 2px solid ${({ theme }) => theme.colors.accent};
     outline-offset: 2px;
   }
 

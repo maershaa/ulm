@@ -23,14 +23,15 @@ export const Block = styled.div`
   background-image: url(${(props) => props.$bgImageAboutUsPage});
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: var(--primary-text-color-light);
+  background-color: ${({ theme }) => theme.colors.textInverse};
+
   background-position: center center;
 
   width: 100%;
   min-height: 400px;
   padding: 20px;
 
-  border-radius: var(--radius-lg);
+  border-radius: ${({ theme }) => theme.radius.lg};
 
   @media (min-width: ${breakpoints.tabletLg}) {
     padding: 40px;
@@ -50,8 +51,9 @@ export const InfoContainer = styled.div`
   justify-content: center;
   align-items: center;
 
-  border-radius: var(--radius-md);
-  background-color: var(--primary-text-color-light);
+  border-radius: ${({ theme }) => theme.radius.md};
+
+  background-color: ${({ theme }) => theme.colors.textInverse};
 
   @media (min-width: ${breakpoints.tabletLg}) {
     max-width: 500px;
@@ -65,8 +67,8 @@ export const InfoContainer = styled.div`
 export const AboutUsInfo = styled.p`
   text-align: left;
 
-  color: var(--primary-bg-dark-color);
-  background-color: var(--primary-text-color-light);
+  color: ${({ theme }) => theme.colors.brand};
+  background-color: ${({ theme }) => theme.colors.textInverse};
 
   font-size: 0.9rem;
   line-height: 1.2;

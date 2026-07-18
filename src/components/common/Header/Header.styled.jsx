@@ -13,20 +13,15 @@ export const HeaderContainer = styled.div`
   align-items: center;
   justify-content: space-between;
 
-  background-color: var(--primary-bg-dark-color);
-
+  background-color: ${({ theme }) => theme.colors.brand};
   padding: 0 15px;
   margin-left: auto;
   margin-right: auto;
 
-  border-top-left-radius: var(--radius-lg);
-  border-top-right-radius: var(--radius-lg);
+  border-top-left-radius: ${({ theme }) => theme.radius.lg};
+  border-top-right-radius: ${({ theme }) => theme.radius.lg};
 
-  border-bottom: 1px solid var(--light-accent);
-  box-shadow:
-    rgba(46, 47, 66, 0.08) 0px 2px 1px,
-    rgba(46, 47, 66, 0.16) 0px 1px 1px,
-    rgba(46, 47, 66, 0.08) 0px 1px 6px;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.accentLight};
 
   @media (min-width: ${breakpoints.tabletLg}) {
     padding: 0 25px;

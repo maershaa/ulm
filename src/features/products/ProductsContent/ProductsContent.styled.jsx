@@ -26,11 +26,13 @@ export const ProductsItem = styled.li`
   align-items: center;
   text-align: center;
 
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-lg);
+  border: 1px solid ${({ theme }) => theme.colors.borderSubtle};
 
-  border-bottom-color: var(--accent-color);
-  background-color: var(--accent-color);
+  border-radius: ${({ theme }) => theme.radius.lg};
+
+  border-bottom-color: ${({ theme }) => theme.colors.accent};
+
+  background-color: ${({ theme }) => theme.colors.card};
 
   // !Устанавливает базовый размер элемента равный 100% ширины контейнера, за вычетом 20 пикселей.
   // Это позволяет элементу занимать всю ширину контейнера, но оставляет небольшой отступ.
@@ -58,12 +60,12 @@ export const ProductsItem = styled.li`
     object-fit: cover;
     aspect-ratio: 1 / 1;
 
-    border-radius: var(--radius-round);
+    border-radius: ${({ theme }) => theme.radius.round};
   }
 
   h3 {
     margin-top: 10px;
-    color: var(--text-color);
+    color: ${({ theme }) => theme.colors.textPrimary};
 
     font-weight: 700;
     font-size: 1.7rem;
@@ -79,7 +81,7 @@ export const ProductsItem = styled.li`
 
   p {
     margin-top: 10px;
-    color: var(--text-color);
+    color: ${({ theme }) => theme.colors.textPrimary};
 
     font-weight: 500;
     font-size: 1.2rem;

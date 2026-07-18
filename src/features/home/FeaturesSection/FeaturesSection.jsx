@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import {
   SectionWrapper,
-  FeatureGrid,
+  FeatureList,
   FeatureItem,
   TextContainer,
   StyledImage,
@@ -25,8 +25,6 @@ const FeaturesSection = () => {
   };
 
   const closeFeaturesModal = () => {
-    console.log('🚀 ~ FeaturesSection ~ modalContent:', modalContent);
-
     setShowFeaturesModal(false);
   };
 
@@ -35,7 +33,7 @@ const FeaturesSection = () => {
   return (
     <SectionWrapper id="features">
       <Title title={t('features.title')} />
-      <FeatureGrid>
+      <FeatureList>
         {featuresData.map((feature) => (
           <FeatureItem
             key={feature.id}
@@ -48,7 +46,7 @@ const FeaturesSection = () => {
             />
             <TextContainer>
               <FeatureItemTitle>
-                <h2>{t(`features.items.${feature.id}.title`)}</h2>
+                {t(`features.items.${feature.id}.title`)}
               </FeatureItemTitle>
               <FeatureItemText>
                 {t(`features.items.${feature.id}.description`)}
@@ -56,7 +54,7 @@ const FeaturesSection = () => {
             </TextContainer>
           </FeatureItem>
         ))}
-      </FeatureGrid>
+      </FeatureList>
 
       {/* Компонент модалки */}
       {showFeaturesModal && (

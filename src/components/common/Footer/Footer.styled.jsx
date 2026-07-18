@@ -10,23 +10,16 @@ export const FooterWrapper = styled.div`
   justify-content: center;
   text-align: center;
 
-  background-color: var(--primary-bg-dark-color);
-
+  background-color: ${({ theme }) => theme.colors.brand};
   padding: 15px;
 
   margin-left: auto;
   margin-right: auto;
 
-  /* border-radius: var(--radius-lg); */
+  border-bottom-left-radius: ${({ theme }) => theme.radius.lg};
+  border-bottom-right-radius: ${({ theme }) => theme.radius.lg};
 
-  border-bottom-left-radius: var(--radius-lg);
-  border-bottom-right-radius: var(--radius-lg);
-
-  border-top: 1px solid var(--light-accent);
-  box-shadow:
-    rgba(46, 47, 66, 0.08) 0px 2px 1px,
-    rgba(46, 47, 66, 0.16) 0px 1px 1px,
-    rgba(46, 47, 66, 0.08) 0px 1px 6px;
+  border-top: 1px solid ${({ theme }) => theme.colors.accentLight};
 
   @media (min-width: ${breakpoints.tabletLg}) {
     padding: 0 25px;
@@ -72,7 +65,8 @@ export const ContactInfo = styled.div`
   font-size: 1rem;
 
   line-height: 1.2;
-  color: var(--primary-text-color-light);
+  color: ${({ theme }) => theme.colors.textInverse};
+
   @media (min-width: ${breakpoints.tabletLg}) {
     font-size: 1.1rem;
   }
@@ -84,12 +78,13 @@ export const Icon = styled.div`
   svg {
     width: 22px;
     height: 22px;
-    fill: var(--accent-color);
+    fill: ${({ theme }) => theme.colors.accent};
   }
 `;
 
 export const ContactLink = styled.a`
-  color: var(--primary-text-color-light);
+  color: ${({ theme }) => theme.colors.textInverse};
+
   text-decoration: none;
 
   display: flex;
@@ -105,7 +100,7 @@ export const ContactLink = styled.a`
 `;
 
 export const CopyrightText = styled.p`
-  color: var(--primary-text-color-light);
+  color: ${({ theme }) => theme.colors.textInverse};
 
   margin: 0;
   margin-bottom: 10px;

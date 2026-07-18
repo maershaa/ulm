@@ -26,7 +26,7 @@ export const ContactInfo = styled.div`
 
   line-height: 1.2;
 
-  color: var(--text-color);
+  color: ${({ theme }) => theme.colors.textPrimary};
 
   @media (min-width: ${breakpoints.tabletLg}) {
     font-size: 1.1rem;
@@ -39,12 +39,13 @@ export const Icon = styled.div`
   svg {
     width: 22px;
     height: 22px;
-    fill: var(--light-accent);
+    fill: ${({ theme }) => theme.colors.accentLight};
   }
 `;
 
 export const ContactLink = styled.a`
-  color: var(--light-accent);
+  color: ${({ theme }) => theme.colors.accentLight};
+
   text-decoration: none;
 
   display: flex;

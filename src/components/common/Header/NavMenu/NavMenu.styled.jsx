@@ -32,23 +32,25 @@ export const StyledLink = styled(Link)`
   position: relative;
   padding: 6px 14px;
 
-  color: var(--text-color-muted);
+  color: ${({ theme }) => theme.colors.textSecondary};
+
   border: none;
-  border-radius: var(--radius-lg);
+  border-radius: ${({ theme }) => theme.radius.lg};
 
   font-size: 0.9rem;
   font-weight: 500;
 
-  transition: var(--transition-base);
+  transition: ${({ theme }) => theme.transitions.base};
 
   &:hover,
   &:focus-visible {
-    color: var(--primary-text-color-light);
+    color: ${({ theme }) => theme.colors.textInverse};
   }
 
   &.active {
-    color: var(--primary-text-color-light);
-    background-color: var(--light-accent);
+    color: ${({ theme }) => theme.colors.textInverse};
+
+    background-color: ${({ theme }) => theme.colors.accentLight};
     font-weight: 600;
   }
 
@@ -64,11 +66,10 @@ export const StyledLink = styled(Link)`
       width: 100%;
       height: 2px;
 
-      background-color: var(--light-accent);
-
+      background-color: ${({ theme }) => theme.colors.accentLight};
       transform: scaleX(0);
       transform-origin: left;
-      transition: transform 0.25s ease;
+      transition: ${({ theme }) => theme.transitions.base};
     }
 
     &.active {

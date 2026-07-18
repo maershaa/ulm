@@ -26,7 +26,7 @@ export const ModalContainer = styled.div`
 export const ModalContent = styled.div`
   background: white;
   padding: 20px;
-  border-radius: var(--radius-md);
+  border-radius: ${({ theme }) => theme.radius.md};
   max-width: 500px;
   width: 100%;
   position: relative;
@@ -39,7 +39,7 @@ export const CloseButton = styled.button`
   right: 10px;
   background-color: rgba(200, 200, 200, 0.8);
   border: none;
-  border-radius: var(--radius-round);
+  border-radius: ${({ theme }) => theme.radius.round};
   width: 30px;
   height: 30px;
   font-size: 1.5rem;

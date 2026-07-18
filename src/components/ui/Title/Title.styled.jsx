@@ -5,8 +5,7 @@ export const Title = styled.h2`
   display: inline;
   margin: 0;
   margin-right: 10px;
-  color: var(--light-accent);
-
+  color: ${({ theme }) => theme.colors.accentLight};
   font-family: 'Caladea', Arial, sans-serif;
 
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);

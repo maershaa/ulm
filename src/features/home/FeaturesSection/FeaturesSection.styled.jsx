@@ -11,7 +11,7 @@ export const SectionWrapper = styled.section`
   padding: 40px 20px;
 `;
 
-export const FeatureGrid = styled.ul`
+export const FeatureList = styled.ul`
   display: grid;
   grid-template-columns: 1fr;
 
@@ -72,8 +72,9 @@ export const TextContainer = styled.div`
   justify-content: center;
 
   text-align: center;
-  background-color: var(--accent-color);
-  color: var(--primary-text-color-light);
+  background-color: ${({ theme }) => theme.colors.accent};
+
+  color: ${({ theme }) => theme.colors.textInverse};
 
   width: 100%;
   aspect-ratio: 1 / 1;

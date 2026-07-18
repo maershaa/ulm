@@ -7,7 +7,8 @@ export const Wrapper = styled.div`
 `;
 
 export const Title = styled.h1`
-  color: var(--primary-text-color-light);
+  color: ${({ theme }) => theme.colors.textInverse};
+
   text-shadow:
     0 0 5px #00baff,
     0 0 10px #00baff,

@@ -12,7 +12,7 @@ export const LayoutWrapper = styled.div`
   // ниже фона body, а останется именно позади контента LayoutWrapper
   isolation: isolate;
 
-  background-color: var(--page-bg-color);
+  background-color: ${({ theme }) => theme.colors.page};
 
   main {
     flex-grow: 1;

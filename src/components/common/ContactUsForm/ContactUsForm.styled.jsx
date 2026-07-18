@@ -8,10 +8,11 @@ export const FormContainer = styled.div`
   margin: 0 auto;
   padding: 50px 30px;
 
-  background-color: var(--surface-bg-color);
-  border-radius: var(--radius-md);
+  background-color: ${({ theme }) => theme.colors.card};
 
-  box-shadow: 2px 4px 15px 5px var(--glow-color);
+  border-radius: ${({ theme }) => theme.radius.md};
+
+  box-shadow: ${({ theme }) => theme.shadows.md};
 
   @media (min-width: ${breakpoints.tablet}) {
   }
@@ -44,8 +45,9 @@ export const FormLabel = styled.label`
 export const FormInput = styled.input`
   width: 100%;
   padding: 10px;
-  border: 1px solid var(--border-color-strong);
-  border-radius: var(--radius-sm);
+  border: 1px solid ${({ theme }) => theme.colors.borderStrong};
+
+  border-radius: ${({ theme }) => theme.radius.sm};
   font-size: 1rem;
 
   @media (min-width: ${breakpoints.desktop}) {
@@ -53,7 +55,8 @@ export const FormInput = styled.input`
   }
 
   &:focus {
-    border-color: var(--accent-color);
+    border-color: ${({ theme }) => theme.colors.accent};
+
     outline: none;
   }
 `;
@@ -62,7 +65,7 @@ export const FormTextarea = styled.textarea`
   width: 100%;
   padding: 10px;
   border: 1px solid #ddd;
-  border-radius: var(--radius-sm);
+  border-radius: ${({ theme }) => theme.radius.sm};
   font-size: 0.9rem;
   box-sizing: border-box;
 
@@ -81,15 +84,16 @@ export const FormButton = styled.button`
 
   padding: 0.75rem 1.1rem;
   text-transform: uppercase;
-  border-radius: var(--radius-sm);
+  border-radius: ${({ theme }) => theme.radius.sm};
   border: none;
 
   font-size: 0.9rem;
 
-  background-color: var(--accent-color);
+  background-color: ${({ theme }) => theme.colors.accent};
+
   color: #fff;
 
-  transition: background-color 0.3s ease;
+  transition: ${({ theme }) => theme.transitions.base};
 
   @media (min-width: ${breakpoints.tablet}) {
     font-size: 1rem;

@@ -64,7 +64,7 @@ export const Block = styled.div`
 `;
 
 export const HeroPrimaryText = styled.h1`
-  color: var(--primary-text-color-light);
+  color: ${({ theme }) => theme.colors.textInverse};
 
   font-size: 1.7rem;
   font-weight: 600;
@@ -86,14 +86,15 @@ export const HeroPrimaryText = styled.h1`
   &::after {
     content: '';
     display: block;
-    border-top: 6px solid var(--light-accent);
+    border-top: 6px solid ${({ theme }) => theme.colors.accentLight};
+
     width: 100px;
     margin-top: 20px;
     margin-bottom: 20px;
   }
 `;
 export const HeroInfo = styled.h2`
-  color: var(--primary-text-color-light);
+  color: ${({ theme }) => theme.colors.textInverse};
 
   font-size: 1.5rem;
   font-weight: 400;
@@ -138,13 +139,14 @@ export const ButtonsGroup = styled.div`
     font-weight: 600;
     font-size: 1rem;
     padding: 14px 28px;
-    border-radius: var(--radius-lg);
+    border-radius: ${({ theme }) => theme.radius.lg};
 
-    background-color: var(--light-accent);
+    background-color: ${({ theme }) => theme.colors.accentLight};
+
     opacity: 0.8;
-    color: var(--primary-text-color-light);
+    color: ${({ theme }) => theme.colors.textInverse};
 
-    transition: var(--transition-base);
+    transition: ${({ theme }) => theme.transitions.base};
 
     @media (min-width: ${breakpoints.tablet}) {
       width: auto;
