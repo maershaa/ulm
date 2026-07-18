@@ -1,7 +1,9 @@
 {
   "hero": {
     "title": "A Manufacturer of Metal Solutions That Meet Your Standards",
-    "subtitle": "We have been manufacturing metal products since 1994. Our cans, trays, and lids combine reliability, functionality, and the highest quality standards.",
+    "subtitle1": "We have been manufacturing metal products since 1994.",
+    "subtitle2": "Our cans, trays, and lids combine reliability, functionality, and the highest quality standards.",
+
     "linkAbout": "ABOUT US",
     "linkFeatures": "ADVANTAGES"
   },

@@ -1,4 +1,4 @@
-import{j as a,T as o,b as t,s as i}from"./index-BlloITFA.js";const n=({title:e})=>a.jsx(o,{children:e}),d=i.div`
+import{j as a,T as o,b as t,s as i}from"./index-Bg6O2cn0.js";const n=({title:e})=>a.jsx(o,{children:e}),d=i.section`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,18 +67,15 @@ import{j as a,T as o,b as t,s as i}from"./index-BlloITFA.js";const n=({title:e})
     font-size: 1rem;
     padding: 0 10px 0 0;
   }
-`,g=i.div`
-  background-color: rgb(3, 37, 65);
+`,p=i.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: center;
 
   padding: 40px 10px;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  flex-wrap: wrap;
-  flex-direction: column;
-
+  background-color: rgb(3, 37, 65);
   background-image: linear-gradient(
       to right,
       rgba(3, 37, 65, 0.9) 0%,
@@ -98,15 +95,7 @@ import{j as a,T as o,b as t,s as i}from"./index-BlloITFA.js";const n=({title:e})
     background-color: rgb(3, 37, 65);
   }
 
-  @media (min-width: ${t.tablet}) {
-    padding: 40px;
-  }
-
   @media (min-width: ${t.tabletLg}) {
-    flex-wrap: nowrap;
-    flex-direction: row;
-    /* height: 600px; */
-
     background-image: linear-gradient(
         to right,
         rgba(3, 37, 65, 0.9) 0%,
@@ -114,37 +103,48 @@ import{j as a,T as o,b as t,s as i}from"./index-BlloITFA.js";const n=({title:e})
       ),
       url(${e=>e.$heroImage});
   }
+
+  @media (min-width: ${t.desktop}) {
+    grid-template-columns: 1fr 1fr;
+
+    justify-items: stretch;
+    gap: 60px;
+  }
 `,c=i.div`
-  text-align: center;
-  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+
   text-align: center;
 
   margin-bottom: 20px;
+  padding: 20px;
 
   @media (min-width: ${t.tabletLg}) {
-    width: 50%;
-    margin-bottom: 0;
+    align-items: flex-start;
+    text-align: left;
   }
-`,p=i.h2`
+`,g=i.h1`
   color: var(--primary-text-color-light);
 
-  margin-bottom: 10px;
-  font-size: 1.4rem;
+  font-size: 1.7rem;
   font-weight: 600;
   line-height: 1.3;
 
   text-align: left;
 
+  margin-bottom: 16px;
+
   @media (min-width: ${t.tablet}) {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
   }
 
-  @media (min-width: ${t.tabletLg}) {
-    width: 50%;
-    margin-bottom: 0;
+  @media (min-width: ${t.desktop}) {
+    font-size: 3rem;
   }
 
-  /* Псевдоэлемент для разделительной полоски */
+  /*Декоративная полоска */
   &::after {
     content: '';
     display: block;
@@ -153,22 +153,24 @@ import{j as a,T as o,b as t,s as i}from"./index-BlloITFA.js";const n=({title:e})
     margin-top: 20px;
     margin-bottom: 20px;
   }
-`,x=i.h3`
+`,x=i.h2`
   color: var(--primary-text-color-light);
 
-  margin-bottom: 10px;
-  font-size: 0.9rem;
+  font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.2;
 
-  text-align: center;
+  text-align: left;
+
+  margin-bottom: 35px;
+  max-width: 600px;
 
   @media (min-width: ${t.tablet}) {
-    font-size: 1.1rem;
+    font-size: 1.8rem;
   }
 
-  @media (min-width: ${t.tabletLg}) {
-    text-align: left;
+  @media (min-width: ${t.desktop}) {
+    font-size: 2.2rem;
   }
 `,h=i.div`
   display: flex;
@@ -177,7 +179,7 @@ import{j as a,T as o,b as t,s as i}from"./index-BlloITFA.js";const n=({title:e})
   gap: 16px;
   width: 100%;
 
-  @media (min-width: ${t.mobileLg}) {
+  @media (min-width: ${t.tablet}) {
     flex-direction: row;
     width: auto;
   }
@@ -188,31 +190,36 @@ import{j as a,T as o,b as t,s as i}from"./index-BlloITFA.js";const n=({title:e})
     justify-content: center;
     gap: 10px;
 
+    width: 100%;
+    white-space: nowrap; //чтобы на 2 строки "про нас" не разделялось
+    margin-top: 20px;
+
     font-weight: 600;
     font-size: 1rem;
     padding: 14px 28px;
     border-radius: var(--radius-lg);
 
-    transition: all 0.2s ease;
-
-    width: 100%;
-    margin-top: 20px;
-
-    @media (min-width: ${t.mobileLg}) {
-      width: auto;
-    }
-
     background-color: var(--light-accent);
     opacity: 0.8;
     color: var(--primary-text-color-light);
 
+    transition: var(--transition-base);
+
+    @media (min-width: ${t.tablet}) {
+      width: auto;
+    }
+
+    @media (min-width: ${t.desktop}) {
+      font-size: 1.1rem;
+    }
+
     &:hover {
       transform: translateY(-2px);
       opacity: 1;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 12px var(--glow-color);
     }
   }
-`,b=i.div`
+`,f=i.section`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -220,7 +227,7 @@ import{j as a,T as o,b as t,s as i}from"./index-BlloITFA.js";const n=({title:e})
   flex-direction: column;
 
   padding: 40px 20px;
-`,f=i.ul`
+`,b=i.ul`
   display: grid;
   grid-template-columns: 1fr;
 
@@ -551,4 +558,4 @@ import{j as a,T as o,b as t,s as i}from"./index-BlloITFA.js";const n=({title:e})
       font-size: 1.1rem;
     }
   }
-`;export{s as A,l as B,L as C,f as F,g as H,m as I,y as M,F as P,u as S,n as T,d as W,c as a,p as b,x as c,h as d,z as e,j as f,I as g,b as h,w as i,v as j,$ as k,k as l,H as m,C as n,M as o,T as p,P as q,B as r};
+`;export{s as A,l as B,L as C,b as F,p as H,m as I,y as M,F as P,d as S,n as T,c as a,g as b,x as c,h as d,z as e,j as f,I as g,f as h,w as i,u as j,v as k,$ as l,k as m,H as n,C as o,M as p,T as q,P as r,B as s};
