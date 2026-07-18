@@ -1,5 +1,6 @@
-import axios from 'axios'; // Для отправки запросов на сервер
-import { Formik, ErrorMessage } from 'formik';
+import axios from 'axios';
+import { useTranslation } from 'react-i18next';
+import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { ToastContainer, toast } from 'react-toastify';
 import { FormErrorText } from '@/components';
@@ -20,31 +21,30 @@ const initialValues = {
   message: '',
 };
 
-// Схема валидации формы с использованием Yup
-const ContactSchema = Yup.object().shape({
-  name: Yup.string().required("Введіть ваше ім'я"),
-  phone: Yup.string()
-    .matches(
-      /^\+?\d{10,14}$/,
-      'Введіть номер телефону у форматі +380 XX XXX XX XX'
-    )
-    .required('Введіть ваш телефон'),
-  email: Yup.string().email('Невірний формат email'),
-  message: Yup.string()
-    .min(10, 'Повідомлення повинно містити принаймні 10 символів')
-    .required('Введіть ваше повідомлення'),
-});
-
 const ContactUsForm = () => {
+  const { t } = useTranslation('main');
+
+  // Схема валидации формы с использованием Yup
+  const ContactSchema = Yup.object().shape({
+    name: Yup.string().required(t('contactUsForm.nameError')),
+    phone: Yup.string()
+      .matches(/^\+?\d{10,14}$/, t('contactUsForm.telFormatError'))
+      .required(t('contactUsForm.telError')),
+    email: Yup.string().email(t('contactUsForm.emailError')),
+    message: Yup.string()
+      .min(10, t('contactUsForm.messageTooShort'))
+      .required(t('contactUsForm.messageError')),
+  });
+
   const handleContactSubmit = (values, actions) => {
     axios
       .post('http://localhost:5001/api/sendMail', values) // Отправка данных на сервер
       .then((response) => {
-        toast.success('Дякуємо! Ми вже отримали ваше повідомлення');
+        toast.success(t('contactUsForm.successToast'));
         actions.resetForm(); // Очистка формы после успешной отправки
       })
       .catch((error) => {
-        toast.error('Сталася помилка під час відправки повідомлення');
+        toast.error(t('contactUsForm.errorToast'));
         console.error(error);
       });
   };
@@ -66,12 +66,14 @@ const ContactUsForm = () => {
         }) => (
           <form onSubmit={handleSubmit}>
             <FormGroup>
-              <FormLabel htmlFor="name">Ваше ім’я*</FormLabel>
+              <FormLabel htmlFor="name">
+                {t('contactUsForm.nameInput')}
+              </FormLabel>
               <FormInput
                 type="text"
                 id="name"
                 name="name"
-                placeholder="Наприклад: Олександр"
+                placeholder={t('contactUsForm.namePlaceholder')}
                 value={values.name}
                 onChange={handleChange}
                 onBlur={handleBlur}
@@ -82,12 +84,14 @@ const ContactUsForm = () => {
             </FormGroup>
 
             <FormGroup>
-              <FormLabel htmlFor="phone">Номер телефону*</FormLabel>
+              <FormLabel htmlFor="phone">
+                {t('contactUsForm.telInput')}
+              </FormLabel>
               <FormInput
                 type="tel"
                 id="phone"
                 name="phone"
-                placeholder="+380 XX XXX XX XX"
+                placeholder={t('contactUsForm.telPlaceholder')}
                 value={values.phone}
                 onChange={handleChange}
                 onBlur={handleBlur}
@@ -98,12 +102,14 @@ const ContactUsForm = () => {
             </FormGroup>
 
             <FormGroup>
-              <FormLabel htmlFor="email">Email</FormLabel>
+              <FormLabel htmlFor="email">
+                {t('contactUsForm.emailInput')}
+              </FormLabel>
               <FormInput
                 type="email"
                 id="email"
                 name="email"
-                placeholder="name@example.com"
+                placeholder={t('contactUsForm.emailPlaceholder')}
                 value={values.email}
                 onChange={handleChange}
                 onBlur={handleBlur}
@@ -114,12 +120,14 @@ const ContactUsForm = () => {
             </FormGroup>
 
             <FormGroup>
-              <FormLabel htmlFor="message">Що вас цікавить?*</FormLabel>
+              <FormLabel htmlFor="message">
+                {t('contactUsForm.messageInput')}
+              </FormLabel>
               <FormTextarea
                 id="message"
                 name="message"
                 rows="4"
-                placeholder="Розкажіть, що вас цікавить, або задайте запитання. Ми допоможемо!"
+                placeholder={t('contactUsForm.messagePlaceholder')}
                 value={values.message}
                 onChange={handleChange}
                 onBlur={handleBlur}
@@ -129,7 +137,7 @@ const ContactUsForm = () => {
               )}
             </FormGroup>
 
-            <FormButton type="submit">Надіслати</FormButton>
+            <FormButton type="submit">{t('contactUsForm.btnText')}</FormButton>
             <ToastContainer position="bottom-right" autoClose={3000} />
           </form>
         )}
