@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import {
-  Wrapper,
+  SectionWrapper,
   FeatureGrid,
   FeatureItem,
   TextContainer,
@@ -33,7 +33,7 @@ const FeaturesSection = () => {
   const { t } = useTranslation('home');
 
   return (
-    <Wrapper>
+    <SectionWrapper id="features">
       <Title title={t('features.title')} />
       <FeatureGrid>
         {featuresData.map((feature) => (
@@ -66,7 +66,7 @@ const FeaturesSection = () => {
           featureContent={modalContent}
         />
       )}
-    </Wrapper>
+    </SectionWrapper>
   );
 };
 

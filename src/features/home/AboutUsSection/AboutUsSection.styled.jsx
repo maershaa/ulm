@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { breakpoints } from '@/assets/styles/breakpoints';
 
-export const Wrapper = styled.div`
+export const SectionWrapper = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;

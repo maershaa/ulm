@@ -1,5 +1,5 @@
 import {
-  Wrapper,
+  SectionWrapper,
   Block,
   AboutUsInfo,
   InfoContainer,
@@ -13,7 +13,7 @@ const AboutUsSection = () => {
   const { t } = useTranslation('home');
 
   return (
-    <Wrapper>
+    <SectionWrapper id="aboutUs">
       <Block $bgImageAboutUsPage={bgImageAboutUsPage}>
         <InfoContainer>
           <Title title={t('aboutUs.title')} />
@@ -25,7 +25,7 @@ const AboutUsSection = () => {
           <AboutUsInfo>{t('aboutUs.paragraph3')}</AboutUsInfo>
         </InfoContainer>
       </Block>
-    </Wrapper>
+    </SectionWrapper>
   );
 };
 

@@ -2,6 +2,7 @@ import axios from 'axios'; // Для отправки запросов на се
 import { Formik, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { ToastContainer, toast } from 'react-toastify';
+import { FormErrorText } from '@/components';
 import 'react-toastify/dist/ReactToastify.css';
 import {
   FormContainer,
@@ -10,11 +11,10 @@ import {
   FormInput,
   FormTextarea,
   FormButton,
-} from './ContactUsForm.styled'; // Подключите свои стили
+} from './ContactUsForm.styled';
 
-// Начальные значения формы
 const initialValues = {
-  fullName: '',
+  name: '',
   phone: '',
   email: '',
   message: '',
@@ -22,26 +22,25 @@ const initialValues = {
 
 // Схема валидации формы с использованием Yup
 const ContactSchema = Yup.object().shape({
-  fullName: Yup.string().required("Введіть ваше ім'я"),
+  name: Yup.string().required("Введіть ваше ім'я"),
   phone: Yup.string()
-    .matches(/^\+?\d{10,14}$/, 'Введіть правильний номер телефону')
+    .matches(
+      /^\+?\d{10,14}$/,
+      'Введіть номер телефону у форматі +380 XX XXX XX XX'
+    )
     .required('Введіть ваш телефон'),
-  email: Yup.string()
-    .email('Невірний формат email')
-    .required('Введіть вашу електронну адресу'),
+  email: Yup.string().email('Невірний формат email'),
   message: Yup.string()
     .min(10, 'Повідомлення повинно містити принаймні 10 символів')
     .required('Введіть ваше повідомлення'),
 });
 
-// Основной компонент формы
 const ContactUsForm = () => {
-  // Обработчик отправки данных формы
   const handleContactSubmit = (values, actions) => {
     axios
       .post('http://localhost:5001/api/sendMail', values) // Отправка данных на сервер
       .then((response) => {
-        toast.success('Ваше повідомлення успішно відправлено');
+        toast.success('Дякуємо! Ми вже отримали ваше повідомлення');
         actions.resetForm(); // Очистка формы после успешной отправки
       })
       .catch((error) => {
@@ -67,78 +66,70 @@ const ContactUsForm = () => {
         }) => (
           <form onSubmit={handleSubmit}>
             <FormGroup>
-              <FormLabel htmlFor="fullName">Повне Ім'я</FormLabel>
+              <FormLabel htmlFor="name">Ваше ім’я*</FormLabel>
               <FormInput
                 type="text"
-                id="fullName"
-                name="fullName"
-                placeholder="Ваше повне ім'я"
-                value={values.fullName}
+                id="name"
+                name="name"
+                placeholder="Наприклад: Олександр"
+                value={values.name}
                 onChange={handleChange}
                 onBlur={handleBlur}
               />
-              <ErrorMessage
-                name="fullName"
-                component="div"
-                style={{ color: 'red' }}
-              />
+              {errors.name && touched.name && (
+                <FormErrorText errorMessage={errors.name} />
+              )}
             </FormGroup>
 
             <FormGroup>
-              <FormLabel htmlFor="phone">Телефон</FormLabel>
+              <FormLabel htmlFor="phone">Номер телефону*</FormLabel>
               <FormInput
                 type="tel"
                 id="phone"
                 name="phone"
-                placeholder="Ваш телефон"
+                placeholder="+380 XX XXX XX XX"
                 value={values.phone}
                 onChange={handleChange}
                 onBlur={handleBlur}
               />
-              <ErrorMessage
-                name="phone"
-                component="div"
-                style={{ color: 'red' }}
-              />
+              {errors.phone && touched.phone && (
+                <FormErrorText errorMessage={errors.phone} />
+              )}
             </FormGroup>
 
             <FormGroup>
-              <FormLabel htmlFor="email">Електронна Адреса</FormLabel>
+              <FormLabel htmlFor="email">Email</FormLabel>
               <FormInput
                 type="email"
                 id="email"
                 name="email"
-                placeholder="Ваш email"
+                placeholder="name@example.com"
                 value={values.email}
                 onChange={handleChange}
                 onBlur={handleBlur}
               />
-              <ErrorMessage
-                name="email"
-                component="div"
-                style={{ color: 'red' }}
-              />
+              {errors.email && touched.email && (
+                <FormErrorText errorMessage={errors.email} />
+              )}
             </FormGroup>
 
             <FormGroup>
-              <FormLabel htmlFor="message">Текст повідомлення</FormLabel>
+              <FormLabel htmlFor="message">Що вас цікавить?*</FormLabel>
               <FormTextarea
                 id="message"
                 name="message"
                 rows="4"
-                placeholder="Ваше повідомлення"
+                placeholder="Розкажіть, що вас цікавить, або задайте запитання. Ми допоможемо!"
                 value={values.message}
                 onChange={handleChange}
                 onBlur={handleBlur}
               />
-              <ErrorMessage
-                name="message"
-                component="div"
-                style={{ color: 'red' }}
-              />
+              {errors.message && touched.message && (
+                <FormErrorText errorMessage={errors.message} />
+              )}
             </FormGroup>
 
-            <FormButton type="submit">Зв'яжіться з нами</FormButton>
+            <FormButton type="submit">Надіслати</FormButton>
             <ToastContainer position="bottom-right" autoClose={3000} />
           </form>
         )}

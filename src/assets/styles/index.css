@@ -35,7 +35,9 @@
 
   /* фон страницы */
   --page-bg-color: #f8f6f6;
-  --surface-bg-color: #f6f4f1;
+
+  /* фон формы */
+  --surface-bg-color: #f9f9f9;
 
   /* границы / свечение */
   --border-color: rgba(3, 37, 65, 0.12);

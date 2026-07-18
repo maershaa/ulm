@@ -11,7 +11,7 @@ import heroImageMobile from '@/assets/images/Hero/lots_of_tins_mb.jpeg';
 
 import { ContactUsForm } from '@/components';
 
-import { FiCompass, FiPlusCircle } from 'react-icons/fi';
+import { FaIndustry, FaShieldAlt } from 'react-icons/fa';
 
 import { useTranslation } from 'react-i18next';
 
@@ -27,15 +27,16 @@ const Hero = () => {
       <Block>
         <HeroPrimaryText>{t('hero.title')}</HeroPrimaryText>
 
-        <HeroInfo>{t('hero.subtitle')}</HeroInfo>
+        <HeroInfo>{t('hero.subtitle1')}</HeroInfo>
+        <HeroInfo>{t('hero.subtitle2')}</HeroInfo>
 
         <ButtonsGroup>
           <a href={'#aboutUs'}>
-            <FiCompass size={32} />
+            <FaIndustry size={24} />
             {t('hero.linkAbout')}
           </a>
           <a href={'#features'}>
-            <FiPlusCircle size={32} />
+            <FaShieldAlt size={24} />
             {t('hero.linkFeatures')}
           </a>
         </ButtonsGroup>

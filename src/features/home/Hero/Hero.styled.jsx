@@ -2,17 +2,14 @@ import styled from 'styled-components';
 import { breakpoints } from '@/assets/styles/breakpoints';
 
 export const HeroContainer = styled.div`
-  background-color: rgb(3, 37, 65);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: center;
 
   padding: 40px 10px;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  flex-wrap: wrap;
-  flex-direction: column;
-
+  background-color: rgb(3, 37, 65);
   background-image: linear-gradient(
       to right,
       rgba(3, 37, 65, 0.9) 0%,
@@ -32,15 +29,7 @@ export const HeroContainer = styled.div`
     background-color: rgb(3, 37, 65);
   }
 
-  @media (min-width: ${breakpoints.tablet}) {
-    padding: 40px;
-  }
-
   @media (min-width: ${breakpoints.tabletLg}) {
-    flex-wrap: nowrap;
-    flex-direction: row;
-    /* height: 600px; */
-
     background-image: linear-gradient(
         to right,
         rgba(3, 37, 65, 0.9) 0%,
@@ -48,41 +37,52 @@ export const HeroContainer = styled.div`
       ),
       url(${(props) => props.$heroImage});
   }
-`;
 
-export const Block = styled.div`
-  text-align: center;
-  width: 90%;
-  text-align: center;
+  @media (min-width: ${breakpoints.desktop}) {
+    grid-template-columns: 1fr 1fr;
 
-  margin-bottom: 20px;
-
-  @media (min-width: ${breakpoints.tabletLg}) {
-    width: 50%;
-    margin-bottom: 0;
+    justify-items: stretch;
+    gap: 60px;
   }
 `;
 
-export const HeroPrimaryText = styled.h2`
+export const Block = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+
+  text-align: center;
+
+  margin-bottom: 20px;
+  padding: 20px;
+
+  @media (min-width: ${breakpoints.tabletLg}) {
+    align-items: flex-start;
+    text-align: left;
+  }
+`;
+
+export const HeroPrimaryText = styled.h1`
   color: var(--primary-text-color-light);
 
-  margin-bottom: 10px;
-  font-size: 1.4rem;
+  font-size: 1.7rem;
   font-weight: 600;
   line-height: 1.3;
 
   text-align: left;
 
+  margin-bottom: 16px;
+
   @media (min-width: ${breakpoints.tablet}) {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
   }
 
-  @media (min-width: ${breakpoints.tabletLg}) {
-    width: 50%;
-    margin-bottom: 0;
+  @media (min-width: ${breakpoints.desktop}) {
+    font-size: 3rem;
   }
 
-  /* Псевдоэлемент для разделительной полоски */
+  /*Декоративная полоска */
   &::after {
     content: '';
     display: block;
@@ -92,22 +92,24 @@ export const HeroPrimaryText = styled.h2`
     margin-bottom: 20px;
   }
 `;
-export const HeroInfo = styled.h3`
+export const HeroInfo = styled.h2`
   color: var(--primary-text-color-light);
 
-  margin-bottom: 10px;
-  font-size: 0.9rem;
+  font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.2;
 
-  text-align: center;
+  text-align: left;
+
+  margin-bottom: 35px;
+  max-width: 600px;
 
   @media (min-width: ${breakpoints.tablet}) {
-    font-size: 1.1rem;
+    font-size: 1.8rem;
   }
 
-  @media (min-width: ${breakpoints.tabletLg}) {
-    text-align: left;
+  @media (min-width: ${breakpoints.desktop}) {
+    font-size: 2.2rem;
   }
 `;
 
@@ -118,7 +120,7 @@ export const ButtonsGroup = styled.div`
   gap: 16px;
   width: 100%;
 
-  @media (min-width: ${breakpoints.mobileLg}) {
+  @media (min-width: ${breakpoints.tablet}) {
     flex-direction: row;
     width: auto;
   }
@@ -129,28 +131,33 @@ export const ButtonsGroup = styled.div`
     justify-content: center;
     gap: 10px;
 
+    width: 100%;
+    white-space: nowrap; //чтобы на 2 строки "про нас" не разделялось
+    margin-top: 20px;
+
     font-weight: 600;
     font-size: 1rem;
     padding: 14px 28px;
     border-radius: var(--radius-lg);
 
-    transition: all 0.2s ease;
-
-    width: 100%;
-    margin-top: 20px;
-
-    @media (min-width: ${breakpoints.mobileLg}) {
-      width: auto;
-    }
-
     background-color: var(--light-accent);
     opacity: 0.8;
     color: var(--primary-text-color-light);
 
+    transition: var(--transition-base);
+
+    @media (min-width: ${breakpoints.tablet}) {
+      width: auto;
+    }
+
+    @media (min-width: ${breakpoints.desktop}) {
+      font-size: 1.1rem;
+    }
+
     &:hover {
       transform: translateY(-2px);
       opacity: 1;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 12px var(--glow-color);
     }
   }
 `;
