@@ -6,7 +6,7 @@ export const HeroContainer = styled.div`
   gap: 40px;
   align-items: center;
 
-  padding: 40px 10px;
+  padding: 56px 20px;
 
   border-bottom-left-radius: ${({ theme }) => theme.radius.lg};
   border-bottom-right-radius: ${({ theme }) => theme.radius.lg};
@@ -31,6 +31,9 @@ export const HeroContainer = styled.div`
       url(${(props) => props.$heroImageMobile});
   }
 
+  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    padding: 72px 40px;
+  }
   @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
     background-image: linear-gradient(
         to right,
@@ -45,6 +48,8 @@ export const HeroContainer = styled.div`
 
     justify-items: stretch;
     gap: 60px;
+
+    padding: 90px 60px;
   }
 `;
 
@@ -52,12 +57,15 @@ export const Block = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
-
+  gap: 20px;
   text-align: center;
 
   margin-bottom: 20px;
-  padding: 20px;
+  padding: 0;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    gap: 28px;
+  }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
     align-items: flex-start;
@@ -123,9 +131,19 @@ export const ButtonsGroup = styled.div`
   gap: 16px;
   width: 100%;
 
+  padding: 12px 20px;
+  font-size: 0.95rem;
+
+  svg {
+    font-size: 20px;
+  }
+
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
     flex-direction: row;
     width: auto;
+
+    padding: 14px 28px;
+    font-size: 1rem;
   }
 
   a {
@@ -183,44 +201,64 @@ export const FeaturesTitle = styled.p`
 export const HeroFeatures = styled.ul`
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
-  gap: 22px;
+  gap: 18px;
 
-  width: 430px;
-  padding: 30px;
+  width: 100%;
+  max-width: 430px;
+
+  margin: 0 auto;
+  padding: 20px;
 
   border-radius: ${({ theme }) => theme.radius.lg};
-
-  background: rgba(3, 37, 65, 0.7);
-
-  backdrop-filter: blur(16px);
-
   border: 1px solid rgba(255, 255, 255, 0.12);
 
+  background: rgba(3, 37, 65, 0.7);
+  backdrop-filter: blur(16px);
+
   box-shadow: ${({ theme }) => theme.shadows.lg};
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    padding: 28px;
+    gap: 22px;
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
+    margin-left: auto;
+  }
 `;
 
 export const HeroFeature = styled.li`
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 14px;
 
-  padding-bottom: 18px;
+  padding-bottom: 16px;
 
   &:not(:last-child) {
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
 
   svg {
-    font-size: 1.7rem;
+    flex-shrink: 0;
+
+    font-size: 1.35rem;
+
     color: ${({ theme }) => theme.colors.accentLight};
+
+    @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+      font-size: 1.7rem;
+    }
   }
 
   span {
+    font-size: 1rem;
+    line-height: 1.45;
+    font-weight: 600;
+
     color: ${({ theme }) => theme.colors.textInverse};
 
-    font-size: 1.25rem;
-    font-weight: 600;
-    line-height: 1.4;
+    @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+      font-size: 1.2rem;
+    }
   }
 `;
