@@ -199,6 +199,13 @@ ThemeContext
 data-theme
 ```
 
+Все дизайн-токены (цвета, radius, shadows, glow, transitions, breakpoints,
+z-index) собраны в едином файле
+
+```
+src/theme.js
+```
+
 ---
 
 # 9. Дизайн
@@ -240,11 +247,17 @@ Accent
 Light Accent
 #1274A2
 
-Background
-#F8F6F6
+Background (page)
+#F7F9FC
 
-Surface
-#F6F4F1
+Section
+#FFFFFF
+
+Card
+#FFFFFF
+
+Elevated
+#FFFFFF
 ```
 
 ---
@@ -252,15 +265,28 @@ Surface
 ## Темная
 
 ```
-Background
-#0B1620
+Background (page)
+#071723
 
-Surface
-#426791
+Section
+#0B2234
+
+Card
+#123A59
+
+Elevated
+#1B4D78
 
 Accent
+#1274A2
+
+Light Accent
 #4EA8D8
 ```
+
+Все цвета заданы через CSS-переменные в `src/styles/index.css` (`--bg-page`,
+`--bg-section`, `--bg-card`, `--bg-elevated` и т.д.) и прокинуты в `theme.js`
+для использования в styled-components.
 
 ---
 
@@ -303,17 +329,26 @@ media()
 # 13. z-index
 
 ```
-Header
+Base
+0
 
+Header
 100
 
 Mobile Menu
-
 200
 
 Burger Button
-
 300
+
+Modal Backdrop
+1000
+
+Modal Content
+1001
+
+Tooltip
+2000
 ```
 
 ---
@@ -507,15 +542,14 @@ ULM/
 │   │       ├── ProductsPage.jsx
 │   │       └── ProductsPage.styled.jsx
 │   ├── styles/
-│   │   ├── breakpoints.js
 │   │   ├── Glow.styled.jsx
 │   │   ├── index.css
-│   │   ├── zIndex.js
 │   │   ├── icons.svg
 │   │   └── IconSprite.jsx
 │   ├── App.jsx
 │   ├── App.styled.jsx
 │   ├── i18n.js
+│   ├── theme.js
 │   └── main.jsx
 ├── .env
 ├── .eslintrc.cjs
@@ -538,9 +572,12 @@ ULM/
 
 # 18. Известные проблемы
 
-- backend не задеплоен
+- backend ещё не задеплоен
 - форма контактов не работает на GitHub Pages
-- необходимо развернуть сервер отдельно
+- есть домен и доступ к DNS (cPanel, ProHosting) — планируется деплой ULM на
+  `ulm.com.ua`
+- отправку писем планируется реализовать через Resend
+- деплой backend и настройка Resend пока не начаты
 
 ---
 
@@ -548,14 +585,15 @@ ULM/
 
 ## Ближайшие
 
-- закончить Products
-- закончить Contacts
-- подключить backend
-- SEO
-- favicon
-- Open Graph
-- robots.txt
-- sitemap.xml
+- Products — готова, осталась перепроверка стилей
+- Contacts — готова, осталась перепроверка стилей
+- задеплоить backend на `ulm.com.ua` (ProHosting, cPanel)
+- настроить отправку писем через Resend
+- SEO (мета-теги title/description) — не начато
+- favicon — готов ✅
+- Open Graph (превью для соцсетей) — не начато
+- robots.txt — не начато
+- sitemap.xml — не начато
 
 ---
 

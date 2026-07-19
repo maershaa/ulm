@@ -2,33 +2,43 @@ import styled from 'styled-components';
 
 // Контейнер для всей модалки, включая затемнённый фон
 export const ModalContainer = styled.div`
-  visibility: hidden; //!!! временное решение чтобы не обображать модалку на телефонах
-
   @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
-    visibility: visible; //!!! временное решение чтобы не обображать модалку на телефонах
+    padding: 24px;
 
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+
     display: flex;
     justify-content: center;
     align-items: center;
 
-    z-index: 1001; //! так как у header 1000
+    /* запрет прокрутки странички при открытой модалке */
+    overflow: hidden;
+    overscroll-behavior: none;
+
+    background: rgba(3, 37, 65, 0.65);
+    backdrop-filter: blur(5px);
+
+    z-index: ${({ theme }) => theme.zIndex.modalBackdrop};
   }
 `;
 
 // Контейнер для контента модалки
 export const ModalContent = styled.div`
-  background: white;
-  padding: 20px;
-  border-radius: ${({ theme }) => theme.radius.md};
-  max-width: 500px;
-  width: 100%;
   position: relative;
+  width: 100%;
+  max-width: 680px;
+  padding: 28px;
+
+  background: ${({ theme }) => theme.colors.elevated};
+  border: 1px solid ${({ theme }) => theme.colors.borderDefault};
+  border-radius: ${({ theme }) => theme.radius.lg};
+  box-shadow: ${({ theme }) => theme.shadows.lg};
+
+  z-index: ${({ theme }) => theme.zIndex.modalContent};
 `;
 
 // Кнопка закрытия модалки
@@ -36,56 +46,39 @@ export const CloseButton = styled.button`
   position: absolute;
   top: 10px;
   right: 10px;
-  background-color: rgba(200, 200, 200, 0.8);
-  border: none;
-  border-radius: ${({ theme }) => theme.radius.round};
-  width: 30px;
-  height: 30px;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: #333;
+  width: 36px;
+  height: 36px;
+
   display: flex;
   justify-content: center;
   align-items: center;
 
+  font-size: 1.5rem;
+
+  background: ${({ theme }) => theme.colors.elevated};
+  color: ${({ theme }) => theme.colors.textSecondary};
+  border: 1px solid ${({ theme }) => theme.colors.borderDefault};
+  border-radius: ${({ theme }) => theme.radius.round};
+
+  transition: ${({ theme }) => theme.transitions.fast};
+
   &:hover {
-    background-color: rgba(
-      150,
-      150,
-      150,
-      0.8
-    ); /* Более темный фон при наведении */
+    background: ${({ theme }) => theme.colors.accent};
+    color: ${({ theme }) => theme.colors.textInverse};
   }
 `;
 
 export const ModalImage = styled.img`
+  object-fit: cover;
   width: 100%;
-  max-width: 400px;
-  height: auto;
-
-  margin-bottom: 20px;
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
-    max-width: 500px;
-  }
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
-    max-width: 600px;
-  }
+  border-radius: ${({ theme }) => theme.radius.md};
+  margin-bottom: 24px;
 `;
 
 export const ModalText = styled.p`
   font-size: 1rem;
-  line-height: 1.5;
-  color: #333;
-
+  line-height: 1.7;
   margin: 0;
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
-    font-size: 1.1rem;
-  }
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
-    font-size: 1.2rem;
-  }
+  color: ${({ theme }) => theme.colors.textInverse};
 `;

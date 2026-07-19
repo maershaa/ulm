@@ -6,10 +6,14 @@ import {
   ModalText,
 } from './FeaturesModal.styled';
 import { useTranslation } from 'react-i18next';
+import { useMediaQuery } from 'react-responsive';
 
 // Основной компонент модалки
 const FeaturesModal = ({ show, onClose, featureContent }) => {
   const { t } = useTranslation('home');
+
+  // Используем медиазапрос для проверки ширины экрана
+  const isTabletLg = useMediaQuery({ minWidth: '768px' });
 
   // Если show=false, модалка не отображается
   if (!show) return null;
@@ -21,10 +25,14 @@ const FeaturesModal = ({ show, onClose, featureContent }) => {
     }
   };
 
+  if (!isTabletLg) return null;
+
   return (
     <ModalContainer onClick={handleBackdropClick}>
       <ModalContent onClick={(e) => e.stopPropagation()}>
-        <CloseButton onClick={onClose}>×</CloseButton>
+        <CloseButton aria-label="Close modal" onClick={onClose}>
+          ×
+        </CloseButton>
         <ModalImage
           src={featureContent.imageSrc}
           alt="Expanded view"

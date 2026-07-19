@@ -1,12 +1,11 @@
 import styled from 'styled-components';
-import { zIndex } from '@/assets/styles/zIndex';
 
 export const HeaderContainer = styled.div`
   min-width: 100%;
 
   position: sticky;
   top: 0;
-  z-index: ${zIndex.header};
+  z-index: ${({ theme }) => theme.zIndex.header};
 
   display: flex;
   align-items: center;

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { zIndex } from '@/assets/styles/zIndex';
 
 export const BtnBurger = styled.button`
   background-color: transparent;
@@ -10,7 +9,7 @@ export const BtnBurger = styled.button`
   justify-content: center;
 
   // Должна быть выше мобильного меню, иначе иконку "закрыть" будет не видно
-  z-index: ${zIndex.burgerButton};
+  z-index: ${({ theme }) => theme.zIndex.burgerButton};
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktopLg}) {
     display: none;

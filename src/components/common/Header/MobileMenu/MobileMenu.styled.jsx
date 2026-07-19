@@ -1,6 +1,4 @@
 import styled from 'styled-components';
-// import { breakpoints } from '@/assets/styles/breakpoints';
-import { zIndex } from '@/assets/styles/zIndex';
 
 export const MobMenuContainer = styled.div`
   position: fixed;
@@ -10,7 +8,8 @@ export const MobMenuContainer = styled.div`
   height: 100dvh;
 
   background-color: ${({ theme }) => theme.colors.brand};
-  z-index: ${zIndex.mobileMenu};
+  z-index: ${({ theme }) => theme.zIndex.mobileMenu};
+
   overflow: hidden;
   isolation: isolate; // чтобы z-index: -1 у <Glow /> не терялся
 

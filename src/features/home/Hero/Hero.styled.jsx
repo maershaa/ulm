@@ -8,6 +8,9 @@ export const HeroContainer = styled.div`
 
   padding: 40px 10px;
 
+  border-bottom-left-radius: ${({ theme }) => theme.radius.lg};
+  border-bottom-right-radius: ${({ theme }) => theme.radius.lg};
+
   background-color: rgb(3, 37, 65);
   background-image: linear-gradient(
       to right,
@@ -17,15 +20,15 @@ export const HeroContainer = styled.div`
     url(${(props) => props.$heroImageTablet});
 
   @media (min-width: ${({ theme }) => theme.breakpoints.mobileLg}) {
+    background-size: cover;
+    background-repeat: no-repeat;
+
     background-image: linear-gradient(
         to right,
         rgba(3, 37, 65, 0.9) 0%,
         rgba(3, 37, 65, 0) 100%
       ),
       url(${(props) => props.$heroImageMobile});
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: rgb(3, 37, 65);
   }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
