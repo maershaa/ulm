@@ -6,8 +6,11 @@ export const FooterRoot = styled.div`
 
   background-color: ${({ theme }) => theme.colors.brand};
   border-top: 1px solid ${({ theme }) => theme.colors.accentLight};
-  border-bottom-left-radius: ${({ theme }) => theme.radius.lg};
-  border-bottom-right-radius: ${({ theme }) => theme.radius.lg};
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    border-bottom-left-radius: ${({ theme }) => theme.radius.lg};
+    border-bottom-right-radius: ${({ theme }) => theme.radius.lg};
+  }
 `;
 
 export const FooterMain = styled.div`

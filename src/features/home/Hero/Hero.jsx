@@ -4,14 +4,17 @@ import {
   HeroPrimaryText,
   HeroInfo,
   ButtonsGroup,
+  FeaturesTitle,
+  HeroFeatures,
+  HeroFeature,
 } from './Hero.styled';
 import heroImage from '@/assets/images/Hero/hero.jpeg';
 import heroImageTablet from '@/assets/images/Hero/lots_of_tins.jpeg';
 import heroImageMobile from '@/assets/images/Hero/lots_of_tins_mb.jpeg';
 
-import { ContactUsForm } from '@/components';
-
-import { FaIndustry, FaShieldAlt } from 'react-icons/fa';
+import { FaIndustry, FaShieldAlt, FaCheckCircle } from 'react-icons/fa';
+import { FaBoxesStacked } from 'react-icons/fa6';
+import { MdFactory } from 'react-icons/md';
 
 import { useTranslation } from 'react-i18next';
 
@@ -42,7 +45,23 @@ const Hero = () => {
         </ButtonsGroup>
       </Block>
 
-      <ContactUsForm />
+      <HeroFeatures>
+        <FeaturesTitle>Чому обирають нас</FeaturesTitle>
+        <HeroFeature>
+          <FaCheckCircle />
+          <span>Контроль якості</span>
+        </HeroFeature>
+
+        <HeroFeature>
+          <MdFactory />
+          <span>Сучасне виробництво</span>
+        </HeroFeature>
+
+        <HeroFeature>
+          <FaBoxesStacked />
+          <span>Будь-які обсяги</span>
+        </HeroFeature>
+      </HeroFeatures>
     </HeroContainer>
   );
 };

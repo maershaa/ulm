@@ -165,3 +165,62 @@ export const ButtonsGroup = styled.div`
     }
   }
 `;
+
+export const FeaturesTitle = styled.p`
+  font-size: 1rem;
+  letter-spacing: 0.15em;
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  color: ${({ theme }) => theme.colors.textInverse};
+
+  opacity: 0.75;
+
+  margin-bottom: 10px;
+`;
+
+export const HeroFeatures = styled.ul`
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  gap: 22px;
+
+  width: 430px;
+  padding: 30px;
+
+  border-radius: ${({ theme }) => theme.radius.lg};
+
+  background: rgba(3, 37, 65, 0.7);
+
+  backdrop-filter: blur(16px);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  box-shadow: ${({ theme }) => theme.shadows.lg};
+`;
+
+export const HeroFeature = styled.li`
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  padding-bottom: 18px;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  svg {
+    font-size: 1.7rem;
+    color: ${({ theme }) => theme.colors.accentLight};
+  }
+
+  span {
+    color: ${({ theme }) => theme.colors.textInverse};
+
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+`;

@@ -1,10 +1,16 @@
-import { Hero, AboutUsSection, FeaturesSection } from '@/features';
+import {
+  Hero,
+  AboutUsSection,
+  ProductsSection,
+  FeaturesSection,
+} from '@/features';
 
 const HomePage = () => {
   return (
     <>
       <Hero />
       <AboutUsSection />
+      <ProductsSection />
       <FeaturesSection />
     </>
   );
