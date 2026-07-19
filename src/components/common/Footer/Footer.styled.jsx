@@ -1,119 +1,124 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
-export const FooterWrapper = styled.div`
-  min-width: 100%;
+export const FooterRoot = styled.div`
+  width: 100%;
 
+  background-color: ${({ theme }) => theme.colors.brand};
+  border-top: 1px solid ${({ theme }) => theme.colors.accentLight};
+  border-bottom-left-radius: ${({ theme }) => theme.radius.lg};
+  border-bottom-right-radius: ${({ theme }) => theme.radius.lg};
+`;
+
+export const FooterMain = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  gap: 20px;
+
+  padding: 24px 20px;
   text-align: center;
 
-  background-color: ${({ theme }) => theme.colors.brand};
-  padding: 15px;
-
-  margin-left: auto;
-  margin-right: auto;
-
-  border-bottom-left-radius: ${({ theme }) => theme.radius.lg};
-  border-bottom-right-radius: ${({ theme }) => theme.radius.lg};
-
-  border-top: 1px solid ${({ theme }) => theme.colors.accentLight};
-
   @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
-    padding: 0 25px;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
+    gap: 24px;
+
+    padding: 20px 32px;
+    text-align: left;
   }
 `;
 
-export const Wrapper = styled.div`
-  order: 3; /* По умолчанию для мобильных внизу */
-
-  max-width: 200px;
+export const Column = styled.div`
+  order: 3; /* на мобильных — последним */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 220px;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
-    order: 0; /* Для планшетов и десктопов отображается первым */
-
-    max-width: 300px;
+    order: 0; /* на планшетах/десктопе — первым */
+    align-items: flex-start;
+    max-width: 280px;
   }
 `;
 
 export const Address = styled.address`
   order: 1;
-
-  max-width: 200px;
+  font-style: normal;
+  max-width: 220px;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
-    max-width: 250px;
+    max-width: 260px;
   }
 `;
 
 export const Phone = styled.div`
   order: 2;
-
-  max-width: 200px;
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
-    max-width: 250px;
-  }
-`;
-export const ContactInfo = styled.div`
   display: flex;
-  align-items: center;
-  font-size: 1rem;
-
-  line-height: 1.2;
-  color: ${({ theme }) => theme.colors.textInverse};
+  flex-direction: column;
+  gap: 6px;
+  max-width: 220px;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
-    font-size: 1.1rem;
-  }
-`;
-
-export const Icon = styled.div`
-  margin-right: 8px;
-
-  svg {
-    width: 22px;
-    height: 22px;
-    fill: ${({ theme }) => theme.colors.accent};
-  }
-`;
-
-export const ContactLink = styled.a`
-  color: ${({ theme }) => theme.colors.textInverse};
-
-  text-decoration: none;
-
-  display: flex;
-  align-items: start;
-  font-size: 1rem;
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
-    font-size: 1.1rem;
-  }
-  &:hover {
-    text-decoration: underline;
+    max-width: 260px;
   }
 `;
 
 export const CopyrightText = styled.p`
   color: ${({ theme }) => theme.colors.textInverse};
-
   margin: 0;
-  margin-bottom: 10px;
 `;
 
+/* --- Нижняя полоса: политика + подпись разработчика --- */
+
+export const BottomBar = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 14px 20px;
+
+  border-top: 1px solid ${({ theme }) => theme.colors.borderSubtle};
+
+  font-size: 0.8rem;
+
+  span {
+    color: ${({ theme }) => theme.colors.textInverse};
+  }
+`;
+
+export const PolicyLink = styled(Link)`
+  color: ${({ theme }) => theme.colors.textInverse};
+  opacity: 0.7;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 1;
+    text-decoration: underline;
+  }
+`;
+
+export const Divider = styled.span`
+  color: ${({ theme }) => theme.colors.textInverse};
+  opacity: 0.35;
+`;
+
+export const DevCredit = styled.p`
+  margin: 0;
+  color: ${({ theme }) => theme.colors.textInverse};
+  opacity: 0.7;
+`;
+
+// Фон футера (theme.colors.brand) фиксирован и не меняется между темами,
+// поэтому цвет ссылки тоже фиксированный, а не токен темы.
 export const StyledLink = styled.a`
   color: #00baff;
   text-decoration: none;
 
-  font-size: 1rem;
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
-    font-size: 1.1rem;
-  }
   &:hover {
     text-decoration: underline;
   }

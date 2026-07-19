@@ -1,59 +1,65 @@
+import { useTranslation } from 'react-i18next';
+
 import { Logo } from '@/components';
+import { ContactMethod } from '@/features/contacts';
+import { ContactInfo } from '@/features/contacts/ContactMethod/ContactMethod.styled';
 import {
-  FooterWrapper,
-  Wrapper,
-  Phone,
+  FooterRoot,
+  FooterMain,
+  Column,
   Address,
-  ContactInfo,
-  ContactLink,
-  Icon,
-  CopyrightText,
+  Phone,
+  BottomBar,
+  PolicyLink,
+  Divider,
+  DevCredit,
   StyledLink,
 } from './Footer.styled';
-import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
   const { t } = useTranslation('contacts');
 
   return (
-    <FooterWrapper>
-      <Wrapper>
-        <Logo />
-        <CopyrightText>
-          Copyright © 2024{' '}
-          <StyledLink href="https://www.linkedin.com/in/valeriiayefremova/">
-            Valeriia Yefremova{' '}
-          </StyledLink>
-        </CopyrightText>
-      </Wrapper>
+    <FooterRoot data-theme="dark">
+      <FooterMain>
+        <Column>
+          <Logo />
+        </Column>
 
-      <Address>
-        <ContactInfo>
-          {t('contacts.factoryName')} {t('contacts.addressStreet')}{' '}
-          {t('contacts.addressCity')}
-        </ContactInfo>
-      </Address>
+        <Address>
+          <ContactInfo>
+            {t('contacts.factoryName')} {t('contacts.addressStreet')}{' '}
+            {t('contacts.addressCity')}
+          </ContactInfo>
+        </Address>
 
-      <Phone>
-        <ContactInfo>
-          <Icon>
-            <svg>
-              <use xlinkHref="#icon-phone"></use>
-            </svg>
-          </Icon>
-          <ContactLink href="tel:+380487151660">
+        <Phone>
+          <ContactMethod icon="phone" href="tel:+380487151660">
             +38 (048) 715-16-60
-          </ContactLink>
-        </ContactInfo>
-
-        <ContactInfo>
-          {t('contacts.fax')}
-          <ContactLink href="tel:+380487145509">
+          </ContactMethod>
+          <ContactMethod icon="phone" href="tel:+380487145509">
             +38 (048) 714-55-09
-          </ContactLink>
-        </ContactInfo>
-      </Phone>
-    </FooterWrapper>
+          </ContactMethod>
+        </Phone>
+      </FooterMain>
+
+      <BottomBar>
+        <span>Copyright © 2026 ULM</span>
+        <Divider>•</Divider>
+        <PolicyLink to="/privacy-policy">{t('privacyPolicyLink')}</PolicyLink>
+        <Divider>•</Divider>
+        <DevCredit>
+          {t('devCreditLabel')}{' '}
+          <StyledLink
+            href="https://www.linkedin.com/in/valeriiayefremova/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Valeriia Y.
+          </StyledLink>
+        </DevCredit>
+      </BottomBar>
+    </FooterRoot>
   );
 };
 

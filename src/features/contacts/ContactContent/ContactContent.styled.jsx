@@ -1,5 +1,17 @@
 import styled from 'styled-components';
 
+export const Wrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
+    flex-wrap: nowrap;
+  }
+`;
+
 export const ContactContainer = styled.div`
   padding: 20px;
   max-width: 600px;
@@ -8,23 +20,17 @@ export const ContactContainer = styled.div`
   text-align: left;
 
   address {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
     margin-bottom: 20px;
   }
 `;
 
-export const Phone = styled.div`
-  margin-bottom: 20px;
-`;
-
-export const ContactInfo = styled.div`
-  margin-bottom: 5px;
-
-  display: flex;
-  align-items: center;
+export const AddressLine = styled.div`
   font-size: 1rem;
-
   line-height: 1.2;
-
   color: ${({ theme }) => theme.colors.textPrimary};
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
@@ -32,29 +38,10 @@ export const ContactInfo = styled.div`
   }
 `;
 
-export const Icon = styled.div`
-  margin-right: 8px;
-
-  svg {
-    width: 22px;
-    height: 22px;
-    fill: ${({ theme }) => theme.colors.accentLight};
-  }
-`;
-
-export const ContactLink = styled.a`
-  color: ${({ theme }) => theme.colors.accentLight};
-
-  text-decoration: none;
-
+export const Phone = styled.div`
   display: flex;
-  align-items: center;
-  font-size: 1rem;
+  flex-direction: column;
+  gap: 10px;
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
-    font-size: 1.1rem;
-  }
-  &:hover {
-    text-decoration: underline;
-  }
+  margin-bottom: 20px;
 `;

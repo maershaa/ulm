@@ -1,0 +1,44 @@
+{
+  "privacyPolicy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: [20.07.2026]",
+    "sections": [
+      {
+        "heading": "1. General provisions",
+        "text": "This Privacy Policy describes how we collect, use, and protect the personal data of visitors to ulm.com.ua (the \"Site\"), operated by LLC \"Yuzhlitografmetall\" (ULM). By using the Site and submitting the contact form, you agree to the terms of this Policy."
+      },
+      {
+        "heading": "2. What data we collect",
+        "text": "When you fill out the contact form, we collect: your name, phone number, email address, and message text. This information is provided voluntarily."
+      },
+      {
+        "heading": "3. Purpose of processing",
+        "text": "Your data is used solely to process your inquiry, respond to it, and, if needed, follow up regarding potential cooperation. Your data is never used for marketing without your separate consent."
+      },
+      {
+        "heading": "4. Legal basis",
+        "text": "Personal data is processed on the basis of your voluntary consent, in accordance with the Law of Ukraine \"On Personal Data Protection\"."
+      },
+      {
+        "heading": "5. Third-party disclosure",
+        "text": "To deliver emails from the contact form, we use the Resend service. Data is shared with Resend solely for the technical purpose of message delivery and is not used by them for their own purposes. We do not sell or share your data with any other third parties."
+      },
+      {
+        "heading": "6. Cookies and local storage",
+        "text": "The Site uses only technical cookies / browser local storage to remember your selected theme (light/dark) and interface language. We do not use advertising or analytics cookies that track your activity."
+      },
+      {
+        "heading": "7. Data retention",
+        "text": "Personal data submitted via the contact form is kept only as long as necessary to process your inquiry, after which it is deleted."
+      },
+      {
+        "heading": "8. Your rights",
+        "text": "You have the right to access, correct, or delete your personal data. To do so, please send a request to info@ulm.com.ua."
+      },
+      {
+        "heading": "9. Contact",
+        "text": "For questions related to this Policy, please contact: info@ulm.com.ua."
+      }
+    ]
+  }
+}

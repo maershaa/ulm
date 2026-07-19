@@ -12,7 +12,7 @@ const BurgerMenuButton = ({ isOpenMenu, setIsOpenMenu }) => {
     Если меню открыто, отображаем иконку закрытия (icon-close). 
     Если меню закрыто, отображаем иконку бургер-меню (icon-menu-burger). */}
         <use
-          xlinkHref={
+          href={
             isOpenMenu
               ? '#icon-close' // Иконка закрытия, если меню открыто
               : '#icon-menu-burger' // Иконка бургер-меню, если меню закрыто

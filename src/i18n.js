@@ -15,7 +15,7 @@ i18n
   .init({
     lng: 'uk',
     fallbackLng: 'uk',
-    ns: ['main', 'home', 'products', 'contacts'],
+    ns: ['main', 'home', 'products', 'contacts', 'legal'],
 
     backend: {
       loadPath: `${import.meta.env.BASE_URL}/locales/{{lng}}/{{ns}}.json`,

@@ -38,7 +38,7 @@ const ContactUsForm = () => {
 
   const handleContactSubmit = (values, actions) => {
     axios
-      .post('http://localhost:5001/api/sendMail', values) // Отправка данных на сервер
+      .post(import.meta.env.VITE_API_URL, values) // Отправка данных на сервер
       .then((response) => {
         toast.success(t('contactUsForm.successToast'));
         actions.resetForm(); // Очистка формы после успешной отправки

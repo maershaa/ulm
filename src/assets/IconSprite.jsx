@@ -4,7 +4,7 @@ import spriteContent from '@/assets/icons.svg?raw';
 // через <use href="/icons.svg#id">), иначе браузер не даёт применять к иконкам
 // CSS из родительских компонентов (fill/stroke не наследуются в "внешний" SVG).
 // Поэтому один раз рендерим содержимое icons.svg прямо в документ,
-// а дальше везде используем короткую ссылку: <use xlinkHref="#icon-name" />
+// а дальше везде используем короткую ссылку: <use href="#icon-name" />
 const IconSprite = () => {
   return (
     <div

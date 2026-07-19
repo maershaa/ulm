@@ -1,73 +1,65 @@
-import {
-  ContactContainer,
-  Phone,
-  ContactInfo,
-  ContactLink,
-  Icon,
-} from './ContactContent.styled';
-import { Title, ContactUsForm } from '@/components';
-import Map from '@/pages/ContactsPage/Map';
 import { useTranslation } from 'react-i18next';
+import { Title, ContactUsForm } from '@/components';
+import { Map, ContactMethod } from '@/features/contacts';
+import {
+  Wrapper,
+  ContactContainer,
+  AddressLine,
+  Phone,
+} from './ContactContent.styled';
 
 const ContactContent = () => {
   const { t } = useTranslation('contacts');
 
   return (
-    <>
+    <Wrapper>
       <ContactContainer>
         <Title title={t('contacts.title')} />
+
         <address>
-          <ContactInfo>{t('contacts.factoryName')}</ContactInfo>
-          <ContactInfo>{t('contacts.addressStreet')}</ContactInfo>
-          <ContactInfo>{t('contacts.addressCity')}</ContactInfo>
+          <AddressLine>{t('contacts.factoryName')}</AddressLine>
+          <AddressLine>{t('contacts.addressStreet')}</AddressLine>
+          <AddressLine>{t('contacts.addressCity')}</AddressLine>
         </address>
 
         <Phone>
-          <ContactInfo>
-            <Icon>
-              <svg>
-                <use xlinkHref="#icon-phone"></use>
-              </svg>
-            </Icon>
-            <ContactLink href="tel:+380487151660">
-              +38 (048) 715-16-60
-            </ContactLink>
-          </ContactInfo>
-
-          <ContactInfo>
-            {t('contacts.fax')}
-            <ContactLink href="tel:+380487145509">
-              +38 (048) 714-55-09
-            </ContactLink>
-          </ContactInfo>
+          <ContactMethod
+            icon="phone"
+            label={t('contacts.phoneLabel')}
+            href="tel:+380487151660"
+          >
+            +38 (048) 715-16-60
+          </ContactMethod>
+          <ContactMethod
+            icon="phone"
+            label={t('contacts.faxLabel')}
+            href="tel:+380487145509"
+          >
+            +38 (048) 714-55-09
+          </ContactMethod>
         </Phone>
-        <ContactInfo>
-          {t('contacts.option1')}
-          <ContactLink href="mailto:info@ulm.com.ua">
-            <Icon>
-              <svg>
-                <use xlinkHref="#icon-mail"></use>
-              </svg>
-            </Icon>
-            info@ulm.com.ua
-          </ContactLink>
-        </ContactInfo>
-        <ContactInfo>
-          {t('contacts.option2')}
-          <ContactLink href="mailto:factory@ulm.com.ua">
-            <Icon>
-              <svg>
-                <use xlinkHref="#icon-mail"></use>
-              </svg>
-            </Icon>
-            factory@ulm.com.ua
-          </ContactLink>
-        </ContactInfo>
+
+        <ContactMethod
+          icon="mail"
+          label={t('contacts.option1')}
+          href="mailto:info@ulm.com.ua"
+        >
+          info@ulm.com.ua
+        </ContactMethod>
+
+        <ContactMethod
+          icon="mail"
+          label={t('contacts.option2')}
+          href="mailto:factory@ulm.com.ua"
+        >
+          factory@ulm.com.ua
+        </ContactMethod>
 
         <Map />
       </ContactContainer>
+
       <ContactUsForm />
-    </>
+    </Wrapper>
   );
 };
 

@@ -12,15 +12,6 @@ export const FormContainer = styled.div`
   border-radius: ${({ theme }) => theme.radius.md};
 
   box-shadow: ${({ theme }) => theme.shadows.md};
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
-  }
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
-  }
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
-  }
 `;
 
 export const FormGroup = styled.div`
@@ -34,7 +25,7 @@ export const FormLabel = styled.label`
   display: block;
   font-size: 1rem;
   margin-left: 2px;
-  color: var(--text-color);
+  color: ${({ theme }) => theme.colors.textPrimary};
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
     font-size: 1.1rem;
@@ -44,9 +35,10 @@ export const FormLabel = styled.label`
 export const FormInput = styled.input`
   width: 100%;
   padding: 10px;
-  border: 1px solid ${({ theme }) => theme.colors.borderStrong};
 
+  border: 1px solid ${({ theme }) => theme.colors.borderStrong};
   border-radius: ${({ theme }) => theme.radius.sm};
+
   font-size: 1rem;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
@@ -63,17 +55,17 @@ export const FormInput = styled.input`
 export const FormTextarea = styled.textarea`
   width: 100%;
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid ${({ theme }) => theme.colors.borderStrong};
   border-radius: ${({ theme }) => theme.radius.sm};
-  font-size: 0.9rem;
-  box-sizing: border-box;
+  font-size: 1rem;
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    font-size: 1rem;
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
+    font-size: 1.1rem;
   }
 
   &:focus {
-    border-color: #007bff;
+    border-color: ${({ theme }) => theme.colors.accent};
+
     outline: none;
   }
 `;
@@ -81,16 +73,15 @@ export const FormTextarea = styled.textarea`
 export const FormButton = styled.button`
   cursor: pointer;
 
-  padding: 0.75rem 1.1rem;
+  padding: 12px 16px;
+  font-size: 0.9rem;
   text-transform: uppercase;
+
   border-radius: ${({ theme }) => theme.radius.sm};
   border: none;
 
-  font-size: 0.9rem;
-
   background-color: ${({ theme }) => theme.colors.accent};
-
-  color: #fff;
+  color: ${({ theme }) => theme.colors.textInverse};
 
   transition: ${({ theme }) => theme.transitions.base};
 
@@ -99,6 +90,6 @@ export const FormButton = styled.button`
   }
 
   &:hover {
-    background-color: #196f97;
+    background-color: ${({ theme }) => theme.colors.accentLight};
   }
 `;
