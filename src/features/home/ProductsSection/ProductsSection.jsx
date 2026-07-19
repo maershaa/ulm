@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import {
   ProductsWrapper,
   SectionDescription,
@@ -11,14 +12,12 @@ import { topProductsData } from '@/constants/topProductsData';
 import { FaArrowRight } from 'react-icons/fa6';
 
 const ProductsSection = () => {
+  const { t } = useTranslation('products');
   return (
     <ProductsWrapper>
-      <Title title="Наша продукція" />
+      <Title title={t('title')} />
 
-      <SectionDescription>
-        Виробляємо металеву упаковку для підприємств харчової промисловості,
-        поєднуючи якість, надійність та багаторічний досвід.
-      </SectionDescription>
+      <SectionDescription>{t('description')}</SectionDescription>
 
       <ProductsList>
         {topProductsData.map((product) => (
@@ -28,8 +27,7 @@ const ProductsSection = () => {
 
       <ButtonWrapper>
         <ButtonLink to="/products">
-          <span>Переглянути всю продукцію</span>
-          <FaArrowRight />
+          <span>{t('button')}</span> <FaArrowRight />
         </ButtonLink>
       </ButtonWrapper>
     </ProductsWrapper>

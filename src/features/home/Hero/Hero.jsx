@@ -46,20 +46,18 @@ const Hero = () => {
       </Block>
 
       <HeroFeatures>
-        <FeaturesTitle>Чому обирають нас</FeaturesTitle>
+        <FeaturesTitle>{t('hero.featuresSection.title')}</FeaturesTitle>{' '}
         <HeroFeature>
           <FaCheckCircle />
-          <span>Контроль якості</span>
+          <span>{t('hero.featuresSection.quality')}</span>
         </HeroFeature>
-
         <HeroFeature>
           <MdFactory />
-          <span>Сучасне виробництво</span>
+          <span>{t('hero.featuresSection.manufacturing')}</span>
         </HeroFeature>
-
         <HeroFeature>
           <FaBoxesStacked />
-          <span>Будь-які обсяги</span>
+          <span>{t('hero.featuresSection.volumes')}</span>
         </HeroFeature>
       </HeroFeatures>
     </HeroContainer>
