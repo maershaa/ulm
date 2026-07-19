@@ -1,4 +1,4 @@
-import{s as e,L as i}from"./index-ClJ6pMsU.js";const a=e.section`
+import{s as e,L as i}from"./index-B0MKf2Ij.js";const a=e.section`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -75,7 +75,7 @@ import{s as e,L as i}from"./index-ClJ6pMsU.js";const a=e.section`
   gap: 40px;
   align-items: center;
 
-  padding: 40px 10px;
+  padding: 56px 20px;
 
   border-bottom-left-radius: ${({theme:t})=>t.radius.lg};
   border-bottom-right-radius: ${({theme:t})=>t.radius.lg};
@@ -100,6 +100,9 @@ import{s as e,L as i}from"./index-ClJ6pMsU.js";const a=e.section`
       url(${t=>t.$heroImageMobile});
   }
 
+  @media (min-width: ${({theme:t})=>t.breakpoints.tablet}) {
+    padding: 72px 40px;
+  }
   @media (min-width: ${({theme:t})=>t.breakpoints.tabletLg}) {
     background-image: linear-gradient(
         to right,
@@ -114,17 +117,22 @@ import{s as e,L as i}from"./index-ClJ6pMsU.js";const a=e.section`
 
     justify-items: stretch;
     gap: 60px;
+
+    padding: 90px 60px;
   }
 `,p=e.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
-
+  gap: 20px;
   text-align: center;
 
   margin-bottom: 20px;
-  padding: 20px;
+  padding: 0;
+
+  @media (min-width: ${({theme:t})=>t.breakpoints.tablet}) {
+    gap: 28px;
+  }
 
   @media (min-width: ${({theme:t})=>t.breakpoints.tabletLg}) {
     align-items: flex-start;
@@ -159,7 +167,7 @@ import{s as e,L as i}from"./index-ClJ6pMsU.js";const a=e.section`
     margin-top: 20px;
     margin-bottom: 20px;
   }
-`,c=e.h2`
+`,m=e.h2`
   color: ${({theme:t})=>t.colors.textInverse};
 
   font-size: 1.5rem;
@@ -178,16 +186,26 @@ import{s as e,L as i}from"./index-ClJ6pMsU.js";const a=e.section`
   @media (min-width: ${({theme:t})=>t.breakpoints.desktop}) {
     font-size: 2.2rem;
   }
-`,m=e.div`
+`,c=e.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
   width: 100%;
 
+  padding: 12px 20px;
+  font-size: 0.95rem;
+
+  svg {
+    font-size: 20px;
+  }
+
   @media (min-width: ${({theme:t})=>t.breakpoints.tablet}) {
     flex-direction: row;
     width: auto;
+
+    padding: 14px 28px;
+    font-size: 1rem;
   }
 
   a {
@@ -241,43 +259,63 @@ import{s as e,L as i}from"./index-ClJ6pMsU.js";const a=e.section`
 `,x=e.ul`
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
-  gap: 22px;
+  gap: 18px;
 
-  width: 430px;
-  padding: 30px;
+  width: 100%;
+  max-width: 430px;
+
+  margin: 0 auto;
+  padding: 20px;
 
   border-radius: ${({theme:t})=>t.radius.lg};
-
-  background: rgba(3, 37, 65, 0.7);
-
-  backdrop-filter: blur(16px);
-
   border: 1px solid rgba(255, 255, 255, 0.12);
 
+  background: rgba(3, 37, 65, 0.7);
+  backdrop-filter: blur(16px);
+
   box-shadow: ${({theme:t})=>t.shadows.lg};
+
+  @media (min-width: ${({theme:t})=>t.breakpoints.tablet}) {
+    padding: 28px;
+    gap: 22px;
+  }
+
+  @media (min-width: ${({theme:t})=>t.breakpoints.desktop}) {
+    margin-left: auto;
+  }
 `,b=e.li`
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 14px;
 
-  padding-bottom: 18px;
+  padding-bottom: 16px;
 
   &:not(:last-child) {
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
 
   svg {
-    font-size: 1.7rem;
+    flex-shrink: 0;
+
+    font-size: 1.35rem;
+
     color: ${({theme:t})=>t.colors.accentLight};
+
+    @media (min-width: ${({theme:t})=>t.breakpoints.tablet}) {
+      font-size: 1.7rem;
+    }
   }
 
   span {
+    font-size: 1rem;
+    line-height: 1.45;
+    font-weight: 600;
+
     color: ${({theme:t})=>t.colors.textInverse};
 
-    font-size: 1.25rem;
-    font-weight: 600;
-    line-height: 1.4;
+    @media (min-width: ${({theme:t})=>t.breakpoints.tablet}) {
+      font-size: 1.2rem;
+    }
   }
 `,h=e.section`
   display: flex;
@@ -638,4 +676,4 @@ import{s as e,L as i}from"./index-ClJ6pMsU.js";const a=e.section`
   @media (min-width: ${({theme:t})=>t.breakpoints.desktopLg}) {
     gap: 30px;
   }
-`;export{s as A,r as B,L as C,g as F,d as H,n as I,y as M,B as P,a as S,$ as T,p as a,l as b,c,m as d,x as e,b as f,z as g,I as h,j as i,h as j,f as k,u as l,w as m,k as n,v as o,C as p,F as q,P as r,T as s,H as t,S as u};
+`;export{s as A,r as B,L as C,g as F,d as H,n as I,y as M,B as P,a as S,$ as T,p as a,l as b,m as c,c as d,x as e,b as f,z as g,I as h,j as i,h as j,f as k,u as l,w as m,k as n,v as o,C as p,F as q,P as r,T as s,H as t,S as u};
