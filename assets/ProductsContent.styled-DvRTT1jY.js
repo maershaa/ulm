@@ -1,4 +1,4 @@
-import{j as i,T as o,s as e}from"./index-EkST_Q1r.js";const n=({title:t})=>i.jsx(o,{children:t}),r=e.section`
+import{j as i,T as o,s as e}from"./index-DXTNzUCz.js";const n=({title:t})=>i.jsx(o,{children:t}),r=e.section`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,7 +56,7 @@ import{j as i,T as o,s as e}from"./index-EkST_Q1r.js";const n=({title:t})=>i.jsx
   @media (min-width: ${({theme:t})=>t.breakpoints.desktop}) {
     max-width: 600px;
   }
-`,p=e.p`
+`,l=e.p`
   text-align: left;
 
   color: ${({theme:t})=>t.colors.brand};
@@ -69,13 +69,16 @@ import{j as i,T as o,s as e}from"./index-EkST_Q1r.js";const n=({title:t})=>i.jsx
     font-size: 1rem;
     padding: 0 10px 0 0;
   }
-`,l=e.div`
+`,p=e.div`
   display: grid;
   grid-template-columns: 1fr;
   gap: 40px;
   align-items: center;
 
   padding: 40px 10px;
+
+  border-bottom-left-radius: ${({theme:t})=>t.radius.lg};
+  border-bottom-right-radius: ${({theme:t})=>t.radius.lg};
 
   background-color: rgb(3, 37, 65);
   background-image: linear-gradient(
@@ -86,15 +89,15 @@ import{j as i,T as o,s as e}from"./index-EkST_Q1r.js";const n=({title:t})=>i.jsx
     url(${t=>t.$heroImageTablet});
 
   @media (min-width: ${({theme:t})=>t.breakpoints.mobileLg}) {
+    background-size: cover;
+    background-repeat: no-repeat;
+
     background-image: linear-gradient(
         to right,
         rgba(3, 37, 65, 0.9) 0%,
         rgba(3, 37, 65, 0) 100%
       ),
       url(${t=>t.$heroImageMobile});
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: rgb(3, 37, 65);
   }
 
   @media (min-width: ${({theme:t})=>t.breakpoints.tabletLg}) {
@@ -112,7 +115,7 @@ import{j as i,T as o,s as e}from"./index-EkST_Q1r.js";const n=({title:t})=>i.jsx
     justify-items: stretch;
     gap: 60px;
   }
-`,m=e.div`
+`,c=e.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -127,7 +130,7 @@ import{j as i,T as o,s as e}from"./index-EkST_Q1r.js";const n=({title:t})=>i.jsx
     align-items: flex-start;
     text-align: left;
   }
-`,c=e.h1`
+`,m=e.h1`
   color: ${({theme:t})=>t.colors.textInverse};
 
   font-size: 1.7rem;
@@ -267,7 +270,7 @@ import{j as i,T as o,s as e}from"./index-EkST_Q1r.js";const n=({title:t})=>i.jsx
       flex-direction: column-reverse;
     }
   }
-`,w=e.img`
+`,u=e.img`
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
@@ -280,7 +283,7 @@ import{j as i,T as o,s as e}from"./index-EkST_Q1r.js";const n=({title:t})=>i.jsx
   @media (min-width: ${({theme:t})=>t.breakpoints.desktop}) {
     max-width: 500px;
   }
-`,u=e.div`
+`,$=e.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -310,7 +313,7 @@ import{j as i,T as o,s as e}from"./index-EkST_Q1r.js";const n=({title:t})=>i.jsx
     max-width: 500px;
     padding: 32px;
   }
-`,k=e.h4`
+`,w=e.h4`
   text-transform: uppercase;
   margin: 0;
   font-weight: 700;
@@ -324,7 +327,7 @@ import{j as i,T as o,s as e}from"./index-EkST_Q1r.js";const n=({title:t})=>i.jsx
   @media (min-width: ${({theme:t})=>t.breakpoints.desktop}) {
     font-size: 1.2rem;
   }
-`,$=e.p`
+`,k=e.p`
   position: relative;
   padding: 0 30px;
   font-size: 0.9rem;
@@ -349,82 +352,75 @@ import{j as i,T as o,s as e}from"./index-EkST_Q1r.js";const n=({title:t})=>i.jsx
     ); /* Устанавливает максимальную высоту для 5 строк */
   }
 `,v=e.div`
-  visibility: hidden; //!!! временное решение чтобы не обображать модалку на телефонах
-
   @media (min-width: ${({theme:t})=>t.breakpoints.tabletLg}) {
-    visibility: visible; //!!! временное решение чтобы не обображать модалку на телефонах
+    padding: 24px;
 
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+
     display: flex;
     justify-content: center;
     align-items: center;
 
-    z-index: 1001; //! так как у header 1000
+    /* запрет прокрутки странички при открытой модалке */
+    overflow: hidden;
+    overscroll-behavior: none;
+
+    background: rgba(3, 37, 65, 0.65);
+    backdrop-filter: blur(5px);
+
+    z-index: ${({theme:t})=>t.zIndex.modalBackdrop};
   }
 `,y=e.div`
-  background: white;
-  padding: 20px;
-  border-radius: ${({theme:t})=>t.radius.md};
-  max-width: 500px;
-  width: 100%;
   position: relative;
+  width: 100%;
+  max-width: 680px;
+  padding: 28px;
+
+  background: ${({theme:t})=>t.colors.elevated};
+  border: 1px solid ${({theme:t})=>t.colors.borderDefault};
+  border-radius: ${({theme:t})=>t.radius.lg};
+  box-shadow: ${({theme:t})=>t.shadows.lg};
+
+  z-index: ${({theme:t})=>t.zIndex.modalContent};
 `,z=e.button`
   position: absolute;
   top: 10px;
   right: 10px;
-  background-color: rgba(200, 200, 200, 0.8);
-  border: none;
-  border-radius: ${({theme:t})=>t.radius.round};
-  width: 30px;
-  height: 30px;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: #333;
+  width: 36px;
+  height: 36px;
+
   display: flex;
   justify-content: center;
   align-items: center;
 
+  font-size: 1.5rem;
+
+  background: ${({theme:t})=>t.colors.elevated};
+  color: ${({theme:t})=>t.colors.textSecondary};
+  border: 1px solid ${({theme:t})=>t.colors.borderDefault};
+  border-radius: ${({theme:t})=>t.radius.round};
+
+  transition: ${({theme:t})=>t.transitions.fast};
+
   &:hover {
-    background-color: rgba(
-      150,
-      150,
-      150,
-      0.8
-    ); /* Более темный фон при наведении */
+    background: ${({theme:t})=>t.colors.accent};
+    color: ${({theme:t})=>t.colors.textInverse};
   }
 `,L=e.img`
+  object-fit: cover;
   width: 100%;
-  max-width: 400px;
-  height: auto;
-
-  margin-bottom: 20px;
-
-  @media (min-width: ${({theme:t})=>t.breakpoints.tabletLg}) {
-    max-width: 500px;
-  }
-
-  @media (min-width: ${({theme:t})=>t.breakpoints.desktop}) {
-    max-width: 600px;
-  }
+  border-radius: ${({theme:t})=>t.radius.md};
+  margin-bottom: 24px;
 `,I=e.p`
   font-size: 1rem;
-  line-height: 1.5;
-  color: #333;
-
+  line-height: 1.7;
   margin: 0;
 
-  @media (min-width: ${({theme:t})=>t.breakpoints.tabletLg}) {
-    font-size: 1.1rem;
-  }
-
-  @media (min-width: ${({theme:t})=>t.breakpoints.desktop}) {
-    font-size: 1.2rem;
-  }
+  color: ${({theme:t})=>t.colors.textInverse};
 `,j=e.div`
   padding: 20px;
   max-width: 600px;
@@ -459,7 +455,7 @@ import{j as i,T as o,s as e}from"./index-EkST_Q1r.js";const n=({title:t})=>i.jsx
     height: 22px;
     fill: ${({theme:t})=>t.colors.accentLight};
   }
-`,M=e.a`
+`,B=e.a`
   color: ${({theme:t})=>t.colors.accentLight};
 
   text-decoration: none;
@@ -474,7 +470,7 @@ import{j as i,T as o,s as e}from"./index-EkST_Q1r.js";const n=({title:t})=>i.jsx
   &:hover {
     text-decoration: underline;
   }
-`,B=e.ul`
+`,M=e.ul`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -491,7 +487,7 @@ import{j as i,T as o,s as e}from"./index-EkST_Q1r.js";const n=({title:t})=>i.jsx
   @media (min-width: ${({theme:t})=>t.breakpoints.desktopLg}) {
     gap: 30px;
   }
-`,F=e.li`
+`,S=e.li`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -565,4 +561,4 @@ import{j as i,T as o,s as e}from"./index-EkST_Q1r.js";const n=({title:t})=>i.jsx
       font-size: 1.1rem;
     }
   }
-`;export{p as A,d as B,z as C,h as F,l as H,s as I,v as M,B as P,r as S,n as T,m as a,c as b,g as c,x as d,y as e,L as f,I as g,b as h,f as i,w as j,u as k,k as l,$ as m,F as n,j as o,T as p,C as q,P as r,M as s};
+`;export{l as A,d as B,z as C,h as F,p as H,s as I,v as M,M as P,r as S,n as T,c as a,m as b,g as c,x as d,y as e,L as f,I as g,b as h,f as i,u as j,$ as k,w as l,k as m,S as n,j as o,T as p,C as q,P as r,B as s};
