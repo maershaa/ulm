@@ -1,4 +1,4 @@
-import{j as i,T as o,s as e}from"./index-DXTNzUCz.js";const n=({title:t})=>i.jsx(o,{children:t}),r=e.section`
+import{s as e}from"./index-DUFdDDp8.js";const o=e.section`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,7 +14,7 @@ import{j as i,T as o,s as e}from"./index-DXTNzUCz.js";const n=({title:t})=>i.jsx
     /* padding-left: 20px;
     padding-right: 20px; */
   }
-`,d=e.div`
+`,a=e.div`
   background-image: url(${t=>t.$bgImageAboutUsPage});
   background-size: cover;
   background-repeat: no-repeat;
@@ -31,7 +31,7 @@ import{j as i,T as o,s as e}from"./index-DXTNzUCz.js";const n=({title:t})=>i.jsx
   @media (min-width: ${({theme:t})=>t.breakpoints.tabletLg}) {
     padding: 40px;
   }
-`,s=e.div`
+`,r=e.div`
   width: 100%;
   padding: 40px 20px;
 
@@ -56,7 +56,7 @@ import{j as i,T as o,s as e}from"./index-DXTNzUCz.js";const n=({title:t})=>i.jsx
   @media (min-width: ${({theme:t})=>t.breakpoints.desktop}) {
     max-width: 600px;
   }
-`,l=e.p`
+`,n=e.p`
   text-align: left;
 
   color: ${({theme:t})=>t.colors.brand};
@@ -69,7 +69,7 @@ import{j as i,T as o,s as e}from"./index-DXTNzUCz.js";const n=({title:t})=>i.jsx
     font-size: 1rem;
     padding: 0 10px 0 0;
   }
-`,p=e.div`
+`,d=e.div`
   display: grid;
   grid-template-columns: 1fr;
   gap: 40px;
@@ -115,7 +115,7 @@ import{j as i,T as o,s as e}from"./index-DXTNzUCz.js";const n=({title:t})=>i.jsx
     justify-items: stretch;
     gap: 60px;
   }
-`,c=e.div`
+`,s=e.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -130,7 +130,7 @@ import{j as i,T as o,s as e}from"./index-DXTNzUCz.js";const n=({title:t})=>i.jsx
     align-items: flex-start;
     text-align: left;
   }
-`,m=e.h1`
+`,l=e.h1`
   color: ${({theme:t})=>t.colors.textInverse};
 
   font-size: 1.7rem;
@@ -159,7 +159,7 @@ import{j as i,T as o,s as e}from"./index-DXTNzUCz.js";const n=({title:t})=>i.jsx
     margin-top: 20px;
     margin-bottom: 20px;
   }
-`,g=e.h2`
+`,p=e.h2`
   color: ${({theme:t})=>t.colors.textInverse};
 
   font-size: 1.5rem;
@@ -178,7 +178,7 @@ import{j as i,T as o,s as e}from"./index-DXTNzUCz.js";const n=({title:t})=>i.jsx
   @media (min-width: ${({theme:t})=>t.breakpoints.desktop}) {
     font-size: 2.2rem;
   }
-`,x=e.div`
+`,m=e.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -226,7 +226,7 @@ import{j as i,T as o,s as e}from"./index-DXTNzUCz.js";const n=({title:t})=>i.jsx
       box-shadow: 0 4px 12px var(--glow-color);
     }
   }
-`,b=e.section`
+`,c=e.section`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -234,7 +234,7 @@ import{j as i,T as o,s as e}from"./index-DXTNzUCz.js";const n=({title:t})=>i.jsx
   flex-direction: column;
 
   padding: 40px 20px;
-`,h=e.ul`
+`,g=e.ul`
   display: grid;
   grid-template-columns: 1fr;
 
@@ -249,7 +249,7 @@ import{j as i,T as o,s as e}from"./index-DXTNzUCz.js";const n=({title:t})=>i.jsx
   @media (min-width: ${({theme:t})=>t.breakpoints.desktop}) {
     grid-template-columns: 1fr 1fr 1fr;
   }
-`,f=e.li`
+`,x=e.li`
   cursor: pointer;
 
   display: flex;
@@ -270,7 +270,7 @@ import{j as i,T as o,s as e}from"./index-DXTNzUCz.js";const n=({title:t})=>i.jsx
       flex-direction: column-reverse;
     }
   }
-`,u=e.img`
+`,b=e.img`
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
@@ -283,7 +283,7 @@ import{j as i,T as o,s as e}from"./index-DXTNzUCz.js";const n=({title:t})=>i.jsx
   @media (min-width: ${({theme:t})=>t.breakpoints.desktop}) {
     max-width: 500px;
   }
-`,$=e.div`
+`,h=e.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -313,7 +313,7 @@ import{j as i,T as o,s as e}from"./index-DXTNzUCz.js";const n=({title:t})=>i.jsx
     max-width: 500px;
     padding: 32px;
   }
-`,w=e.h4`
+`,f=e.h4`
   text-transform: uppercase;
   margin: 0;
   font-weight: 700;
@@ -327,7 +327,7 @@ import{j as i,T as o,s as e}from"./index-DXTNzUCz.js";const n=({title:t})=>i.jsx
   @media (min-width: ${({theme:t})=>t.breakpoints.desktop}) {
     font-size: 1.2rem;
   }
-`,k=e.p`
+`,u=e.p`
   position: relative;
   padding: 0 30px;
   font-size: 0.9rem;
@@ -351,7 +351,7 @@ import{j as i,T as o,s as e}from"./index-DXTNzUCz.js";const n=({title:t})=>i.jsx
       1.2em * 5
     ); /* Устанавливает максимальную высоту для 5 строк */
   }
-`,v=e.div`
+`,$=e.div`
   @media (min-width: ${({theme:t})=>t.breakpoints.tabletLg}) {
     padding: 24px;
 
@@ -374,7 +374,7 @@ import{j as i,T as o,s as e}from"./index-DXTNzUCz.js";const n=({title:t})=>i.jsx
 
     z-index: ${({theme:t})=>t.zIndex.modalBackdrop};
   }
-`,y=e.div`
+`,w=e.div`
   position: relative;
   width: 100%;
   max-width: 680px;
@@ -386,7 +386,7 @@ import{j as i,T as o,s as e}from"./index-DXTNzUCz.js";const n=({title:t})=>i.jsx
   box-shadow: ${({theme:t})=>t.shadows.lg};
 
   z-index: ${({theme:t})=>t.zIndex.modalContent};
-`,z=e.button`
+`,k=e.button`
   position: absolute;
   top: 10px;
   right: 10px;
@@ -410,67 +410,18 @@ import{j as i,T as o,s as e}from"./index-DXTNzUCz.js";const n=({title:t})=>i.jsx
     background: ${({theme:t})=>t.colors.accent};
     color: ${({theme:t})=>t.colors.textInverse};
   }
-`,L=e.img`
+`,v=e.img`
   object-fit: cover;
   width: 100%;
   border-radius: ${({theme:t})=>t.radius.md};
   margin-bottom: 24px;
-`,I=e.p`
+`,y=e.p`
   font-size: 1rem;
   line-height: 1.7;
   margin: 0;
 
   color: ${({theme:t})=>t.colors.textInverse};
-`,j=e.div`
-  padding: 20px;
-  max-width: 600px;
-  margin: 0 auto;
-
-  text-align: left;
-
-  address {
-    margin-bottom: 20px;
-  }
-`,C=e.div`
-  margin-bottom: 20px;
-`,T=e.div`
-  margin-bottom: 5px;
-
-  display: flex;
-  align-items: center;
-  font-size: 1rem;
-
-  line-height: 1.2;
-
-  color: ${({theme:t})=>t.colors.textPrimary};
-
-  @media (min-width: ${({theme:t})=>t.breakpoints.tabletLg}) {
-    font-size: 1.1rem;
-  }
-`,P=e.div`
-  margin-right: 8px;
-
-  svg {
-    width: 22px;
-    height: 22px;
-    fill: ${({theme:t})=>t.colors.accentLight};
-  }
-`,B=e.a`
-  color: ${({theme:t})=>t.colors.accentLight};
-
-  text-decoration: none;
-
-  display: flex;
-  align-items: center;
-  font-size: 1rem;
-
-  @media (min-width: ${({theme:t})=>t.breakpoints.tabletLg}) {
-    font-size: 1.1rem;
-  }
-  &:hover {
-    text-decoration: underline;
-  }
-`,M=e.ul`
+`,z=e.ul`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -487,7 +438,7 @@ import{j as i,T as o,s as e}from"./index-DXTNzUCz.js";const n=({title:t})=>i.jsx
   @media (min-width: ${({theme:t})=>t.breakpoints.desktopLg}) {
     gap: 30px;
   }
-`,S=e.li`
+`,I=e.li`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -561,4 +512,4 @@ import{j as i,T as o,s as e}from"./index-DXTNzUCz.js";const n=({title:t})=>i.jsx
       font-size: 1.1rem;
     }
   }
-`;export{l as A,d as B,z as C,h as F,p as H,s as I,v as M,M as P,r as S,n as T,c as a,m as b,g as c,x as d,y as e,L as f,I as g,b as h,f as i,u as j,$ as k,w as l,k as m,S as n,j as o,T as p,C as q,P as r,B as s};
+`;export{n as A,a as B,k as C,g as F,d as H,r as I,$ as M,z as P,o as S,h as T,s as a,l as b,p as c,m as d,w as e,v as f,y as g,c as h,x as i,b as j,f as k,u as l,I as m};

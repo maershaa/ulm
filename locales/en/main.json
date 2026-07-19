@@ -22,6 +22,9 @@
     "messageTooShort": "Please write a bit more (at least 10 characters)",
     "btnText": "Send",
     "successToast": "Thank you for reaching out! We've received your message and will be in touch soon. 😊",
-    "errorToast": "Oops, something went wrong. Please try again"
+    "errorToast": "Oops, something went wrong. Please try again",
+    "consentLabel": "Я погоджуюсь на обробку моїх персональних даних згідно з",
+    "consentLinkText": "Політикою конфіденційності",
+    "consentError": "Потрібно погодитись на обробку даних"
   }
 }

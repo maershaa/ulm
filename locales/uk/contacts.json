@@ -4,8 +4,11 @@
     "factoryName": "ТОВ «Южлитографметалл»",
     "addressStreet": "Застава II, вул. Привозна, 1",
     "addressCity": "Одеса, 65098, Україна",
-    "fax": "факс.",
+    "phoneLabel": "Телефон",
+    "faxLabel": "Факс",
     "option1": "З питань комерції:",
     "option2": " З питань виробництва:"
-  }
+  },
+  "privacyPolicyLink": "Політика конфіденційності",
+  "devCreditLabel": "Сайт розробила"
 }

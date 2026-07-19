@@ -22,6 +22,9 @@
     "messageTooShort": "Будь ласка, напишіть трішки більше (від 10 символів)",
     "btnText": "Надіслати",
     "successToast": "Дякуємо, що написали нам! Ми вже отримали ваше повідомлення і скоро зв’яжемося з вами. 😊",
-    "errorToast": "Ой, щось пішло не так. Будь ласка, спробуйте ще раз"
+    "errorToast": "Ой, щось пішло не так. Будь ласка, спробуйте ще раз",
+    "consentLabel": "I agree to the processing of my personal data according to the",
+    "consentLinkText": "Privacy Policy",
+    "consentError": "You must agree to data processing"
   }
 }
