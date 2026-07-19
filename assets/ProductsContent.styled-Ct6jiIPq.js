@@ -1,4 +1,4 @@
-import{s as e}from"./index-DUFdDDp8.js";const o=e.section`
+import{s as e,L as i}from"./index-DO5OmBdR.js";const a=e.section`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,7 +14,7 @@ import{s as e}from"./index-DUFdDDp8.js";const o=e.section`
     /* padding-left: 20px;
     padding-right: 20px; */
   }
-`,a=e.div`
+`,r=e.div`
   background-image: url(${t=>t.$bgImageAboutUsPage});
   background-size: cover;
   background-repeat: no-repeat;
@@ -31,7 +31,7 @@ import{s as e}from"./index-DUFdDDp8.js";const o=e.section`
   @media (min-width: ${({theme:t})=>t.breakpoints.tabletLg}) {
     padding: 40px;
   }
-`,r=e.div`
+`,n=e.div`
   width: 100%;
   padding: 40px 20px;
 
@@ -56,7 +56,7 @@ import{s as e}from"./index-DUFdDDp8.js";const o=e.section`
   @media (min-width: ${({theme:t})=>t.breakpoints.desktop}) {
     max-width: 600px;
   }
-`,n=e.p`
+`,s=e.p`
   text-align: left;
 
   color: ${({theme:t})=>t.colors.brand};
@@ -115,7 +115,7 @@ import{s as e}from"./index-DUFdDDp8.js";const o=e.section`
     justify-items: stretch;
     gap: 60px;
   }
-`,s=e.div`
+`,p=e.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -159,7 +159,7 @@ import{s as e}from"./index-DUFdDDp8.js";const o=e.section`
     margin-top: 20px;
     margin-bottom: 20px;
   }
-`,p=e.h2`
+`,c=e.h2`
   color: ${({theme:t})=>t.colors.textInverse};
 
   font-size: 1.5rem;
@@ -226,7 +226,60 @@ import{s as e}from"./index-DUFdDDp8.js";const o=e.section`
       box-shadow: 0 4px 12px var(--glow-color);
     }
   }
-`,c=e.section`
+`,g=e.p`
+  font-size: 1rem;
+  letter-spacing: 0.15em;
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  color: ${({theme:t})=>t.colors.textInverse};
+
+  opacity: 0.75;
+
+  margin-bottom: 10px;
+`,x=e.ul`
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  gap: 22px;
+
+  width: 430px;
+  padding: 30px;
+
+  border-radius: ${({theme:t})=>t.radius.lg};
+
+  background: rgba(3, 37, 65, 0.7);
+
+  backdrop-filter: blur(16px);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  box-shadow: ${({theme:t})=>t.shadows.lg};
+`,b=e.li`
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  padding-bottom: 18px;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  svg {
+    font-size: 1.7rem;
+    color: ${({theme:t})=>t.colors.accentLight};
+  }
+
+  span {
+    color: ${({theme:t})=>t.colors.textInverse};
+
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+`,h=e.section`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -234,7 +287,7 @@ import{s as e}from"./index-DUFdDDp8.js";const o=e.section`
   flex-direction: column;
 
   padding: 40px 20px;
-`,g=e.ul`
+`,f=e.ul`
   display: grid;
   grid-template-columns: 1fr;
 
@@ -249,7 +302,7 @@ import{s as e}from"./index-DUFdDDp8.js";const o=e.section`
   @media (min-width: ${({theme:t})=>t.breakpoints.desktop}) {
     grid-template-columns: 1fr 1fr 1fr;
   }
-`,x=e.li`
+`,u=e.li`
   cursor: pointer;
 
   display: flex;
@@ -270,7 +323,7 @@ import{s as e}from"./index-DUFdDDp8.js";const o=e.section`
       flex-direction: column-reverse;
     }
   }
-`,b=e.img`
+`,w=e.img`
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
@@ -283,7 +336,7 @@ import{s as e}from"./index-DUFdDDp8.js";const o=e.section`
   @media (min-width: ${({theme:t})=>t.breakpoints.desktop}) {
     max-width: 500px;
   }
-`,h=e.div`
+`,$=e.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -313,7 +366,7 @@ import{s as e}from"./index-DUFdDDp8.js";const o=e.section`
     max-width: 500px;
     padding: 32px;
   }
-`,f=e.h4`
+`,k=e.h4`
   text-transform: uppercase;
   margin: 0;
   font-weight: 700;
@@ -327,7 +380,7 @@ import{s as e}from"./index-DUFdDDp8.js";const o=e.section`
   @media (min-width: ${({theme:t})=>t.breakpoints.desktop}) {
     font-size: 1.2rem;
   }
-`,u=e.p`
+`,v=e.p`
   position: relative;
   padding: 0 30px;
   font-size: 0.9rem;
@@ -351,7 +404,7 @@ import{s as e}from"./index-DUFdDDp8.js";const o=e.section`
       1.2em * 5
     ); /* Устанавливает максимальную высоту для 5 строк */
   }
-`,$=e.div`
+`,y=e.div`
   @media (min-width: ${({theme:t})=>t.breakpoints.tabletLg}) {
     padding: 24px;
 
@@ -374,7 +427,7 @@ import{s as e}from"./index-DUFdDDp8.js";const o=e.section`
 
     z-index: ${({theme:t})=>t.zIndex.modalBackdrop};
   }
-`,w=e.div`
+`,z=e.div`
   position: relative;
   width: 100%;
   max-width: 680px;
@@ -386,7 +439,7 @@ import{s as e}from"./index-DUFdDDp8.js";const o=e.section`
   box-shadow: ${({theme:t})=>t.shadows.lg};
 
   z-index: ${({theme:t})=>t.zIndex.modalContent};
-`,k=e.button`
+`,L=e.button`
   position: absolute;
   top: 10px;
   right: 10px;
@@ -410,61 +463,117 @@ import{s as e}from"./index-DUFdDDp8.js";const o=e.section`
     background: ${({theme:t})=>t.colors.accent};
     color: ${({theme:t})=>t.colors.textInverse};
   }
-`,v=e.img`
+`,I=e.img`
   object-fit: cover;
   width: 100%;
   border-radius: ${({theme:t})=>t.radius.md};
   margin-bottom: 24px;
-`,y=e.p`
+`,j=e.p`
   font-size: 1rem;
   line-height: 1.7;
   margin: 0;
 
   color: ${({theme:t})=>t.colors.textInverse};
-`,z=e.ul`
+`,B=e.section`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+
+  gap: 24px;
+
+  padding: 80px 0;
+`,C=e.p`
+  max-width: 760px;
+
+  color: ${({theme:t})=>t.colors.textSecondary};
+
+  font-size: 1.05rem;
+  line-height: 1.8;
+  text-align: center;
+
+  @media (min-width: ${({theme:t})=>t.breakpoints.desktop}) {
+    font-size: 1.15rem;
+  }
+`,F=e.ul`
+  display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 16px;
 
-  gap: 10px;
-
-  align-items: stretch; //! Устанавливает одинаковую высоту для всех элементов
+  width: 100%;
+  margin-top: 20px;
 
   @media (min-width: ${({theme:t})=>t.breakpoints.tabletLg}) {
-    gap: 20px;
+    gap: 24px;
   }
 
   @media (min-width: ${({theme:t})=>t.breakpoints.desktopLg}) {
-    gap: 30px;
+    gap: 32px;
   }
-`,I=e.li`
+`,P=e.div`
+  margin-top: 24px;
+`,T=e(i)`
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+
+  padding: 18px 34px;
+
+  border-radius: ${({theme:t})=>t.radius.round};
+
+  background: linear-gradient(
+    135deg,
+    ${({theme:t})=>t.colors.accentLight} 0%,
+    ${({theme:t})=>t.colors.accent} 100%
+  );
+
+  color: ${({theme:t})=>t.colors.textInverse};
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  box-shadow:
+    0 12px 30px rgba(18, 116, 162, 0.25),
+    0 4px 12px rgba(18, 116, 162, 0.15);
+
+  transition:
+    transform 250ms ease,
+    box-shadow 250ms ease;
+
+  overflow: hidden;
+  position: relative;
+
+  &:hover {
+    transform: translateY(-2px) scale(1.03);
+
+    box-shadow:
+      0 18px 40px rgba(18, 116, 162, 0.35),
+      0 8px 18px rgba(18, 116, 162, 0.2);
+  }
+
+  &:active {
+    transform: translateY(0) scale(0.98);
+  }
+`,S=e.li`
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 
-  border: 1px solid ${({theme:t})=>t.colors.borderSubtle};
-
+  border: 1px solid ${({theme:t})=>t.colors.accent};
   border-radius: ${({theme:t})=>t.radius.lg};
-
-  border-bottom-color: ${({theme:t})=>t.colors.accent};
-
   background-color: ${({theme:t})=>t.colors.card};
 
-  // !Устанавливает базовый размер элемента равный 100% ширины контейнера, за вычетом 20 пикселей.
-  // Это позволяет элементу занимать всю ширину контейнера, но оставляет небольшой отступ.
   flex-basis: calc(100% - 20px);
   margin-bottom: 15px;
   padding: 22px;
 
   @media (min-width: ${({theme:t})=>t.breakpoints.tabletLg}) {
-    // !Элемент занимает 50% ширины контейнера, минус 20 пикселей. Это делит экран на два столбца.
     flex-basis: calc(50% - 20px);
   }
 
   @media (min-width: ${({theme:t})=>t.breakpoints.desktop}) {
-    // !Элемент занимает 33.3333% ширины контейнера, минус 30 пикселей. Это делит экран на три столбца.
     flex-basis: calc(33.3333% - 30px);
   }
 
@@ -512,4 +621,21 @@ import{s as e}from"./index-DUFdDDp8.js";const o=e.section`
       font-size: 1.1rem;
     }
   }
-`;export{n as A,a as B,k as C,g as F,d as H,r as I,$ as M,z as P,o as S,h as T,s as a,l as b,p as c,m as d,w as e,v as f,y as g,c as h,x as i,b as j,f as k,u as l,I as m};
+`,H=e.ul`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  align-items: stretch;
+
+  @media (min-width: ${({theme:t})=>t.breakpoints.tabletLg}) {
+    gap: 20px;
+  }
+
+  @media (min-width: ${({theme:t})=>t.breakpoints.desktopLg}) {
+    gap: 30px;
+  }
+`;export{s as A,r as B,L as C,g as F,d as H,n as I,y as M,B as P,a as S,$ as T,p as a,l as b,c,m as d,x as e,b as f,z as g,I as h,j as i,h as j,f as k,u as l,w as m,k as n,v as o,C as p,F as q,P as r,T as s,H as t,S as u};
