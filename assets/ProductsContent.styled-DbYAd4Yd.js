@@ -1,4 +1,4 @@
-import{s as e,L as i}from"./index-DO5OmBdR.js";const a=e.section`
+import{s as e,L as i}from"./index-ClJ6pMsU.js";const a=e.section`
   display: flex;
   justify-content: center;
   align-items: center;
