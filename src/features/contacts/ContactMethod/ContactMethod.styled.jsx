@@ -31,6 +31,7 @@ export const ContactLink = styled.a`
   display: flex;
   align-items: center;
   gap: 8px;
+  margin-left: auto;
 
   color: ${({ theme }) => theme.colors.accentLight};
   text-decoration: none;

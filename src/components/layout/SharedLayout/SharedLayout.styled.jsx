@@ -14,6 +14,8 @@ export const LayoutWrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.page};
 
   main {
+    padding-top: 92px; //header height === 72 и чуть с запасом чтобы красиво смотрелось
+
     flex-grow: 1;
     display: flex;
     width: 100%;

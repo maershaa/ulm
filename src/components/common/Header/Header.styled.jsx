@@ -1,29 +1,28 @@
 import styled from 'styled-components';
 
-export const HeaderContainer = styled.div`
-  min-width: 100%;
+export const HeaderContainer = styled.header`
+  width: 100%;
 
-  position: sticky;
+  position: fixed;
+
   top: 0;
+  left: 0;
+  right: 0;
+
   z-index: ${({ theme }) => theme.zIndex.header};
+
+  padding: 0 30px;
+  margin: 0 auto;
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 
   background-color: ${({ theme }) => theme.colors.brand};
-  padding: 0 15px;
-  margin-left: auto;
-  margin-right: auto;
 
   border-bottom: 1px solid ${({ theme }) => theme.colors.accentLight};
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    border-top-left-radius: ${({ theme }) => theme.radius.lg};
-    border-top-right-radius: ${({ theme }) => theme.radius.lg};
-  }
-
   @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
-    padding: 0 25px;
+    padding: 0 50px;
   }
 `;

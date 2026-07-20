@@ -15,9 +15,7 @@ const SharedLayout = () => {
       {/* блик — нижний правый угол */}
       <Glow $size={450} $opacity={0.9} $bottom="10%" $right="-150px" />
 
-      <Container>
-        <Header />
-      </Container>
+      <Header />
       <main>
         <Container>
           <Suspense fallback={null}>
@@ -25,9 +23,7 @@ const SharedLayout = () => {
           </Suspense>
         </Container>
       </main>
-      <Container>
-        <Footer />
-      </Container>
+      <Footer />
     </LayoutWrapper>
   );
 };

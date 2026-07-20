@@ -1,7 +1,13 @@
 import styled from 'styled-components';
 
 export const SectionWrapper = styled.section`
-  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 24px;
+
+  padding: 40px 0;
 `;
 
 export const FeatureList = styled.ul`

@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 
 export const FooterRoot = styled.div`
   width: 100%;
+  padding: 0 30px;
 
   background-color: ${({ theme }) => theme.colors.brand};
   border-top: 1px solid ${({ theme }) => theme.colors.accentLight};
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    border-bottom-left-radius: ${({ theme }) => theme.radius.lg};
-    border-bottom-right-radius: ${({ theme }) => theme.radius.lg};
+  @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
+    padding: 0 50px;
   }
 `;
 
@@ -19,7 +19,6 @@ export const FooterMain = styled.div`
   align-items: center;
   gap: 20px;
 
-  padding: 24px 20px;
   text-align: center;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
@@ -28,7 +27,6 @@ export const FooterMain = styled.div`
     justify-content: space-between;
     gap: 24px;
 
-    padding: 20px 32px;
     text-align: left;
   }
 `;

@@ -4,7 +4,8 @@
     "factoryName": "LLC Yuzhlitografmetall",
     "addressStreet": "1 Pryvozna Street, Zastava II",
     "addressCity": "Odesa, 65098, Ukraine",
-    "fax": "Fax",
+    "phoneLabel": "Phone number:",
+    "faxLabel": "Fax:",
     "option1": "Commercial inquiries:",
     "option2": "Production inquiries:"
   },
