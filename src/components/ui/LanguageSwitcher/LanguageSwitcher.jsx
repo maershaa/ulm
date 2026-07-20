@@ -1,7 +1,5 @@
 import { useTranslation } from 'react-i18next';
-
 import { Switcher, LanguageButton } from './LanguageSwitcher.styled';
-import { useEffect } from 'react';
 
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
@@ -9,11 +7,6 @@ const LanguageSwitcher = () => {
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
   };
-
-  useEffect(() => {
-    const userPreflanguage = localStorage.getItem('i18nextLng');
-    console.log('🚀 ~ LanguageSwitcher ~ userPreflanguage:', userPreflanguage);
-  }, []);
 
   return (
     <Switcher role="group" aria-label="Language switcher">

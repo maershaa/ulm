@@ -23,8 +23,17 @@
     "btnText": "Надіслати",
     "successToast": "Дякуємо, що написали нам! Ми вже отримали ваше повідомлення і скоро зв’яжемося з вами. 😊",
     "errorToast": "Ой, щось пішло не так. Будь ласка, спробуйте ще раз",
-    "consentLabel": "I agree to the processing of my personal data according to the",
-    "consentLinkText": "Privacy Policy",
-    "consentError": "You must agree to data processing"
+    "consentLabel": "Я погоджуюсь на обробку моїх персональних даних згідно з",
+    "consentLinkText": "Політикою конфіденційності",
+    "consentError": "Потрібно погодитись на обробку даних"
+  },
+
+  "error": {
+    "unspecific": "Щось пішло не так.",
+    "404": {
+      "title": "Сторінку не знайдено",
+      "description": "На жаль, сторінка, яку ви шукаєте, не існує або була переміщена.",
+      "button": "На головну"
+    }
   }
 }

@@ -23,8 +23,17 @@
     "btnText": "Send",
     "successToast": "Thank you for reaching out! We've received your message and will be in touch soon. 😊",
     "errorToast": "Oops, something went wrong. Please try again",
-    "consentLabel": "Я погоджуюсь на обробку моїх персональних даних згідно з",
-    "consentLinkText": "Політикою конфіденційності",
-    "consentError": "Потрібно погодитись на обробку даних"
+    "consentLabel": "I agree to the processing of my personal data according to the",
+    "consentLinkText": "Privacy Policy",
+    "consentError": "You must agree to data processing"
+  },
+
+  "error": {
+    "unspecific": "Something went wrong.",
+    "404": {
+      "title": "Page not found",
+      "description": "Sorry, the page you are looking for doesn't exist or may have been moved.",
+      "button": "Back to Home"
+    }
   }
 }
