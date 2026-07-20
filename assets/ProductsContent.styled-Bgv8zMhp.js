@@ -1,19 +1,9 @@
-import{s as e,L as i}from"./index-BxccpzYT.js";const a=e.section`
+import{s as e,L as i}from"./index-CPKMhUXy.js";const a=e.section`
   display: flex;
   justify-content: center;
   align-items: center;
 
   padding: 40px 0;
-
-  @media (min-width: ${({theme:t})=>t.breakpoints.tabletLg}) {
-    /* padding-left: 32px;
-    padding-right: 32px; */
-  }
-
-  @media (min-width: ${({theme:t})=>t.breakpoints.desktop}) {
-    /* padding-left: 20px;
-    padding-right: 20px; */
-  }
 `,r=e.div`
   background-image: url(${t=>t.$bgImageAboutUsPage});
   background-size: cover;
@@ -54,7 +44,7 @@ import{s as e,L as i}from"./index-BxccpzYT.js";const a=e.section`
   }
 
   @media (min-width: ${({theme:t})=>t.breakpoints.desktop}) {
-    max-width: 600px;
+    max-width: 650px;
   }
 `,s=e.p`
   text-align: left;
