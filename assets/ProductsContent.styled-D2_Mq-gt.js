@@ -1,4 +1,4 @@
-import{s as e,L as i}from"./index-BPUaKxAn.js";const a=e.section`
+import{s as e,L as i}from"./index-BxccpzYT.js";const a=e.section`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -318,7 +318,13 @@ import{s as e,L as i}from"./index-BPUaKxAn.js";const a=e.section`
     }
   }
 `,h=e.section`
-  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 24px;
+
+  padding: 40px 0;
 `,f=e.ul`
   display: grid;
   gap: 32px;
