@@ -3,9 +3,9 @@ import { SharedLayout } from '@/components';
 import { lazy } from 'react';
 import 'normalize.css';
 
-const HomePage = lazy(() => import('@/pages/HomePage/HomePage.jsx'));
-const ProductsPage = lazy(() => import('@/pages/ProductsPage/ProductsPage'));
-const ContactsPage = lazy(() => import('@/pages/ContactsPage/ContactsPage'));
+const HomePage = lazy(() => import('@/pages/HomePage'));
+const ProductsPage = lazy(() => import('@/pages/ProductsPage'));
+const ContactsPage = lazy(() => import('@/pages/ContactsPage'));
 const PrivacyPolicyPage = lazy(() =>
   import('@/pages/PrivacyPolicyPage/PrivacyPolicyPage')
 );

@@ -1,22 +1,33 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+
 import {
   SectionWrapper,
   FeatureList,
-  FeatureItem,
-  TextContainer,
+  FeatureCard,
+  ImageWrapper,
   StyledImage,
+  Overlay,
+  CardContent,
+  FeatureNumber,
   FeatureItemTitle,
   FeatureItemText,
+  MoreButton,
 } from './FeaturesSection.styled';
+
 import FeaturesModal from '@/features/home/FeaturesModal/FeaturesModal';
 import { featuresData } from '@/constants';
 import { Title } from '@/components';
-import { useTranslation } from 'react-i18next';
+import { useMediaQuery } from 'react-responsive';
 
 const FeaturesSection = () => {
-  const [showFeaturesModal, setShowFeaturesModal] = useState(false);
+  const { t } = useTranslation('home');
 
-  // Состояние для хранения данных текущей особенности, которые будут отображаться в модалке
+  const isTabletLg = useMediaQuery({
+    minWidth: '768px',
+  });
+
+  const [showFeaturesModal, setShowFeaturesModal] = useState(false);
   const [modalContent, setModalContent] = useState({});
 
   const openFeaturesModal = (feature) => {
@@ -24,43 +35,49 @@ const FeaturesSection = () => {
     setShowFeaturesModal(true);
   };
 
-  const closeFeaturesModal = () => {
-    setShowFeaturesModal(false);
-  };
-
-  const { t } = useTranslation('home');
-
   return (
     <SectionWrapper id="features">
       <Title title={t('features.title')} />
+
       <FeatureList>
-        {featuresData.map((feature) => (
-          <FeatureItem
+        {featuresData.map((feature, index) => (
+          <FeatureCard
             key={feature.id}
-            onClick={() => openFeaturesModal(feature)}
+            onClick={isTabletLg ? () => openFeaturesModal(feature) : undefined}
           >
-            <StyledImage
-              src={feature.imageSrc}
-              alt={t(`features.items.${feature.id}.alt`)}
-              loading="lazy"
-            />
-            <TextContainer>
+            <ImageWrapper>
+              <StyledImage
+                src={feature.imageSrc}
+                alt={t(`features.items.${feature.id}.alt`)}
+                loading="lazy"
+              />
+
+              <Overlay />
+            </ImageWrapper>
+
+            <CardContent>
+              <FeatureNumber>
+                {String(index + 1).padStart(2, '0')}
+              </FeatureNumber>
+
               <FeatureItemTitle>
                 {t(`features.items.${feature.id}.title`)}
               </FeatureItemTitle>
+
               <FeatureItemText>
                 {t(`features.items.${feature.id}.description`)}
               </FeatureItemText>
-            </TextContainer>
-          </FeatureItem>
+
+              <MoreButton>{t('features.more')}</MoreButton>
+            </CardContent>
+          </FeatureCard>
         ))}
       </FeatureList>
 
-      {/* Компонент модалки */}
       {showFeaturesModal && (
         <FeaturesModal
           show={showFeaturesModal}
-          onClose={closeFeaturesModal}
+          onClose={() => setShowFeaturesModal(false)}
           featureContent={modalContent}
         />
       )}

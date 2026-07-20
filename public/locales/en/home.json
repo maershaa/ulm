@@ -1,8 +1,8 @@
 {
   "hero": {
-    "title": "A Manufacturer of Metal Solutions That Meet Your Standards",
-    "subtitle1": "We have been manufacturing metal products since 1994.",
-    "subtitle2": "Our cans, trays, and lids combine reliability, functionality, and the highest quality standards.",
+    "title": "Metal Packaging Manufacturer Since 1994",
+    "subtitle1": "Manufacturing metal cans, lids and trays for the food industry.",
+    "subtitle2": "Delivering consistent quality, reliable supply and long-term partnership.",
     "linkAbout": "ABOUT US",
     "linkFeatures": "ADVANTAGES",
     "featuresSection": {
@@ -22,45 +22,45 @@
 
   "features": {
     "title": "OUR ADVANTAGES",
+    "description": "Combining decades of manufacturing expertise with modern production technologies, we provide reliable solutions for industrial customers.",
+    "more": "Learn more →",
 
     "items": {
       "team": {
         "title": "Experienced Team",
-        "description": "Our company employs highly qualified specialists with 15 to 40 years of experience in metal packaging manufacturing. Their expertise enables us to produce high-quality products using unique manufacturing solutions.",
-        "alt": "Our team"
+        "description": "Our team consists of highly qualified specialists with 15 to 40 years of experience in metal packaging manufacturing. Their expertise, combined with our in-house engineering solutions, enables us to consistently deliver reliable, high-quality products that meet the requirements of industrial customers.",
+        "alt": "Experienced manufacturing team"
       },
 
       "price": {
-        "title": "Competitive Prices",
-        "description": "Through efficient use of tinplate, optimized production processes, and reduced overhead costs, we offer competitive prices while maintaining consistently high product quality.",
+        "title": "Competitive Pricing",
+        "description": "By optimizing the use of tinplate, production processes, and operational costs, we provide competitive pricing without compromising product quality or manufacturing standards.",
         "alt": "Competitive pricing"
       },
 
       "volumes": {
         "title": "Production Capacity",
-        "description": "Our manufacturing capacity allows us to supply products in any quantity required by large food processing companies.",
+        "description": "Our manufacturing facilities are capable of handling both medium and large production runs, ensuring stable supply volumes for food processing and packaging companies.",
         "alt": "Production capacity"
       },
 
       "delivery": {
-        "title": "Delivery",
-        "description": "We provide reliable product delivery services for the convenience of our customers.",
-        "alt": "Delivery service"
+        "title": "Reliable Delivery",
+        "description": "We organize reliable product delivery to ensure timely shipments and uninterrupted supply for our customers.",
+        "alt": "Product delivery"
       },
 
       "quality": {
-        "title": "Quality",
-        "description": "Strict quality control applies to both finished products and incoming raw materials. We use only materials from trusted suppliers that meet European quality standards.",
+        "title": "Quality Control",
+        "description": "Every stage of production is subject to strict quality control, from incoming raw materials to finished products. We work exclusively with trusted suppliers whose materials comply with European quality standards.",
         "alt": "Quality control"
       },
 
       "payment-deferral": {
-        "title": "Deferred Payment",
-        "description": "For long-term and trusted customers, we offer flexible payment terms ranging from 30 to 90 days through factoring.",
-        "alt": "Deferred payment"
+        "title": "Flexible Payment Terms",
+        "description": "For long-term partners we offer flexible payment terms, including deferred payment from 30 to 90 days through factoring agreements.",
+        "alt": "Flexible payment terms"
       }
     }
-  },
-
-  "modalText": "{{text}}"
+  }
 }

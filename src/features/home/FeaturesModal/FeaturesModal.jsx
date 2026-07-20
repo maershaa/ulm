@@ -3,44 +3,54 @@ import {
   ModalContent,
   CloseButton,
   ModalImage,
+  ModalBody,
+  ModalTitle,
+  ModalDivider,
   ModalText,
 } from './FeaturesModal.styled';
+
 import { useTranslation } from 'react-i18next';
 import { useMediaQuery } from 'react-responsive';
+import { IoClose } from 'react-icons/io5';
 
-// Основной компонент модалки
 const FeaturesModal = ({ show, onClose, featureContent }) => {
   const { t } = useTranslation('home');
 
-  // Используем медиазапрос для проверки ширины экрана
-  const isTabletLg = useMediaQuery({ minWidth: '768px' });
+  const isTablet = useMediaQuery({
+    minWidth: '768px',
+  });
 
-  // Если show=false, модалка не отображается
-  if (!show) return null;
+  if (!show || !isTablet) return null;
 
-  // Закрытие модалки при клике на фон (вне модалки)
   const handleBackdropClick = (e) => {
     if (e.target === e.currentTarget) {
       onClose();
     }
   };
 
-  if (!isTabletLg) return null;
-
   return (
     <ModalContainer onClick={handleBackdropClick}>
       <ModalContent onClick={(e) => e.stopPropagation()}>
-        <CloseButton aria-label="Close modal" onClick={onClose}>
-          ×
+        <CloseButton aria-label="Close" onClick={onClose}>
+          <IoClose />
         </CloseButton>
+
         <ModalImage
           src={featureContent.imageSrc}
-          alt="Expanded view"
-          loading="lazy"
+          alt={t(`features.items.${featureContent.id}.alt`)}
         />
-        <ModalText>
-          {t(`features.items.${featureContent.id}.description`)}
-        </ModalText>
+
+        <ModalBody>
+          <ModalTitle>
+            {t(`features.items.${featureContent.id}.title`)}
+          </ModalTitle>
+
+          <ModalDivider />
+
+          <ModalText>
+            {t(`features.items.${featureContent.id}.description`)}
+          </ModalText>
+        </ModalBody>
       </ModalContent>
     </ModalContainer>
   );

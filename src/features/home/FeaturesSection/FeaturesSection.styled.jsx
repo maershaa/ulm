@@ -1,140 +1,139 @@
 import styled from 'styled-components';
 
 export const SectionWrapper = styled.section`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-direction: column;
-
-  padding: 40px 20px;
+  padding: 80px 20px;
 `;
 
 export const FeatureList = styled.ul`
   display: grid;
-  grid-template-columns: 1fr;
+  gap: 32px;
 
-  grid-gap: 5px;
+  margin-top: 48px;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
-    grid-template-columns: 1fr 1fr;
-
-    grid-gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
   }
 `;
 
-export const FeatureItem = styled.li`
-  cursor: pointer;
+export const FeatureCard = styled.li`
+  cursor: default;
+  overflow: hidden;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  background: ${({ theme }) => theme.colors.card};
+  border: 1px solid ${({ theme }) => theme.colors.borderDefault};
+  border-radius: ${({ theme }) => theme.radius.lg};
+  box-shadow: ${({ theme }) => theme.shadows.sm};
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
-    flex-direction: column;
+    cursor: pointer;
+    transition: ${({ theme }) => theme.transitions.base};
 
-    // Для нечётных элементов (1, 3, 5...)
-    &:nth-of-type(odd) {
-      flex-direction: column;
-    }
-
-    // Для чётных элементов (2, 4, 6...)
-    &:nth-of-type(even) {
-      flex-direction: column-reverse;
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: ${({ theme }) => theme.shadows.lg};
+      border-color: ${({ theme }) => theme.colors.accent};
     }
   }
+`;
+
+export const ImageWrapper = styled.div`
+  position: relative;
+  overflow: hidden;
+
+  aspect-ratio: 16 / 10;
 `;
 
 export const StyledImage = styled.img`
   width: 100%;
-  aspect-ratio: 1 / 1;
+  height: 100%;
+
   object-fit: cover;
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
-    max-width: 300px;
-    margin-bottom: 0;
-  }
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
-    max-width: 500px;
-  }
 `;
 
-export const TextContainer = styled.div`
+export const Overlay = styled.div`
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to top,
+    rgba(3, 37, 65, 0.45),
+    rgba(3, 37, 65, 0.05)
+  );
+`;
+
+export const CardContent = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
 
-  text-align: center;
-  background-color: ${({ theme }) => theme.colors.accent};
+  padding: 28px;
 
-  color: ${({ theme }) => theme.colors.textInverse};
-
-  width: 100%;
-  aspect-ratio: 1 / 1;
-
-  margin: 0;
-  gap: 1.5rem;
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    padding: 16px;
-  }
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
-    text-align: left;
-    padding: 24px;
-    max-width: 300px;
-  }
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
-    max-width: 500px;
-    padding: 32px;
-  }
+  gap: 18px;
 `;
 
-export const FeatureItemTitle = styled.h4`
-  text-transform: uppercase;
-  margin: 0;
+export const FeatureNumber = styled.span`
+  font-size: 0.8rem;
+
   font-weight: 700;
 
-  font-size: 1.3rem;
+  color: ${({ theme }) => theme.colors.accent};
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
-    font-size: 1rem;
+  letter-spacing: 0.25em;
+`;
+
+export const FeatureItemTitle = styled.h3`
+  font-size: 1.2rem;
+  line-height: 1.3;
+  font-weight: 700;
+  color: ${({ theme }) => theme.colors.textPrimary};
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    font-size: 1.3rem;
   }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 `;
 
 export const FeatureItemText = styled.p`
-  position: relative;
-  padding: 0 30px;
-  font-size: 0.9rem;
-  line-height: 1.2;
-  text-align: justify;
+  line-height: 1.7;
+  font-size: 1rem;
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.mobileLg}) {
-    font-size: 1rem;
-  }
+  color: ${({ theme }) => theme.colors.textSecondary};
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
-    padding: 0 10px 0 0;
-
-    //! Делаем (...) троеточиеи обрезаем текст
     display: -webkit-box;
-    -webkit-line-clamp: 5; /* Ограничивает количество строк до 5 */
     -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+
     overflow: hidden;
-    text-overflow: ellipsis; /* добавляет многоточие, если текст не помещается в выделенные строки. */
-    max-height: calc(
-      1.2em * 5
-    ); /* Устанавливает максимальную высоту для 5 строк */
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
+    font-size: 1.1rem;
+  }
+`;
+
+export const MoreButton = styled.div`
+  display: none;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: auto;
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    color: ${({ theme }) => theme.colors.accent};
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
+    font-size: 1.1rem;
   }
 `;
