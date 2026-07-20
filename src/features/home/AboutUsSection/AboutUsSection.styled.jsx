@@ -6,16 +6,6 @@ export const SectionWrapper = styled.section`
   align-items: center;
 
   padding: 40px 0;
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {
-    /* padding-left: 32px;
-    padding-right: 32px; */
-  }
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
-    /* padding-left: 20px;
-    padding-right: 20px; */
-  }
 `;
 
 export const Block = styled.div`
@@ -60,7 +50,7 @@ export const InfoContainer = styled.div`
   }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
-    max-width: 600px;
+    max-width: 650px;
   }
 `;
 export const AboutUsInfo = styled.p`

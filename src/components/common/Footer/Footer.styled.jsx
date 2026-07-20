@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export const FooterRoot = styled.div`
   width: 100%;
-  padding: 0 30px;
+  padding: 14px 30px 0 30px;
 
   background-color: ${({ theme }) => theme.colors.brand};
   border-top: 1px solid ${({ theme }) => theme.colors.accentLight};
