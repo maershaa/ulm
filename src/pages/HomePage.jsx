@@ -3,6 +3,7 @@ import {
   AboutUsSection,
   ProductsSection,
   FeaturesSection,
+  CTASection,
 } from '@/features';
 
 const HomePage = () => {
@@ -12,6 +13,7 @@ const HomePage = () => {
       <AboutUsSection />
       <ProductsSection />
       <FeaturesSection />
+      <CTASection />
     </>
   );
 };

@@ -12,15 +12,20 @@ import heroImage from '@/assets/images/Hero/hero.jpeg';
 import heroImageTablet from '@/assets/images/Hero/lots_of_tins.jpeg';
 import heroImageMobile from '@/assets/images/Hero/lots_of_tins_mb.jpeg';
 
-import { FaIndustry, FaShieldAlt, FaCheckCircle } from 'react-icons/fa';
+import {
+  FaIndustry,
+  FaShieldAlt,
+  FaCheckCircle,
+  FaBoxOpen,
+} from 'react-icons/fa';
 import { FaBoxesStacked } from 'react-icons/fa6';
 import { MdFactory } from 'react-icons/md';
 
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   const { t } = useTranslation('home');
-
   return (
     <HeroContainer
       $heroImage={heroImage}
@@ -42,6 +47,10 @@ const Hero = () => {
             <FaShieldAlt size={24} />
             {t('hero.linkFeatures')}
           </a>
+          <Link to={'/products'}>
+            <FaBoxOpen size={24} />
+            {t('hero.linkProducts')}
+          </Link>
         </ButtonsGroup>
       </Block>
 

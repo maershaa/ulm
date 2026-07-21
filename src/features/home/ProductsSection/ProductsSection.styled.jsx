@@ -8,7 +8,7 @@ export const ProductsWrapper = styled.section`
 
   gap: 24px;
 
-  padding: 80px 0;
+  padding: 20px 0;
 `;
 
 export const SectionDescription = styled.p`
@@ -28,7 +28,7 @@ export const SectionDescription = styled.p`
 export const ProductsList = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   align-items: stretch;
   gap: 16px;
 
