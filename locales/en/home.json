@@ -5,6 +5,7 @@
     "subtitle2": "Delivering consistent quality, reliable supply and long-term partnership.",
     "linkAbout": "ABOUT US",
     "linkFeatures": "ADVANTAGES",
+    "linkProducts": "PRODUCTS",
     "featuresSection": {
       "title": "Why Choose Us?",
       "quality": "Quality Control",
@@ -62,5 +63,12 @@
         "alt": "Flexible payment terms"
       }
     }
+  },
+
+  "cta": {
+    "badge": "CONTACT US",
+    "title": "Ready to discuss cooperation?",
+    "description": "Looking for a reliable packaging partner? Contact us to discuss your needs and receive a tailored commercial offer.",
+    "button": "Contact us"
   }
 }

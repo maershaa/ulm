@@ -1,4 +1,4 @@
-import{s as e,L as i}from"./index-CS2fsqCD.js";const a=e.section`
+import{s as e,L as i}from"./index-Dn3ADNMV.js";const a=e.section`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -347,12 +347,12 @@ import{s as e,L as i}from"./index-CS2fsqCD.js";const a=e.section`
       border-color: ${({theme:t})=>t.colors.accent};
     }
   }
-`,w=e.div`
+`,$=e.div`
   position: relative;
   overflow: hidden;
 
   aspect-ratio: 16 / 10;
-`,$=e.img`
+`,w=e.img`
   width: 100%;
   height: 100%;
 
@@ -455,14 +455,14 @@ import{s as e,L as i}from"./index-CS2fsqCD.js";const a=e.section`
   border-radius: ${({theme:t})=>t.radius.lg};
   border: 1px solid ${({theme:t})=>t.colors.borderDefault};
   box-shadow: ${({theme:t})=>t.shadows.lg};
-`,M=e.img`
+`,C=e.img`
   width: 100%;
   aspect-ratio: 16/9;
 
   object-fit: cover;
-`,P=e.div`
+`,S=e.div`
   padding: 36px;
-`,C=e.h2`
+`,M=e.h2`
   font-size: 1.5rem;
 
   margin-bottom: 18px;
@@ -476,14 +476,14 @@ import{s as e,L as i}from"./index-CS2fsqCD.js";const a=e.section`
   @media (min-width: ${({theme:t})=>t.breakpoints.desktop}) {
     font-size: 2.2rem;
   }
-`,F=e.div`
+`,P=e.div`
   width: 100px;
   height: 3px;
 
   margin-bottom: 26px;
 
   background: ${({theme:t})=>t.colors.accent};
-`,S=e.p`
+`,D=e.p`
   line-height: 1.9;
   font-size: 1rem;
 
@@ -492,7 +492,7 @@ import{s as e,L as i}from"./index-CS2fsqCD.js";const a=e.section`
   @media (min-width: ${({theme:t})=>t.breakpoints.desktop}) {
     font-size: 1.1rem;
   }
-`,D=e.button`
+`,F=e.button`
   position: absolute;
 
   top: 20px;
@@ -529,7 +529,7 @@ import{s as e,L as i}from"./index-CS2fsqCD.js";const a=e.section`
 
   gap: 24px;
 
-  padding: 80px 0;
+  padding: 20px 0;
 `,W=e.p`
   max-width: 760px;
 
@@ -545,7 +545,7 @@ import{s as e,L as i}from"./index-CS2fsqCD.js";const a=e.section`
 `,H=e.ul`
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   align-items: stretch;
   gap: 16px;
 
@@ -669,7 +669,72 @@ import{s as e,L as i}from"./index-CS2fsqCD.js";const a=e.section`
       font-size: 1.1rem;
     }
   }
+`,N=e.section`
+  padding: 110px 0;
 `,O=e.div`
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 64px 32px;
+
+  text-align: center;
+
+  background: ${({theme:t})=>t.colors.section};
+
+  border: 1px solid ${({theme:t})=>t.colors.borderDefault};
+  border-radius: ${({theme:t})=>t.radius.lg};
+
+  box-shadow: ${({theme:t})=>t.shadows.sm};
+`,U=e.h2`
+  margin-bottom: 20px;
+
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+
+  color: ${({theme:t})=>t.colors.accentLight};
+`,q=e.p`
+  max-width: 620px;
+
+  margin: 0 auto 40px;
+
+  font-size: 1.125rem;
+  line-height: 1.7;
+
+  color: ${({theme:t})=>t.colors.textSecondary};
+`,E=e(i)`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+
+  padding: 18px 36px;
+
+  border-radius: ${({theme:t})=>t.radius.round};
+
+  background: linear-gradient(
+    135deg,
+    ${({theme:t})=>t.colors.accentLight},
+    ${({theme:t})=>t.colors.accent}
+  );
+
+  color: ${({theme:t})=>t.colors.textInverse};
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  transition: ${({theme:t})=>t.transitions.base};
+
+  &:hover,
+  &:focus-visible {
+    transform: translateY(-3px);
+
+    box-shadow: ${({theme:t})=>t.shadows.md};
+  }
+
+  svg {
+    flex-shrink: 0;
+  }
+`,J=e.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -680,7 +745,7 @@ import{s as e,L as i}from"./index-CS2fsqCD.js";const a=e.section`
   margin-left: auto;
 
   padding: 40px 20px;
-`,U=e.ul`
+`,K=e.ul`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -697,7 +762,7 @@ import{s as e,L as i}from"./index-CS2fsqCD.js";const a=e.section`
   @media (min-width: ${({theme:t})=>t.breakpoints.desktopLg}) {
     gap: 30px;
   }
-`,q=e.p`
+`,Q=e.p`
   max-width: 760px;
 
   color: ${({theme:t})=>t.colors.textSecondary};
@@ -715,4 +780,4 @@ import{s as e,L as i}from"./index-CS2fsqCD.js";const a=e.section`
   @media (min-width: ${({theme:t})=>t.breakpoints.desktop}) {
     font-size: 1.15rem;
   }
-`;export{s as A,r as B,D as C,q as D,U as E,g as F,G,d as H,n as I,j as M,k as O,T as P,a as S,O as W,p as a,l as b,c,m as d,x as e,b as f,B as g,M as h,P as i,C as j,F as k,S as l,h as m,f as n,u as o,w as p,$ as q,v as r,y as s,z as t,L as u,I as v,W as w,H as x,Y as y,A as z};
+`;export{s as A,r as B,F as C,N as D,O as E,g as F,q as G,d as H,n as I,E as J,Q as K,K as L,j as M,G as N,k as O,T as P,a as S,U as T,J as W,p as a,l as b,c,m as d,x as e,b as f,B as g,C as h,S as i,M as j,P as k,D as l,h as m,f as n,u as o,$ as p,w as q,v as r,y as s,z as t,L as u,I as v,W as w,H as x,Y as y,A as z};
