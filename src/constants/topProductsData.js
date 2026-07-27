@@ -2,17 +2,15 @@ import images from '@/assets/images/Products/productsImg';
 
 export const topProductsData = [
   {
-    id: 'drawn-cans',
-    imageSrc: images.can_drawn,
+    id: 'can-38',
+    imageSrc: images.can_38,
   },
-
   {
-    id: 'trench-candle-cans',
-    imageSrc: images.trenchCandles,
+    id: 'can-1',
+    imageSrc: images.can_1,
   },
-
   {
-    id: 'metal-trays',
-    imageSrc: images.metal_trays,
+    id: 'lid-72-8',
+    imageSrc: images.lid_72_8,
   },
 ];

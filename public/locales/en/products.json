@@ -4,51 +4,100 @@
   "button": "View all products",
 
   "items": {
-    "drawn-cans": {
-      "title": "Drawn Cans",
-      "description": "No. 21, 1, 2, 3, 38, 5, 6, 8.",
-      "alt": "Drawn Cans"
+    "can-1": {
+      "title": "Tin Can No. 1",
+      "description": "110 ml tin can made of high-quality electrolytic tinplate with a thickness of 0.18 mm and an internal protective lacquer/enamel coating.",
+      "application": "Suitable for filling and preserving meat, fish, vegetable and other canned food products.",
+      "alt": "Tin Can No. 1"
     },
 
-    "metal-lids": {
-      "title": "Metal Lids",
-      "description": "72.4 mm, 83.4 mm, 99 mm.",
-      "alt": "Metal Lids"
+    "can-2": {
+      "title": "Tin Can No. 2",
+      "description": "160 ml tin can made of high-quality electrolytic tinplate with a thickness of 0.18 mm and an internal protective lacquer/enamel coating.",
+      "application": "Suitable for filling and preserving meat, fish, vegetable and other canned food products.",
+      "alt": "Tin Can No. 2"
     },
 
-    "glass-can-lids": {
-      "title": "Metal Lids for Glass Jars",
-      "description": "SKO 1-82, 1-63, 1-58.",
-      "alt": "Metal Lids for Glass Jars"
+    "can-3": {
+      "title": "Tin Can No. 3",
+      "description": "240 ml tin can made of high-quality electrolytic tinplate with a thickness of 0.18 mm and an internal protective lacquer/enamel coating.",
+      "application": "Suitable for filling and preserving meat, fish, vegetable and other canned food products.",
+      "alt": "Tin Can No. 3"
     },
 
-    "aluminum-packaging": {
-      "title": "Aluminium Food Containers",
-      "description": "Product description.",
-      "alt": "Aluminium FoodContainers"
+    "can-5": {
+      "title": "Tin Can No. 5",
+      "description": "240 ml tin can made of high-quality electrolytic tinplate with a thickness of 0.18 mm and an internal protective lacquer/enamel coating.",
+      "application": "Suitable for filling and preserving meat, fish, vegetable and other canned food products.",
+      "alt": "Tin Can No. 5"
+    },
+
+    "can-6": {
+      "title": "Tin Can No. 6",
+      "description": "260 ml tin can made of high-quality electrolytic tinplate with a thickness of 0.18 mm and an internal protective lacquer/enamel coating.",
+      "application": "Suitable for filling and preserving meat, fish, vegetable and other canned food products.",
+      "alt": "Tin Can No. 6"
+    },
+
+    "can-8": {
+      "title": "Tin Can No. 8",
+      "description": "355 ml tin can made of high-quality electrolytic tinplate with a thickness of 0.18 mm and an internal protective lacquer/enamel coating.",
+      "application": "Suitable for filling and preserving meat, fish, vegetable and other canned food products.",
+      "alt": "Tin Can No. 8"
+    },
+
+    "can-38": {
+      "title": "Tin Can No. 38",
+      "description": "Tin can made of high-quality electrolytic tinplate with a thickness of 0.18 mm and an internal protective lacquer/enamel coating.",
+      "application": "Suitable for filling and preserving meat, fish, vegetable and other canned food products.",
+      "alt": "Tin Can No. 38"
+    },
+
+    "lid-72-8": {
+      "title": "LVK Lid 72.8",
+      "description": "72.8 mm tin lid made of high-quality electrolytic tinplate with a thickness of 0.18 mm and an internal protective lacquer/enamel coating.",
+      "application": "Provides reliable hermetic sealing for food-grade metal containers.",
+      "alt": "LVK Lid 72.8"
+    },
+
+    "lid-83-4": {
+      "title": "LVK Lid 83.4",
+      "description": "83.4 mm tin lid made of high-quality electrolytic tinplate with a thickness of 0.18 mm and an internal protective lacquer/enamel coating.",
+      "application": "Provides reliable hermetic sealing for food-grade metal containers.",
+      "alt": "LVK Lid 83.4"
+    },
+
+    "lid-99": {
+      "title": "LVK Lid 99",
+      "description": "99 mm tin lid made of high-quality electrolytic tinplate with a thickness of 0.18 mm and an internal protective lacquer/enamel coating.",
+      "application": "Provides reliable hermetic sealing for food-grade metal containers.",
+      "alt": "LVK Lid 99"
     },
 
     "metal-trays": {
       "title": "Metal Trays of Various Sizes",
-      "description": "Product description.",
+      "description": "Metal trays manufactured from high-quality tinplate in a wide range of sizes and configurations to meet customer requirements.",
+      "application": "Suitable for food processing, packaging, storage and industrial applications.",
       "alt": "Metal Trays of Various Sizes"
     },
 
     "brush-ferrules": {
       "title": "Paint Brush Ferrules",
-      "description": "Metal crimp ferrules / joints for securing brush bristles to wooden or plastic handles.",
+      "description": "Metal ferrules designed to securely fix brush bristles to wooden or plastic handles.",
       "alt": "Metal Paint Brush Ferrules"
     },
 
     "trench-candle-cans": {
       "title": "Trench Candle Cans",
-      "description": "Durable metal containers specially manufactured for long-burning military trench candles.",
+      "description": "Durable metal containers specially manufactured for trench candles with extended burning time.",
+      "application": "Used for the production of military and emergency trench candles.",
       "alt": "Metal Cans for Trench Candles"
     },
 
     "monpensier-tins": {
       "title": "Monpensier Tin Boxes",
-      "description": "Small metal-plated containers with lids for hard drop candies dusted with powdered sugar.",
+      "description": "Small metal boxes with fitted lids made from high-quality tinplate.",
+      "application": "Suitable for candies, confectionery, tea, spices, souvenirs and promotional packaging.",
       "alt": "Vintage Style Tin Boxes for Monpensier Candies"
     }
   }

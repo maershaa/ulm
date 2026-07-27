@@ -53,7 +53,10 @@ export const Item = styled.li`
 
   p {
     margin-top: 10px;
-    color: ${({ theme }) => theme.colors.textPrimary};
+    text-align: justify;
+    text-indent: 2em;
+
+    color: ${({ theme }) => theme.colors.textSecondary};
 
     font-weight: 500;
     font-size: 1.2rem;

@@ -14,6 +14,7 @@ const ProductsItem = ({ product }) => {
         />
         <h3>{t(`items.${product.id}.title`)}</h3>
         <p>{t(`items.${product.id}.description`)}</p>
+        <p>{t(`items.${product.id}.application`)}</p>
       </div>
     </Item>
   );
