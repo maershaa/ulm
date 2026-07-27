@@ -26,16 +26,16 @@ const ContactContent = () => {
           <ContactMethod
             icon="phone"
             label={t('contacts.phoneLabel')}
-            href="tel:+380487151660"
+            href="tel:+380503164389"
           >
-            +38 (048) 715-16-60
+            +38 (050) 316-43-89
           </ContactMethod>
           <ContactMethod
             icon="phone"
             label={t('contacts.faxLabel')}
-            href="tel:+380487145509"
+            href="tel:+380503333084"
           >
-            +38 (048) 714-55-09
+            +38 (050) 333-30-84
           </ContactMethod>
         </Phone>
 
@@ -45,14 +45,6 @@ const ContactContent = () => {
           href="mailto:info@ulm.com.ua"
         >
           info@ulm.com.ua
-        </ContactMethod>
-
-        <ContactMethod
-          icon="mail"
-          label={t('contacts.option2')}
-          href="mailto:factory@ulm.com.ua"
-        >
-          factory@ulm.com.ua
         </ContactMethod>
 
         <Map />

@@ -34,11 +34,11 @@ const Footer = () => {
         </Address>
 
         <Phone>
-          <ContactMethod icon="phone" href="tel:+380487151660">
-            +38 (048) 715-16-60
+          <ContactMethod icon="phone" href="tel:+380503164389">
+            +38 (050) 316-43-89
           </ContactMethod>
-          <ContactMethod icon="phone" href="tel:+380487145509">
-            +38 (048) 714-55-09
+          <ContactMethod icon="phone" href="tel:+380503333084">
+            +38 (050) 333-30-84
           </ContactMethod>
         </Phone>
       </FooterMain>
