@@ -1,4 +1,4 @@
-import{s as e,L as i}from"./index-Dn3ADNMV.js";const a=e.section`
+import{s as e,L as i}from"./index-BZWZcKIW.js";const a=e.section`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -443,7 +443,7 @@ import{s as e,L as i}from"./index-Dn3ADNMV.js";const a=e.section`
   backdrop-filter: blur(6px);
 
   z-index: ${({theme:t})=>t.zIndex.modalBackdrop};
-`,B=e.div`
+`,S=e.div`
   position: relative;
 
   width: 100%;
@@ -455,12 +455,12 @@ import{s as e,L as i}from"./index-Dn3ADNMV.js";const a=e.section`
   border-radius: ${({theme:t})=>t.radius.lg};
   border: 1px solid ${({theme:t})=>t.colors.borderDefault};
   box-shadow: ${({theme:t})=>t.shadows.lg};
-`,C=e.img`
+`,B=e.img`
   width: 100%;
   aspect-ratio: 16/9;
 
   object-fit: cover;
-`,S=e.div`
+`,C=e.div`
   padding: 36px;
 `,M=e.h2`
   font-size: 1.5rem;
@@ -476,14 +476,14 @@ import{s as e,L as i}from"./index-Dn3ADNMV.js";const a=e.section`
   @media (min-width: ${({theme:t})=>t.breakpoints.desktop}) {
     font-size: 2.2rem;
   }
-`,P=e.div`
+`,D=e.div`
   width: 100px;
   height: 3px;
 
   margin-bottom: 26px;
 
   background: ${({theme:t})=>t.colors.accent};
-`,D=e.p`
+`,F=e.p`
   line-height: 1.9;
   font-size: 1rem;
 
@@ -492,7 +492,7 @@ import{s as e,L as i}from"./index-Dn3ADNMV.js";const a=e.section`
   @media (min-width: ${({theme:t})=>t.breakpoints.desktop}) {
     font-size: 1.1rem;
   }
-`,F=e.button`
+`,P=e.button`
   position: absolute;
 
   top: 20px;
@@ -656,7 +656,10 @@ import{s as e,L as i}from"./index-Dn3ADNMV.js";const a=e.section`
 
   p {
     margin-top: 10px;
-    color: ${({theme:t})=>t.colors.textPrimary};
+    text-align: justify;
+    text-indent: 2em;
+
+    color: ${({theme:t})=>t.colors.textSecondary};
 
     font-weight: 500;
     font-size: 1.2rem;
@@ -780,4 +783,4 @@ import{s as e,L as i}from"./index-Dn3ADNMV.js";const a=e.section`
   @media (min-width: ${({theme:t})=>t.breakpoints.desktop}) {
     font-size: 1.15rem;
   }
-`;export{s as A,r as B,F as C,N as D,O as E,g as F,q as G,d as H,n as I,E as J,Q as K,K as L,j as M,G as N,k as O,T as P,a as S,U as T,J as W,p as a,l as b,c,m as d,x as e,b as f,B as g,C as h,S as i,M as j,P as k,D as l,h as m,f as n,u as o,$ as p,w as q,v as r,y as s,z as t,L as u,I as v,W as w,H as x,Y as y,A as z};
+`;export{s as A,r as B,P as C,N as D,O as E,g as F,q as G,d as H,n as I,E as J,Q as K,K as L,j as M,G as N,k as O,T as P,a as S,U as T,J as W,p as a,l as b,c,m as d,x as e,b as f,S as g,B as h,C as i,M as j,D as k,F as l,h as m,f as n,u as o,$ as p,w as q,v as r,y as s,z as t,L as u,I as v,W as w,H as x,Y as y,A as z};
