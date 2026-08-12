@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+
+    "target": "esnext",
+    "types": [],
+
+    "strict": true,
+
+    "jsx": "react-jsx",
+    // "jsxImportSource": "@styled-components/react",
+
+    "baseUrl": ".",
+
+    "paths": {
+      "@/*": ["src/*"]
+    },
+
+    "allowJs": true,
+    "checkJs": false,
+
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+
+    "noEmit": true,
+
+    "skipLibCheck": true,
+    "ignoreDeprecations": "6.0" // Скрыть предупреждение о будущем устаревании baseUrl.
+  },
+
+  "include": ["src"]
+}
