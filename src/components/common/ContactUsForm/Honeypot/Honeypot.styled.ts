@@ -1,0 +1,9 @@
+import styled from 'styled-components';
+
+export const HoneypotWrapper = styled.div`
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+`;

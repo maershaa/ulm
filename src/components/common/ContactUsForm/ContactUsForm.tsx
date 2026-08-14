@@ -1,10 +1,11 @@
-import axios from 'axios';
 import { useTranslation } from 'react-i18next';
 import { Formik, FormikHelpers } from 'formik';
 import * as Yup from 'yup';
 import { ToastContainer, toast } from 'react-toastify';
 import { FormErrorText } from '@/components';
 import 'react-toastify/dist/ReactToastify.css';
+import emailjs, { SERVICE_ID, TEMPLATE_ID } from './emailjs';
+
 import {
   FormContainer,
   FormGroup,
@@ -13,12 +14,14 @@ import {
   FormTextarea,
   FormButton,
 } from './ContactUsForm.styled';
+import Honeypot from './Honeypot/Honeypot';
 
 interface FormValues {
   name: string;
   phone: string;
   email: string;
   message: string;
+  website: string; // honeypot — реальные люди это поле не видят и не заполняют
 }
 
 const initialValues: FormValues = {
@@ -26,19 +29,29 @@ const initialValues: FormValues = {
   phone: '',
   email: '',
   message: '',
+  website: '',
 };
+
+// Пропускаем при вводе только цифры, +, пробелы и дефисы. не даёт напечатать буквы в поле телефона
+const sanitizePhoneInput = (value: string) => value.replace(/[^\d+\s-]/g, '');
 
 const ContactUsForm = () => {
   const { t } = useTranslation('main');
 
   // Схема валидации формы с использованием Yup
   const ContactSchema = Yup.object().shape({
-    name: Yup.string().required(t('contactUsForm.nameError')),
+    name: Yup.string()
+      .transform((value) => value?.trim())
+      .required(t('contactUsForm.nameError')),
     phone: Yup.string()
+      .transform((value) => value?.trim())
       .matches(/^\+?\d{10,14}$/, t('contactUsForm.telFormatError'))
       .required(t('contactUsForm.telError')),
-    email: Yup.string().email(t('contactUsForm.emailError')),
+    email: Yup.string()
+      .transform((value) => value?.trim())
+      .email(t('contactUsForm.emailError')),
     message: Yup.string()
+      .transform((value) => value?.trim())
       .min(10, t('contactUsForm.messageTooShort'))
       .required(t('contactUsForm.messageError')),
   });
@@ -47,16 +60,22 @@ const ContactUsForm = () => {
     values: FormValues,
     actions: FormikHelpers<FormValues>
   ) => {
-    axios
-      .post(import.meta.env.VITE_API_URL, values) // Отправка данных на сервер
-      .then((response) => {
+    // Honeypot сработал - значит скорее всего был бот. Успешно завершаем, ничего не отправляя, чтобы бот не понял, что его отфильтровали
+    if (values.website) {
+      actions.resetForm();
+      return;
+    }
+
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, '#myForm').then(
+      () => {
         toast.success(t('contactUsForm.successToast'));
         actions.resetForm(); // Очистка формы после успешной отправки
-      })
-      .catch((error) => {
+      },
+      (error) => {
+        console.error('EmailJS error:', error);
         toast.error(t('contactUsForm.errorToast'));
-        console.error(error);
-      });
+      }
+    );
   };
 
   return (
@@ -73,8 +92,9 @@ const ContactUsForm = () => {
           handleChange,
           handleBlur,
           handleSubmit,
+          setFieldValue,
         }) => (
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} id="myForm">
             <FormGroup>
               <FormLabel htmlFor="name">
                 {t('contactUsForm.nameInput')}
@@ -103,7 +123,9 @@ const ContactUsForm = () => {
                 name="phone"
                 placeholder={t('contactUsForm.telPlaceholder')}
                 value={values.phone}
-                onChange={handleChange}
+                onChange={(e) =>
+                  setFieldValue('phone', sanitizePhoneInput(e.target.value))
+                }
                 onBlur={handleBlur}
               />
               {errors.phone && touched.phone && (
@@ -146,6 +168,8 @@ const ContactUsForm = () => {
                 <FormErrorText errorMessage={errors.message} />
               )}
             </FormGroup>
+
+            <Honeypot value={values.website} onChange={handleChange} />
 
             <FormButton type="submit">{t('contactUsForm.btnText')}</FormButton>
             <ToastContainer position="bottom-right" autoClose={3000} />
