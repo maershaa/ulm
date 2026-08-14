@@ -1,7 +1,7 @@
 {
   "privacyPolicy": {
     "title": "Privacy Policy",
-    "lastUpdated": "Last updated: [20.07.2026]",
+    "lastUpdated": "Last updated: 20.08.2026",
     "sections": [
       {
         "heading": "1. General provisions",
@@ -21,7 +21,7 @@
       },
       {
         "heading": "5. Third-party disclosure",
-        "text": "To deliver emails from the contact form, we use the Resend service. Data is shared with Resend solely for the technical purpose of message delivery and is not used by them for their own purposes. We do not sell or share your data with any other third parties."
+        "text": "To deliver emails from the contact form, we use the EmailJS service. Data is shared with EmailJS solely for the technical purpose of message delivery and is not used by them for their own purposes. We do not sell or share your data with any other third parties."
       },
       {
         "heading": "6. Cookies and local storage",
