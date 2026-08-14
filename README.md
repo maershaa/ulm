@@ -1,607 +1,131 @@
-# ULM (Yuzhlitografmetall)
+# ULM — Корпоративный сайт производителя металлической упаковки
 
-## 1. О проекте
+B2B-сайт компании ULM: презентация продукции, направлений деятельности и
+контакты для клиентов. Многоязычный (UA/EN), адаптивный, с формой обратной
+связи.
 
-**Название компании**
+## Технологии
 
-ООО «Южлитографметалл» (ULM — Yuzhlitografmetall)
+**Frontend**
 
-**Тип проекта**
+- [React 19](https://react.dev/)
+- [Vite](https://vitejs.dev/) — сборка и dev-сервер
+- [TypeScript](https://www.typescriptlang.org/)
+- [React Router v6](https://reactrouter.com/) — маршрутизация
+- [Styled Components](https://styled-components.com/) — стилизация
+- [i18next](https://www.i18next.com/) / react-i18next — интернационализация
+  (UA/EN)
+- [Formik](https://formik.org/) + [Yup](https://github.com/jquense/yup) — формы
+  и валидация
+- [React Toastify](https://fkhadra.github.io/react-toastify/) — уведомления
+- [React Icons](https://react-icons.github.io/react-icons/) — иконки
+- [React Responsive](https://github.com/yocontra/react-responsive) — адаптивная
+  логика
+- [EmailJS](https://www.emailjs.com/) — отправка писем с формы обратной связи
+  напрямую из браузера, без собственного backend
 
-Корпоративный B2B сайт производителя металлической упаковки.
+**Инструменты качества кода**
 
-**Целевая аудитория**
+- ESLint + Prettier
+- Husky + lint-staged — проверки перед коммитом
 
-- производители консервной продукции
-- пищевые предприятия
-- корпоративные клиенты
-- оптовые заказчики
+## Реализованный функционал
 
-**Основные задачи сайта**
+- Главная страница: hero-секция, "О компании", преимущества, направления
+  деятельности (Industries), продукция, CTA-секция
+- Каталог продукции с карточками товаров
+- Страница контактов с формой обратной связи (валидация, honeypot-защита от
+  спам-ботов, отправка через EmailJS)
+- Страница политики конфиденциальности
+- Кастомная страница 404
+- Переключение языка интерфейса (UA / EN)
+- Переключение темы оформления (светлая/тёмная)
+- Полностью адаптивная вёрстка
 
-- презентация компании
-- демонстрация продукции
-- получение заявок
-- повышение доверия
-- мультиязычность
-
----
-
-# 2. Стек
-
-## Frontend
-
-- React 19
-- Vite
-- React Router v6
-- Styled Components
-- i18next
-- Formik
-- Yup
-- React Toastify
-- React Icons
-- Axios
-
-## Backend
-
-Отдельный Express сервер.
-
-Используется только для формы обратной связи.
-
-Nodemailer.
-
----
-
-# 3. Деплой
-
-Frontend
-
-GitHub Pages
-
-Автодеплой из ветки
+## Структура проекта
 
 ```
-main
+src/
+├── api/                  # Работа с внешними сервисами
+├── assets/               # Изображения, глобальные стили
+├── components/
+│   ├── common/            # Переиспользуемые составные блоки (форма, шапка, подвал)
+│   ├── layout/             # Обёртки layout'а (SharedLayout)
+│   └── ui/                 # Атомарные UI-компоненты (кнопки, логотип, переключатели)
+├── constants/            # Константы проекта
+├── context/              # React Context (тема оформления)
+├── features/             # Функциональные блоки по страницам/разделам
+│   ├── contacts/
+│   ├── home/
+│   └── products/
+├── hooks/                # Кастомные хуки
+├── pages/                # Страницы (роуты)
+├── types/                # Общие TypeScript-типы
+├── App.tsx
+├── i18n.ts
+└── main.tsx
 ```
 
-Живой сайт
+## Запуск проекта
 
-```
-https://maershaa.github.io/ulm/
-```
+### Установка зависимостей
 
-Backend
-
-Пока НЕ задеплоен.
-
-Поэтому форма обратной связи на production сейчас не работает.
-
----
-
-# 4. Архитектура
-
-```
-App
- └── SharedLayout
-      ├── Header
-      ├── Outlet
-      └── Footer
+```bash
+npm install
 ```
 
----
+### Переменные окружения
 
-# 5. Роуты
+Скопируйте `.env.example` в `.env` и заполните реальными значениями:
 
-```
-/
-```
-
-Главная
-
-```
-/products
+```bash
+VITE_EMAILJS_SERVICE_ID=service_xxxxxxx
+VITE_EMAILJS_TEMPLATE_ID=template_xxxxxxx
+VITE_EMAILJS_PUBLIC_KEY=xxxxxxxxxxxxxxx
 ```
 
-Продукция
+Ключи берутся в личном кабинете [emailjs.com](https://www.emailjs.com/) → Email
+Services / Email Templates / Account → General.
 
-```
-/contacts
-```
+⚠️ Значения `VITE_*` "запекаются" в сборку на этапе `npm run build` — перед
+продакшен-сборкой убедитесь, что в `.env` стоят актуальные боевые ключи.
 
-Контакты
+### Разработка
 
-```
-*
-```
-
-404
-
----
-
-# 6. Главные страницы
-
-## Home
-
-Содержит
-
-- Hero
-- About Us
-- Advantages
-- CTA
-
----
-
-## Products
-
-Каталог продукции.
-
----
-
-## Contacts
-
-Контактная информация
-
-Карта
-
-Форма обратной связи
-
----
-
-# 7. Интернационализация
-
-Используется
-
-```
-react-i18next
+```bash
+npm run dev
 ```
 
-Языки
+### Продакшен-сборка
 
-- 🇺🇦 украинский
-- 🇬🇧 английский
-
-Все переводы лежат
-
-```
-public/locales
+```bash
+npm run build
 ```
 
-Каждая страница имеет собственный namespace.
+Результат — статические файлы в папке `dist/`, готовые к загрузке на любой
+хостинг (Node.js на сервере не требуется).
 
-Например
+### Локальный просмотр сборки
 
-```
-home.json
-products.json
-contacts.json
-main.json
+```bash
+npm run preview
 ```
 
----
+### Линтинг и форматирование
 
-# 8. Темизация
-
-Есть две темы
-
-- light
-- dark
-
-Используется
-
-```
-ThemeProvider
-ThemeContext
+```bash
+npm run lint
+npm run format
 ```
 
-Переключение хранится через
+## Отправка формы обратной связи
 
-```
-data-theme
-```
+Форма отправляет письма напрямую из браузера через EmailJS — отдельный
+backend-сервер для этого не требуется и не задеплоен (собственный
+Express-сервер, ранее использовавшийся через Nodemailer, удалён как избыточный
+после перехода на EmailJS).
 
-Все дизайн-токены (цвета, radius, shadows, glow, transitions, breakpoints,
-z-index) собраны в едином файле
+## Деплой
 
-```
-src/theme.js
-```
-
----
-
-# 9. Дизайн
-
-## Стиль
-
-Industrial Modern
-
-Современный промышленный минимализм.
-
-Ассоциации
-
-- металл
-- надежность
-- производство
-- точность
-- европейский B2B
-
-Избегать
-
-- кислотных цветов
-- слишком ярких градиентов
-- стекломорфизма
-- перегруженного UI
-
----
-
-# 10. Цвета
-
-## Светлая
-
-```
-Primary
-#032541
-
-Accent
-#045174
-
-Light Accent
-#1274A2
-
-Background (page)
-#F7F9FC
-
-Section
-#FFFFFF
-
-Card
-#FFFFFF
-
-Elevated
-#FFFFFF
-```
-
----
-
-## Темная
-
-```
-Background (page)
-#071723
-
-Section
-#0B2234
-
-Card
-#123A59
-
-Elevated
-#1B4D78
-
-Accent
-#1274A2
-
-Light Accent
-#4EA8D8
-```
-
-Все цвета заданы через CSS-переменные в `src/styles/index.css` (`--bg-page`,
-`--bg-section`, `--bg-card`, `--bg-elevated` и т.д.) и прокинуты в `theme.js`
-для использования в styled-components.
-
----
-
-# 11. Типографика
-
-Основной шрифт
-
-```
-Lora
-```
-
----
-
-# 12. Breakpoints
-
-```js
-mobile: 375;
-
-mobileLg: 450;
-
-tablet: 625;
-
-tabletLg: 768;
-
-desktop: 1000;
-
-desktopLg: 1280;
-
-wide: 1800;
-```
-
-Используется собственный helper
-
-```
-media()
-```
-
----
-
-# 13. z-index
-
-```
-Base
-0
-
-Header
-100
-
-Mobile Menu
-200
-
-Burger Button
-300
-
-Modal Backdrop
-1000
-
-Modal Content
-1001
-
-Tooltip
-2000
-```
-
----
-
-# 14. Иконки
-
-Используются два подхода
-
-react-icons
-
-и
-
-SVG Sprite
-
-```
-IconSprite
-```
-
-который монтируется в
-
-```
-main.jsx
-```
-
----
-
-# 15. Стиль кода
-
-Используется
-
-- функциональные компоненты
-- hooks
-- lazy loading
-- alias `@`
-- mobile first
-- styled-components
-- отдельные styled файлы
-- экспорт компонентов через index.js
-
----
-
-# 16. Принципы проекта
-
-При разработке придерживаемся следующих правил.
-
-### Компоненты
-
-Каждый компонент отвечает только за одну задачу.
-
----
-
-### Простота
-
-Сначала простое рабочее решение.
-
-Без преждевременного усложнения архитектуры.
-
----
-
-### Стили
-
-Используем существующие дизайн-токены проекта.
-
-Не создавать новые цвета без необходимости.
-
-Использовать
-
-- radius variables
-- media helper
-- theme variables
-
----
-
-### Responsive
-
-Mobile First.
-
----
-
-### Accessibility
-
-Использовать
-
-- aria-label
-- semantic html
-- keyboard navigation
-
----
-
-# 17. Структура проекта
-
-```text
-ULM/
-├── .vscode/
-├── dist/
-├── node_modules/
-├── public/
-│   ├── locales/
-│   │   ├── en/
-│   │   │   ├── contacts.json
-│   │   │   ├── home.json
-│   │   │   ├── main.json
-│   │   │   └── products.json
-│   │   └── uk/
-│   │       ├── contacts.json
-│   │       ├── home.json
-│   │       ├── main.json
-│   │       └── products.json
-│   ├── favicon.svg
-│   └── logo_metall.png
-├── src/
-│   ├── assets/
-│   │   └── images/
-│   ├── components/
-│   │   ├── common/
-│   │   │   └── ContactUsForm/
-│   │   │       ├── ContactUsForm.jsx
-│   │   │       └── ContactUsForm.styled.jsx
-│   │   ├── Footer/
-│   │   │   ├── Footer.jsx
-│   │   │   └── Footer.styled.jsx
-│   │   ├── Header/
-│   │   │   ├── BurgerMenuButton/
-│   │   │   │   ├── BurgerMenuButton.jsx
-│   │   │   │   └── BurgerMenuButton.styled.jsx
-│   │   │   ├── MobileMenu/
-│   │   │   │   ├── MobileMenu.jsx
-│   │   │   │   └── MobileMenu.styled.jsx
-│   │   │   ├── NavMenu/
-│   │   │   │   ├── NavMenu.jsx
-│   │   │   │   └── NavMenu.styled.jsx
-│   │   │   ├── Header.jsx
-│   │   │   └── Header.styled.jsx
-│   │   │   └── index.js
-│   │   ├── layout/
-│   │   │   ├── SharedLayout/
-│   │   │   │   ├── SharedLayout.jsx
-│   │   │   │   └── SharedLayout.styled.jsx
-│   │   │   └── index.js
-│   │   ├── ui/
-│   │   │   ├── Container/
-│   │   │   │   ├── Container.jsx
-│   │   │   │   └── Container.styled.jsx
-│   │   │   ├── LanguageSwitcher/
-│   │   │   │   ├── LanguageSwitcher.jsx
-│   │   │   │   └── LanguageSwitcher.styled.jsx
-│   │   │   ├── Logo/
-│   │   │   │   ├── logo_metall.png
-│   │   │   │   ├── Logo.jsx
-│   │   │   │   └── Logo.styled.jsx
-│   │   │   ├── ThemeSwitcher/
-│   │   │   │   ├── ThemeSwitcher.jsx
-│   │   │   │   └── ThemeSwitcher.styled.jsx
-│   │   │   └── Title/
-│   │   │       └── index.js
-│   │   └── index.js
-│   ├── constants/
-│   │   ├── featuresData.js
-│   │   ├── index.js
-│   │   └── productsData.js
-│   ├── context/
-│   │   └── theme/
-│   │       ├── ThemeContext.jsx
-│   │       └── ThemeProvider.jsx
-│   ├── features/
-│   │   ├── contacts/
-│   │   │   ├── ContactContent/
-│   │   │   └── index.js
-│   │   ├── home/
-│   │   │   ├── AboutUsSection/
-│   │   │   ├── FeaturesModal/
-│   │   │   │   ├── FeaturesModal.jsx
-│   │   │   │   └── FeaturesModal.styled.jsx
-│   │   │   ├── FeaturesSection/
-│   │   │   ├── Hero/
-│   │   │   └── index.js
-│   │   └── products/
-│   │       └── index.js
-│   ├── hooks/
-│   ├── pages/
-│   │   ├── ContactsPage/
-│   │   │   ├── ContactsPage.jsx
-│   │   │   ├── ContactsPage.styled.jsx
-│   │   │   └── Map.jsx
-│   │   ├── ErrorPage/
-│   │   │   ├── ErrorPage.jsx
-│   │   │   └── ErrorPage.styled.jsx
-│   │   ├── HomePage/
-│   │   │   └── HomePage.jsx
-│   │   └── ProductsPage/
-│   │       ├── ProductsPage.jsx
-│   │       └── ProductsPage.styled.jsx
-│   ├── styles/
-│   │   ├── Glow.styled.jsx
-│   │   ├── index.css
-│   │   ├── icons.svg
-│   │   └── IconSprite.jsx
-│   ├── App.jsx
-│   ├── App.styled.jsx
-│   ├── i18n.js
-│   ├── theme.js
-│   └── main.jsx
-├── .env
-├── .eslintrc.cjs
-├── .gitignore
-├── .huskyrc
-├── .lintstagedrc
-├── .prettierrc.json
-├── index.html
-├── jsconfig.json
-├── package-lock.json
-├── package.json
-├── PROJECT.md
-├── README.md
-├── server.js
-└── vite.config.js
-
-```
-
----
-
-# 18. Известные проблемы
-
-- backend ещё не задеплоен
-- форма контактов не работает на GitHub Pages
-- есть домен и доступ к DNS (cPanel, ProHosting) — планируется деплой ULM на
-  `ulm.com.ua`
-- отправку писем планируется реализовать через Resend
-- деплой backend и настройка Resend пока не начаты
-
----
-
-# 19. Планы
-
-## Ближайшие
-
-- Products — готова, осталась перепроверка стилей
-- Contacts — готова, осталась перепроверка стилей
-- задеплоить backend на `ulm.com.ua` (ProHosting, cPanel)
-- настроить отправку писем через Resend
-- SEO (мета-теги title/description) — не начато
-- favicon — готов ✅
-- Open Graph (превью для соцсетей) — не начато
-- robots.txt — не начато
-- sitemap.xml — не начато
-
----
-
-## После релиза
-
-- оптимизация Lighthouse
-- lazy images
-- аналитика
-- улучшение SEO
-
----
+Сайт разворачивается как статические файлы (папка `dist/`) — подходит для любого
+хостинга без Node.js, включая обычный shared-хостинг с cPanel.
