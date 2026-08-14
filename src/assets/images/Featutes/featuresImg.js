@@ -1,7 +1,7 @@
 import team from './team.jpeg';
 import volumes from './obsessions.jpg';
 import price from './price2.jpeg';
-import delivery from './delivery5.jpg';
+import delivery from './delivery5.jpeg';
 import quality from './quality.jpeg';
 import paymentDeferral from './paymentDeferral.jpeg';
 
