@@ -4,7 +4,7 @@ import {
   AboutUsInfo,
   InfoContainer,
 } from './AboutUsSection.styled';
-import { Title } from '@/components';
+import { Subtitle } from '@/components';
 import bgImageAboutUsPage from '@/assets/images/aboutUs/bg-tin.jpeg';
 
 import { useTranslation } from 'react-i18next';
@@ -16,7 +16,7 @@ const AboutUsSection = () => {
     <SectionWrapper id="aboutUs">
       <Block $bgImageAboutUsPage={bgImageAboutUsPage}>
         <InfoContainer>
-          <Title title={t('aboutUs.title')} />
+          <Subtitle subtitle={t('aboutUs.title')} />
 
           <AboutUsInfo>{t('aboutUs.paragraph1')}</AboutUsInfo>
 

@@ -4,7 +4,7 @@ const Map = () => {
   return (
     <MapWrapper>
       <MapFrame
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2747.9638833563745!2d30.732149175623242!3d46.46922336582478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c631819e476067%3A0xc4fd19d8ea7b11a5!2z0K7QltCb0JjQotCe0JPQoNCQ0KTQnNCV0KLQkNCb0Js!5e0!3m2!1sru!2sua!4v1724351010579!5m2!1sru!2sua"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=30.6585%2C46.4830%2C30.6645%2C46.4868&layer=mapnik&marker=46.484933%2C30.661522"
         title="ULM factory location"
         allowFullScreen
         loading="lazy"

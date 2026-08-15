@@ -43,11 +43,6 @@ export const productsData: ProductsList = [
     imageSrc: images.lid_99,
   },
   {
-    id: 'monpensier-tins',
-    imageSrc: images.candy,
-  },
-
-  {
     id: 'trench-candle-cans',
     imageSrc: images.trenchCandles,
   },

@@ -8,16 +8,17 @@ export const BtnBurger = styled.button`
   align-items: center;
   justify-content: center;
 
+  color: ${({ theme }) => theme.colors.textInverse};
+
   // Должна быть выше мобильного меню, иначе иконку "закрыть" будет не видно
   z-index: ${({ theme }) => theme.zIndex.burgerButton};
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktopLg}) {
     display: none;
   }
-`;
 
-export const SvgIconBurger = styled.svg`
-  width: 32px;
-  height: 32px;
-  stroke: ${({ theme }) => theme.colors.textInverse};
+  svg {
+    width: 32px;
+    height: 32px;
+  }
 `;

@@ -11,7 +11,6 @@ export type ProductId =
   | 'lid-72-8'
   | 'lid-83-4'
   | 'lid-99'
-  | 'monpensier-tins'
   | 'trench-candle-cans'
   | 'brush-ferrules'
   | 'metal-trays';

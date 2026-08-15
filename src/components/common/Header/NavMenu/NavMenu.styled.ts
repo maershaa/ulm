@@ -31,7 +31,7 @@ export const StyledLink = styled(Link)`
   position: relative;
   padding: 6px 14px;
 
-  color: ${({ theme }) => theme.colors.textSecondary};
+  color: ${({ theme }) => theme.colors.textMuted};
 
   border: none;
   border-radius: ${({ theme }) => theme.radius.lg};

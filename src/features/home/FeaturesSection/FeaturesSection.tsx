@@ -18,7 +18,7 @@ import {
 
 import FeaturesModal from '@/features/home/FeaturesModal/FeaturesModal';
 import { featuresData } from '@/constants';
-import { Title } from '@/components';
+import { Subtitle } from '@/components';
 import { Feature } from '@/types';
 
 const FeaturesSection = () => {
@@ -38,7 +38,7 @@ const FeaturesSection = () => {
 
   return (
     <SectionWrapper id="features">
-      <Title title={t('features.title')} />
+      <Subtitle subtitle={t('features.title')} />
 
       <FeatureList>
         {featuresData.map((feature, index) => (
@@ -69,7 +69,7 @@ const FeaturesSection = () => {
                 {t(`features.items.${feature.id}.description`)}
               </FeatureItemText>
 
-              <MoreButton>{t('features.more')}</MoreButton>
+              <MoreButton type="button">{t('features.more')}</MoreButton>
             </CardContent>
           </FeatureCard>
         ))}

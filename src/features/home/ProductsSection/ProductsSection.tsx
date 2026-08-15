@@ -6,7 +6,7 @@ import {
   ButtonWrapper,
   ButtonLink,
 } from './ProductsSection.styled';
-import { Title } from '@/components';
+import { Subtitle } from '@/components';
 import { ProductsItem } from '@/features/products/ProductsItem/ProductsItem';
 import { topProductsData } from '@/constants/topProductsData';
 import { FaArrowRight } from 'react-icons/fa6';
@@ -15,7 +15,7 @@ const ProductsSection = () => {
   const { t } = useTranslation('products');
   return (
     <ProductsWrapper>
-      <Title title={t('title')} />
+      <Subtitle subtitle={t('title')} />
 
       <SectionDescription>{t('description')}</SectionDescription>
 

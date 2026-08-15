@@ -5,7 +5,6 @@ import '@/i18n';
 
 import App from './App';
 import '@/assets/styles/index.css';
-import IconSprite from '@/assets/IconSprite';
 import { ThemeProvider } from '@/context/theme/ThemeProvider';
 
 const root = document.getElementById('root');
@@ -16,7 +15,6 @@ if (!root) {
 
 createRoot(root).render(
   <StrictMode>
-    <IconSprite />
     <BrowserRouter basename="/ulm">
       <ThemeProvider>
         <App />

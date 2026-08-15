@@ -2,6 +2,7 @@ export {
   Logo,
   Container,
   Title,
+  Subtitle,
   ThemeSwitcher,
   LanguageSwitcher,
   FormErrorText,

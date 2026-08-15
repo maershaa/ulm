@@ -109,7 +109,7 @@ export const HeroPrimaryText = styled.h1`
     margin-bottom: 20px;
   }
 `;
-export const HeroInfo = styled.h2`
+export const HeroInfo = styled.p`
   color: ${({ theme }) => theme.colors.textInverse};
 
   font-size: 1.5rem;

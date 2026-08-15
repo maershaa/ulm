@@ -124,7 +124,7 @@ export const FeatureItemText = styled.p`
   }
 `;
 
-export const MoreButton = styled.div`
+export const MoreButton = styled.button`
   display: none;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tabletLg}) {

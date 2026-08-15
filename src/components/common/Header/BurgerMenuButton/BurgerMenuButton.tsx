@@ -1,5 +1,6 @@
 import { Dispatch, SetStateAction } from 'react';
-import { BtnBurger, SvgIconBurger } from './BurgerMenuButton.styled';
+import { IoClose, IoMenu } from 'react-icons/io5';
+import { BtnBurger } from './BurgerMenuButton.styled';
 
 interface BurgerMenuButtonProps {
   isOpenMenu: boolean;
@@ -11,23 +12,17 @@ const BurgerMenuButton = ({
   setIsOpenMenu,
 }: BurgerMenuButtonProps) => {
   const toggleBurgerMenu = () => {
-    setIsOpenMenu((isMenuOpen: boolean) => !isMenuOpen); // Переключаем значение isMenuOpen на противоположное
+    setIsOpenMenu((isMenuOpen) => !isMenuOpen);
   };
 
   return (
-    <BtnBurger type="button" onClick={toggleBurgerMenu}>
-      <SvgIconBurger>
-        {/* Используем тег <use> для отображения иконки из спрайта. 
-    Если меню открыто, отображаем иконку закрытия (icon-close). 
-    Если меню закрыто, отображаем иконку бургер-меню (icon-menu-burger). */}
-        <use
-          href={
-            isOpenMenu
-              ? '#icon-close' // Иконка закрытия, если меню открыто
-              : '#icon-menu-burger' // Иконка бургер-меню, если меню закрыто
-          }
-        ></use>
-      </SvgIconBurger>
+    <BtnBurger
+      type="button"
+      onClick={toggleBurgerMenu}
+      aria-label={isOpenMenu ? 'Закрити меню' : 'Відкрити меню'}
+      aria-expanded={isOpenMenu}
+    >
+      {isOpenMenu ? <IoClose /> : <IoMenu />}
     </BtnBurger>
   );
 };
