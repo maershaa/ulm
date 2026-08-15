@@ -1,4 +1,4 @@
-import{s as e,L as i}from"./index-DjzluAN1.js";const a=e.section`
+import{s as e,L as i}from"./index-CwCXSE9B.js";const a=e.section`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -157,7 +157,7 @@ import{s as e,L as i}from"./index-DjzluAN1.js";const a=e.section`
     margin-top: 20px;
     margin-bottom: 20px;
   }
-`,c=e.h2`
+`,c=e.p`
   color: ${({theme:t})=>t.colors.textInverse};
 
   font-size: 1.5rem;
@@ -411,7 +411,7 @@ import{s as e,L as i}from"./index-DjzluAN1.js";const a=e.section`
   @media (min-width: ${({theme:t})=>t.breakpoints.desktop}) {
     font-size: 1.1rem;
   }
-`,I=e.div`
+`,I=e.button`
   display: none;
 
   @media (min-width: ${({theme:t})=>t.breakpoints.tabletLg}) {
