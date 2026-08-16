@@ -10,7 +10,7 @@ export const Item = styled.li`
   border-radius: ${({ theme }) => theme.radius.lg};
   background-color: ${({ theme }) => theme.colors.card};
 
-  flex-basis: calc(100% - 20px);
+  flex-basis: auto;
   margin-bottom: 15px;
   padding: 22px;
 

@@ -17,7 +17,7 @@ const ProductsItem = ({ product }: ProductsItemProps) => {
           alt={t(`items.${product.id}.alt`)}
           loading="lazy"
         />
-        <h2>{t(`items.${product.id}.title`)}</h2>
+        <h3>{t(`items.${product.id}.title`)}</h3>
         <p>{t(`items.${product.id}.description`)}</p>
         <p>{t(`items.${product.id}.application`)}</p>
       </div>
