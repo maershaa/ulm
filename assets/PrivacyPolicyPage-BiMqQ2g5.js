@@ -1,4 +1,4 @@
-import{s as e,u as n,j as o,p as a}from"./index-DiJkbBL3.js";import{T as c}from"./Title-jNgwglIg.js";const l=e.div`
+import{s as e,u as n,j as o,p as a}from"./index-DTZN8UJf.js";import{T as c}from"./Title-DSuJQ1Io.js";const l=e.div`
   max-width: 760px;
   margin: 0 auto;
   padding: 40px 20px 60px;
