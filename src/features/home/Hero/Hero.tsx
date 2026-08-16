@@ -8,9 +8,9 @@ import {
   HeroFeatures,
   HeroFeature,
 } from './Hero.styled';
-import heroImage from '@/assets/images/Hero/hero.jpeg';
-import heroImageTablet from '@/assets/images/Hero/lots_of_tins.jpeg';
-import heroImageMobile from '@/assets/images/Hero/lots_of_tins_mb.jpeg';
+import heroImage from '@/assets/images/Hero/hero.webp';
+import heroImageTablet from '@/assets/images/Hero/lots_of_tins.webp';
+import heroImageMobile from '@/assets/images/Hero/lots_of_tins_mb.webp';
 
 import {
   FaIndustry,

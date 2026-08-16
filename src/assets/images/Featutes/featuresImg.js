@@ -1,9 +1,9 @@
-import team from './team.jpeg';
+import team from './team.webp';
 import volumes from './obsessions.jpg';
-import price from './price2.jpeg';
-import delivery from './delivery5.jpeg';
-import quality from './quality.jpeg';
-import paymentDeferral from './paymentDeferral.jpeg';
+import price from './price2.webp';
+import delivery from './delivery5.webp';
+import quality from './quality.webp';
+import paymentDeferral from './paymentDeferral.webp';
 
 const images = {
   team,

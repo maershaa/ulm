@@ -1,11 +1,22 @@
-import { Suspense } from 'react';
-import { Outlet } from 'react-router-dom';
+import { Suspense, useEffect, useRef } from 'react';
+import { Outlet, useLocation } from 'react-router-dom';
 
 import { Header, Footer, Container } from '@/components';
 import { Glow } from '@/assets/styles/Glow.styled';
 import { LayoutWrapper } from './SharedLayout.styled';
 
 const SharedLayout = () => {
+  const { pathname } = useLocation();
+
+  // При переходе на другую страницу сбрасываем скролл вверх.
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'auto',
+    });
+  }, [pathname]);
+
   return (
     <LayoutWrapper>
       {/* блик по центру */}

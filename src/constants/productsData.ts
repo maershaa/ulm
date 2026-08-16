@@ -43,15 +43,15 @@ export const productsData: ProductsList = [
     imageSrc: images.lid_99,
   },
   {
+    id: 'metal-trays',
+    imageSrc: images.metal_trays,
+  },
+  {
     id: 'trench-candle-cans',
     imageSrc: images.trenchCandles,
   },
   {
     id: 'brush-ferrules',
     imageSrc: images.paintBrush,
-  },
-  {
-    id: 'metal-trays',
-    imageSrc: images.metal_trays,
   },
 ];
