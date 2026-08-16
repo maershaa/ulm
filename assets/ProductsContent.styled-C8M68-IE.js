@@ -1,4 +1,4 @@
-import{s as e,L as i}from"./index-CwCXSE9B.js";const a=e.section`
+import{s as e,L as i}from"./index-DiJkbBL3.js";const a=e.section`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -613,7 +613,7 @@ import{s as e,L as i}from"./index-CwCXSE9B.js";const a=e.section`
   border-radius: ${({theme:t})=>t.radius.lg};
   background-color: ${({theme:t})=>t.colors.card};
 
-  flex-basis: calc(100% - 20px);
+  flex-basis: auto;
   margin-bottom: 15px;
   padding: 22px;
 
